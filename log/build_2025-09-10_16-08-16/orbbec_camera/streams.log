@@ -1,0 +1,211 @@
+[0.016s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_camera': CMAKE_PREFIX_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs:/home/amrl-linux24-04/ros2_ben/install/orbbec_description:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera:/home/amrl-linux24-04/ros2_ben/install/igus_rebel:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_moveit_config:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/lib:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake /home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera
+[0.031s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.207s] -- Found ament_index_cpp: 1.8.1 (/opt/ros/jazzy/share/ament_index_cpp/cmake)
+[0.208s] -- Found builtin_interfaces: 2.0.3 (/opt/ros/jazzy/share/builtin_interfaces/cmake)
+[0.225s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.231s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.239s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.248s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.256s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[0.331s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.331s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.392s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.437s] -- Found camera_info_manager: 5.1.7 (/opt/ros/jazzy/share/camera_info_manager/cmake)
+[0.439s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[0.462s] -- Found image_transport: 5.1.7 (/opt/ros/jazzy/share/image_transport/cmake)
+[0.470s] -- Found image_publisher: 5.0.11 (/opt/ros/jazzy/share/image_publisher/cmake)
+[0.493s] -- Found orbbec_camera_msgs: 1.2.2 (/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/share/orbbec_camera_msgs/cmake)
+[0.513s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[0.524s] -- Found tf2: 0.36.14 (/opt/ros/jazzy/share/tf2/cmake)
+[0.526s] -- Found tf2_eigen: 0.36.14 (/opt/ros/jazzy/share/tf2_eigen/cmake)
+[0.581s] -- Found tf2_sensor_msgs: 0.36.14 (/opt/ros/jazzy/share/tf2_sensor_msgs/cmake)
+[0.584s] -- Found diagnostic_updater: 4.2.6 (/opt/ros/jazzy/share/diagnostic_updater/cmake)
+[0.617s] -- ORRBEC Machine : x86_64
+[0.617s] 
+[0.617s] -- ORRBEC Machine Bits : 64
+[0.617s] 
+[0.673s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.743s] -- Configuring done (0.7s)
+[0.822s] -- Generating done (0.1s)
+[0.837s] -- Build files have been written to: /home/amrl-linux24-04/ros2_ben/build/orbbec_camera
+[0.850s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_camera' returned '0': CMAKE_PREFIX_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs:/home/amrl-linux24-04/ros2_ben/install/orbbec_description:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera:/home/amrl-linux24-04/ros2_ben/install/igus_rebel:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_moveit_config:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/lib:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake /home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera
+[0.851s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_camera': CMAKE_PREFIX_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs:/home/amrl-linux24-04/ros2_ben/install/orbbec_description:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera:/home/amrl-linux24-04/ros2_ben/install/igus_rebel:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_moveit_config:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/lib:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/amrl-linux24-04/ros2_ben/build/orbbec_camera -- -j22 -l22
+[0.916s] [  8%] Built target frame_latency_node
+[0.920s] [ 16%] Built target orbbec_camera_node
+[0.921s] [ 20%] [32m[1mLinking CXX shared library libframe_latency.so[0m
+[0.959s] [ 24%] [32m[1mLinking CXX shared library liborbbec_camera.so[0m
+[1.166s] [ 28%] Built target frame_latency
+[1.259s] [ 68%] Built target orbbec_camera
+[1.289s] [ 72%] [32m[1mLinking CXX executable topic_statistics_node[0m
+[1.295s] [ 76%] [32m[1mLinking CXX executable list_depth_work_mode_node[0m
+[1.305s] [ 84%] [32m[1mLinking CXX executable list_devices_node[0m
+[1.305s] [ 84%] [32m[1mLinking CXX executable list_camera_profile_mode_node[0m
+[1.468s] [ 88%] Built target list_depth_work_mode_node
+[1.479s] [ 92%] Built target topic_statistics_node
+[1.740s] [ 96%] Built target list_devices_node
+[1.760s] [100%] Built target list_camera_profile_mode_node
+[1.770s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_camera' returned '0': CMAKE_PREFIX_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs:/home/amrl-linux24-04/ros2_ben/install/orbbec_description:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera:/home/amrl-linux24-04/ros2_ben/install/igus_rebel:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_moveit_config:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/lib:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/amrl-linux24-04/ros2_ben/build/orbbec_camera -- -j22 -l22
+[1.771s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_camera': CMAKE_PREFIX_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs:/home/amrl-linux24-04/ros2_ben/install/orbbec_description:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera:/home/amrl-linux24-04/ros2_ben/install/igus_rebel:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_moveit_config:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/lib:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/amrl-linux24-04/ros2_ben/build/orbbec_camera
+[1.780s] -- Install configuration: "Release"
+[1.780s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/orbbec_camera_node
+[1.780s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/frame_latency_node
+[1.780s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/liborbbec_camera.so
+[1.782s] -- Set non-toolchain portion of runtime path of "/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/liborbbec_camera.so" to ":/home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera/SDK/lib/x64"
+[1.783s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/libframe_latency.so
+[1.785s] -- Set non-toolchain portion of runtime path of "/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/libframe_latency.so" to ":/home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera/SDK/lib/x64"
+[1.785s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include
+[1.785s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera
+[1.785s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/dynamic_params.h
+[1.785s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/ros_param_backend.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/jpeg_decoder.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/image_publisher.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/synced_imu_publisher.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/ob_camera_node.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/constants.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/ob_camera_node_driver.h
+[1.786s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/rk_mpp_decoder.h
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/jetson_nv_decoder.h
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/utils.h
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/orbbec_camera/d2c_viewer.h
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/magic_enum
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/magic_enum/magic_enum.hpp
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_dcw2.launch.py
+[1.787s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_e_lite.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_pro.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_ew.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/deeya.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/astra_stereo_u3.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/multi_camera_synced.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_dw.launch.py
+[1.788s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_uw.launch.py
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/COLCON_IGNORE
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/setup.zsh
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/_local_setup_util_sh.py
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/local_setup.bash
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/local_setup.ps1
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/local_setup.sh
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/setup.ps1
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/_local_setup_util_ps1.py
+[1.788s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/.colcon_install_layout
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/setup.sh
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/local_setup.zsh
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/install/setup.bash
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_ew_lite.launch.py
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/ob_camera.launch.py
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini2VL.launch.py
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/build
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/build/COLCON_IGNORE
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/build/.built_by
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/.astra.launch.py.swp
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_max_pro.launch.py
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/astra.launch.py
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_d1.launch.py
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/astra_adv.launch.py
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log/COLCON_IGNORE
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log/latest_build
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log/latest
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log/build_2025-09-10_16-07-57
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log/build_2025-09-10_16-07-57/events.log
+[1.789s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/log/build_2025-09-10_16-07-57/logger_all.log
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/femto_bolt.launch.py
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_max.launch.py
+[1.789s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/femto.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/astra_pro2.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/multi_camera.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_dcw.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_330_series.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/astra2.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini2XL.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/femto_mega.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_intra_process_demo_launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini2L.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/femto_net_camera.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/multi_net_camera.launch.py
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_dcl.py
+[1.790s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/Log
+[1.790s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/Log/OrbbecSDK.log.txt
+[1.790s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini_e.launch.py
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai.launch.py
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/gemini2.launch.py
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/astra_embedded_s.launch.py
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//launch/dabai_dw2.launch.py
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config/.gitkeep
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config/depthfilter
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config/depthfilter/Openni_device.json
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config/depthfilter/Gemini2_v1.8.json
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config/OrbbecSDKConfig_v1.0.xml
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera//config/camera_params.yaml
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/ObSensor.hpp
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Sensor.h
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Context.h
+[1.791s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/RecordPlayback.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Frame.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Utils.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Version.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Device.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/ObTypes.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Filter.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/MultipleDevices.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Pipeline.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Error.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/Property.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/h/StreamProfile.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/ObSensor.h
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp
+[1.792s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Utils.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Types.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Filter.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Sensor.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Version.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Error.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/RecordPlayback.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/StreamProfile.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Device.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Frame.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Pipeline.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/include/libobsensor/hpp/Context.hpp
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//libob_usb.so
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//libOrbbecSDK.so
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//libdepthengine.so
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//libOrbbecSDK.so.1.10.22
+[1.793s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//liblive555.so
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//libOrbbecSDK.so.1.10
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib//libdepthengine.so.2.0
+[1.794s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/list_devices_node
+[1.794s] -- Set non-toolchain portion of runtime path of "/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/list_devices_node" to ":/home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera/SDK/lib/x64"
+[1.794s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/list_depth_work_mode_node
+[1.794s] -- Set non-toolchain portion of runtime path of "/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/list_depth_work_mode_node" to ":/home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera/SDK/lib/x64"
+[1.794s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/list_camera_profile_mode_node
+[1.794s] -- Set non-toolchain portion of runtime path of "/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/list_camera_profile_mode_node" to ":/home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera/SDK/lib/x64"
+[1.794s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/topic_statistics_node
+[1.794s] -- Set non-toolchain portion of runtime path of "/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib/orbbec_camera/topic_statistics_node" to ":/home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_camera/SDK/lib/x64"
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/environment/library_path.sh
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/environment/library_path.dsv
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/ament_index/resource_index/package_run_dependencies/orbbec_camera
+[1.794s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/ament_index/resource_index/parent_prefix_path/orbbec_camera
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/environment/ament_prefix_path.sh
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/environment/ament_prefix_path.dsv
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/environment/path.sh
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/environment/path.dsv
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/local_setup.bash
+[1.794s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/local_setup.sh
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/local_setup.zsh
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/local_setup.dsv
+[1.795s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/package.dsv
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/ament_index/resource_index/packages/orbbec_camera
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/ament_index/resource_index/rclcpp_components/orbbec_camera
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/cmake/orbbec_cameraConfig.cmake
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/cmake/orbbec_cameraConfig-version.cmake
+[1.795s] -- Up-to-date: /home/amrl-linux24-04/ros2_ben/install/orbbec_camera/share/orbbec_camera/package.xml
+[1.795s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_camera' returned '0': CMAKE_PREFIX_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs:/home/amrl-linux24-04/ros2_ben/install/orbbec_description:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera:/home/amrl-linux24-04/ros2_ben/install/igus_rebel:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_moveit_config:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/amrl-linux24-04/ros2_ben/install/orbbec_camera_msgs/lib:/home/amrl-linux24-04/ros2_ben/install/orbbec_camera/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel/lib:/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/amrl-linux24-04/ros2_ben/build/orbbec_camera

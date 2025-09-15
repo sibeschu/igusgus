@@ -1,0 +1,4382 @@
+UpdateCTestConfiguration  from :/home/amrl-linux24-04/ros2_ben/build/igus_rebel/CTestConfiguration.ini
+Parse Config file:/home/amrl-linux24-04/ros2_ben/build/igus_rebel/CTestConfiguration.ini
+   Site: amrl-linux24-04-ThinkPad-E16-Gen-2
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20250909-1504 - Experimental
+UpdateCTestConfiguration  from :/home/amrl-linux24-04/ros2_ben/build/igus_rebel/CTestConfiguration.ini
+Parse Config file:/home/amrl-linux24-04/ros2_ben/build/igus_rebel/CTestConfiguration.ini
+Test project /home/amrl-linux24-04/ros2_ben/build/igus_rebel
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: cppcheck
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/jazzy/bin/ament_cppcheck" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml" "--include_dirs" "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/include"
+1: Working Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+1: Test timeout computed to be: 300
+1: -- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+1:  - /opt/ros/jazzy/bin/ament_cppcheck --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml --include_dirs /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/include
+1: cppcheck 2.13.0 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+1: -- run_test.py: return code 0
+1: -- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml'
+1/6 Test #1: cppcheck .........................   Passed    0.10 sec
+test 2
+    Start 2: flake8
+
+2: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_flake8/flake8.txt" "--command" "/opt/ros/jazzy/bin/ament_flake8" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml"
+2: Working Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+2: Test timeout computed to be: 60
+2: -- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+2:  - /opt/ros/jazzy/bin/ament_flake8 --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml
+2: from launch.substitutions import Command, FindExecutable, LaunchConfiguration
+2: ^
+2: from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+2: ^
+2: from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+2: ^
+2: from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+2: ^
+2: from launch.launch_description_sources import PythonLaunchDescriptionSource
+2: ^
+2: from ament_index_python.packages import get_package_share_directory
+2: ^
+2: import os
+2: ^
+2: import os
+2: ^
+2:     env = {
+2:     ^
+2:     
+2: ^
+2:         "hardware_protocol",
+2:         ^
+2:         default_value="rebel",
+2:                       ^
+2:         choices=["mock_hardware", "gazebo", "rebel"],
+2:                  ^
+2:         choices=["mock_hardware", "gazebo", "rebel"],
+2:                                   ^
+2:         choices=["mock_hardware", "gazebo", "rebel"],
+2:                                             ^
+2:         description="Which hardware protocol or mock hardware should be used",
+2:                     ^
+2:     
+2: ^
+2:     igus_rebel_pkg = get_package_share_directory("igus_rebel")
+2:                                                  ^
+2:     igus_rebel_desc_pkg = get_package_share_directory("igus_rebel_description")
+2:                                                       ^
+2:     
+2: ^
+2:     controller_config_path = os.path.join(igus_rebel_pkg, "config", "controller.yaml")
+2:                                                           ^
+2:     controller_config_path = os.path.join(igus_rebel_pkg, "config", "controller.yaml")
+2:                                                                     ^
+2:     robot_description = {"robot_description" : Command(
+2:                          ^
+2:     robot_description = {"robot_description" : Command(
+2:                                             ^
+2:             FindExecutable(name="xacro"),
+2:                                 ^
+2:             " ",
+2:             ^
+2:             " hardware_protocol:=",
+2:             ^
+2:             LaunchConfiguration("hardware_protocol"),
+2:                                 ^
+2:         
+2: ^
+2:         package="controller_manager",
+2:                 ^
+2:         executable="ros2_control_node",
+2:                    ^
+2:         output="both",
+2:                ^
+2:     
+2: ^
+2:         package="robot_state_publisher",
+2:                 ^
+2:         executable="robot_state_publisher",
+2:                    ^
+2:         output="both",
+2:                ^
+2:     
+2: ^
+2:         package="controller_manager",
+2:                 ^
+2:         executable="spawner",
+2:                    ^
+2:         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+2:                    ^
+2:         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+2:                                               ^
+2:         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+2:                                                                       ^
+2:         output="both",
+2:                ^
+2:     
+2: ^
+2:         package="controller_manager",
+2:                 ^
+2:         executable="spawner",
+2:                    ^
+2:         arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+2:                    ^
+2:         arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+2:                                            ^
+2:         arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+2:                                                                    ^
+2:         output="both",
+2:                ^
+2:     
+2: ^
+2:     ^
+2:         ^
+2: 1     E203 whitespace before ':'
+2: 2     F401 'launch.actions.IncludeLaunchDescription' imported but unused
+2: 1     F841 local variable 'env' is assigned to but never used
+2: 4     I100 Import statements are in the wrong order. 'from launch.substitutions import Command, FindExecutable, LaunchConfiguration' should be before 'from launch_ros.actions import Node'
+2: 1     I101 Imported names are in the wrong order. Should be DeclareLaunchArgument, IncludeLaunchDescription
+2: 1     I201 Missing newline between import groups. 'import os' is identified as Stdlib and 'from ament_index_python.packages import get_package_share_directory' is identified as Third Party.
+2: 33    Q000 Double quotes found but single quotes preferred
+2: 1     W292 no newline at end of file
+2: 9     W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:3:1: I100 Import statements are in the wrong order. 'from launch.substitutions import Command, FindExecutable, LaunchConfiguration' should be before 'from launch_ros.actions import Node'
+2: 
+2: ./launch/rebel.launch.py:4:1: I101 Imported names are in the wrong order. Should be DeclareLaunchArgument, IncludeLaunchDescription
+2: 
+2: ./launch/rebel.launch.py:4:1: I100 Import statements are in the wrong order. 'from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument' should be before 'from launch.substitutions import Command, FindExecutable, LaunchConfiguration'
+2: 
+2: ./launch/rebel.launch.py:4:1: F401 'launch.actions.IncludeLaunchDescription' imported but unused
+2: 
+2: ./launch/rebel.launch.py:5:1: F401 'launch.launch_description_sources.PythonLaunchDescriptionSource' imported but unused
+2: 
+2: ./launch/rebel.launch.py:6:1: I100 Import statements are in the wrong order. 'from ament_index_python.packages import get_package_share_directory' should be before 'from launch.launch_description_sources import PythonLaunchDescriptionSource'
+2: 
+2: ./launch/rebel.launch.py:7:1: I100 Import statements are in the wrong order. 'import os' should be before 'from ament_index_python.packages import get_package_share_directory' and in a different group.
+2: 
+2: ./launch/rebel.launch.py:7:1: I201 Missing newline between import groups. 'import os' is identified as Stdlib and 'from ament_index_python.packages import get_package_share_directory' is identified as Third Party.
+2: 
+2: ./launch/rebel.launch.py:11:5: F841 local variable 'env' is assigned to but never used
+2: 
+2: ./launch/rebel.launch.py:17:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:19:9: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:20:23: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:21:18: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:21:35: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:21:45: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:22:21: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:24:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:25:50: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:26:55: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:27:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:28:59: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:28:69: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:36:26: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:36:45: E203 whitespace before ':'
+2: 
+2: ./launch/rebel.launch.py:38:33: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:39:13: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:41:13: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:42:33: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:45:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:47:17: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:48:20: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:54:16: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:56:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:58:17: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:59:20: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:62:16: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:64:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:66:17: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:67:20: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:68:20: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:68:47: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:68:71: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:69:16: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:71:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:73:17: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:74:20: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:75:20: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:75:44: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:75:68: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:76:16: Q000 Double quotes found but single quotes preferred
+2: 
+2: ./launch/rebel.launch.py:78:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:86:1: W293 blank line contains whitespace
+2: 
+2: ./launch/rebel.launch.py:86:5: W292 no newline at end of file
+2: 
+2: 
+2: 1 files checked
+2: 53 errors
+2: 
+2: 'E'-type errors: 1
+2: 'F'-type errors: 3
+2: 'I'-type errors: 6
+2: 'Q'-type errors: 33
+2: 'W'-type errors: 10
+2: 
+2: Checked files:
+2: 
+2: * ./launch/rebel.launch.py
+2: -- run_test.py: return code 1
+2: -- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml'
+2/6 Test #2: flake8 ...........................***Failed    0.19 sec
+test 3
+    Start 3: lint_cmake
+
+3: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/jazzy/bin/ament_lint_cmake" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml"
+3: Working Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+3: Test timeout computed to be: 60
+3: -- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+3:  - /opt/ros/jazzy/bin/ament_lint_cmake --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml
+3: CMakeLists.txt:6: Line ends in whitespace [whitespace/eol]
+3: 
+3: 
+3: 1 errors
+3: -- run_test.py: return code 1
+3: -- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml'
+3/6 Test #3: lint_cmake .......................***Failed    0.09 sec
+test 4
+    Start 4: pep257
+
+4: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_pep257/pep257.txt" "--command" "/opt/ros/jazzy/bin/ament_pep257" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml"
+4: Working Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+4: Test timeout computed to be: 60
+4: -- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+4:  - /opt/ros/jazzy/bin/ament_pep257 --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml
+4: checking ./launch/rebel.launch.py
+4: No problems found
+4: -- run_test.py: return code 0
+4: -- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml'
+4/6 Test #4: pep257 ...........................   Passed    0.12 sec
+test 5
+    Start 5: uncrustify
+
+5: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/jazzy/bin/ament_uncrustify" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml"
+5: Working Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+5: Test timeout computed to be: 60
+5: -- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+5:  - /opt/ros/jazzy/bin/ament_uncrustify --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml
+5: Code style divergence in file 'include/igus_rebel/CriKeywords.hpp':
+5: 
+5: --- include/igus_rebel/CriKeywords.hpp
+5: +++ include/igus_rebel/CriKeywords.hpp.uncrustify
+5: @@ -8,4 +8,4 @@
+5: -    namespace CriKeywords
+5: -    {
+5: -        const std::string START = "CRISTART";
+5: -        const std::string END = "CRIEND";
+5: +namespace CriKeywords
+5: +{
+5: +const std::string START = "CRISTART";
+5: +const std::string END = "CRIEND";
+5: @@ -13,14 +13,14 @@
+5: -        const std::string TYPE_STATUS = "STATUS";
+5: -        const std::string TYPE_OPINFO = "OPINFO";
+5: -        const std::string TYPE_GSIG = "GSIG";
+5: -        const std::string TYPE_GRIPPERSTATE = "GRIPPERSTATE";
+5: -        const std::string TYPE_RUNSTATE = "RUNSTATE";
+5: -        const std::string TYPE_MESSAGE = "MESSAGE";
+5: -        const std::string TYPE_CMD = "CMD";
+5: -        const std::string TYPE_CONFIG = "CONFIG";
+5: -        const std::string TYPE_INFO = "INFO";
+5: -        const std::string TYPE_LOGMSG = "LOGMSG";
+5: -        const std::string TYPE_VARIABLES = "VARIABLES";
+5: -        const std::string TYPE_CMDERROR = "CMDERROR";
+5: -        const std::string TYPE_CMDACK = "CMDACK";
+5: -        const std::string TYPE_CYCLESTAT = "CYCLESTAT";
+5: +const std::string TYPE_STATUS = "STATUS";
+5: +const std::string TYPE_OPINFO = "OPINFO";
+5: +const std::string TYPE_GSIG = "GSIG";
+5: +const std::string TYPE_GRIPPERSTATE = "GRIPPERSTATE";
+5: +const std::string TYPE_RUNSTATE = "RUNSTATE";
+5: +const std::string TYPE_MESSAGE = "MESSAGE";
+5: +const std::string TYPE_CMD = "CMD";
+5: +const std::string TYPE_CONFIG = "CONFIG";
+5: +const std::string TYPE_INFO = "INFO";
+5: +const std::string TYPE_LOGMSG = "LOGMSG";
+5: +const std::string TYPE_VARIABLES = "VARIABLES";
+5: +const std::string TYPE_CMDERROR = "CMDERROR";
+5: +const std::string TYPE_CMDACK = "CMDACK";
+5: +const std::string TYPE_CYCLESTAT = "CYCLESTAT";
+5: @@ -28,15 +28,15 @@
+5: -        const std::string STATUS_MODE = "MODE";
+5: -        const std::string STATUS_POSJOINTSETPOINT = "POSJOINTSETPOINT";
+5: -        const std::string STATUS_POSJOINTCURRENT = "POSJOINTCURRENT";
+5: -        const std::string STATUS_POSCARTROBOT = "POSCARTROBOT";
+5: -        const std::string STATUS_POSCARTPLATTFORM = "POSCARTPLATTFORM";
+5: -        const std::string STATUS_OVERRIDE = "OVERRIDE";
+5: -        const std::string STATUS_DIN = "DIN";
+5: -        const std::string STATUS_DOUT = "DOUT";
+5: -        const std::string STATUS_ESTOP = "ESTOP";
+5: -        const std::string STATUS_SUPPLY = "SUPPLY";
+5: -        const std::string STATUS_CURRENTALL = "CURRENTALL";
+5: -        const std::string STATUS_CURRENTJOINTS = "CURRENTJOINTS";
+5: -        const std::string STATUS_ERROR = "ERROR";
+5: -        const std::string STATUS_KINSTATE = "KINSTATE";
+5: -        const std::string STATUS_FRAMEROBOT = "FRAMEROBOT";
+5: +const std::string STATUS_MODE = "MODE";
+5: +const std::string STATUS_POSJOINTSETPOINT = "POSJOINTSETPOINT";
+5: +const std::string STATUS_POSJOINTCURRENT = "POSJOINTCURRENT";
+5: +const std::string STATUS_POSCARTROBOT = "POSCARTROBOT";
+5: +const std::string STATUS_POSCARTPLATTFORM = "POSCARTPLATTFORM";
+5: +const std::string STATUS_OVERRIDE = "OVERRIDE";
+5: +const std::string STATUS_DIN = "DIN";
+5: +const std::string STATUS_DOUT = "DOUT";
+5: +const std::string STATUS_ESTOP = "ESTOP";
+5: +const std::string STATUS_SUPPLY = "SUPPLY";
+5: +const std::string STATUS_CURRENTALL = "CURRENTALL";
+5: +const std::string STATUS_CURRENTJOINTS = "CURRENTJOINTS";
+5: +const std::string STATUS_ERROR = "ERROR";
+5: +const std::string STATUS_KINSTATE = "KINSTATE";
+5: +const std::string STATUS_FRAMEROBOT = "FRAMEROBOT";
+5: @@ -44,10 +44,10 @@
+5: -        const std::string COMMAND_CONNECT = "Connect";
+5: -        const std::string COMMAND_RESET = "Reset";
+5: -        const std::string COMMAND_ENABLE = "Enable";
+5: -        const std::string COMMAND_DISABLE = "Disable";
+5: -        const std::string COMMAND_DISCONNECT = "Disconnect";
+5: -        const std::string COMMAND_MOTIONTYPEJOINT = "MotionTypeJoint";
+5: -        const std::string COMMAND_MOTIONTYPECARTBASE = "MotionTypeCartBase";
+5: -        const std::string COMMAND_QUIT = "QUIT";
+5: -        const std::string COMMAND_SETACTIVE = "SetActive";
+5: -        const std::string COMMAND_DOUT = "DOUT";
+5: +const std::string COMMAND_CONNECT = "Connect";
+5: +const std::string COMMAND_RESET = "Reset";
+5: +const std::string COMMAND_ENABLE = "Enable";
+5: +const std::string COMMAND_DISABLE = "Disable";
+5: +const std::string COMMAND_DISCONNECT = "Disconnect";
+5: +const std::string COMMAND_MOTIONTYPEJOINT = "MotionTypeJoint";
+5: +const std::string COMMAND_MOTIONTYPECARTBASE = "MotionTypeCartBase";
+5: +const std::string COMMAND_QUIT = "QUIT";
+5: +const std::string COMMAND_SETACTIVE = "SetActive";
+5: +const std::string COMMAND_DOUT = "DOUT";
+5: @@ -55,2 +55,2 @@
+5: -        const std::string CONFIG_GETKINEMATICLIMITS = "GetKinematicLimits";
+5: -        const std::string CONFIG_GETKINEMATICLIMITS_ANSWER = "KinematicLimits";
+5: +const std::string CONFIG_GETKINEMATICLIMITS = "GetKinematicLimits";
+5: +const std::string CONFIG_GETKINEMATICLIMITS_ANSWER = "KinematicLimits";
+5: @@ -58,5 +58,5 @@
+5: -        const std::string MODE_JOINT = "joint";
+5: -        const std::string MODE_CARTBASE = "cartbase";
+5: -        const std::string MODE_CARTTOOL = "carttool";
+5: -        const std::string MODE_PLATFORM = "platform";
+5: -        const std::string MODE_FSM = "fsm";
+5: +const std::string MODE_JOINT = "joint";
+5: +const std::string MODE_CARTBASE = "cartbase";
+5: +const std::string MODE_CARTTOOL = "carttool";
+5: +const std::string MODE_PLATFORM = "platform";
+5: +const std::string MODE_FSM = "fsm";
+5: @@ -64,7 +64,7 @@
+5: -        const std::string LOG_LEVEL_DEBUG = "DEBUG";
+5: -        const std::string LOG_LEVEL_APP_INFO = "APP_INFO";
+5: -        const std::string LOG_LEVEL_APP_ERROR = "APP_ERROR";
+5: -        const std::string LOG_LEVEL_INFO = "INFO";
+5: -        const std::string LOG_LEVEL_WARN = "WARN";
+5: -        const std::string LOG_LEVEL_ERROR = "ERROR";
+5: -        const std::string LOG_LEVEL_FATAL = "FATAL";
+5: +const std::string LOG_LEVEL_DEBUG = "DEBUG";
+5: +const std::string LOG_LEVEL_APP_INFO = "APP_INFO";
+5: +const std::string LOG_LEVEL_APP_ERROR = "APP_ERROR";
+5: +const std::string LOG_LEVEL_INFO = "INFO";
+5: +const std::string LOG_LEVEL_WARN = "WARN";
+5: +const std::string LOG_LEVEL_ERROR = "ERROR";
+5: +const std::string LOG_LEVEL_FATAL = "FATAL";
+5: @@ -72,3 +72,3 @@
+5: -        const std::string VARIABLES_NR_VARIABLE = "ValueNrVariable";
+5: -        const std::string VARIABLES_POS_VARIABLE = "ValuePosVariable";
+5: -    }
+5: +const std::string VARIABLES_NR_VARIABLE = "ValueNrVariable";
+5: +const std::string VARIABLES_POS_VARIABLE = "ValuePosVariable";
+5: +}
+5: 
+5: Code style divergence in file 'include/igus_rebel/CriMessages.hpp':
+5: 
+5: --- include/igus_rebel/CriMessages.hpp
+5: +++ include/igus_rebel/CriMessages.hpp.uncrustify
+5: @@ -21,238 +21,241 @@
+5: -    namespace CriMessages
+5: -    {
+5: -        enum class MessageType
+5: -        {
+5: -            STATUS,
+5: -            OPINFO,
+5: -            GSIG,
+5: -            GRIPPERSTATE,
+5: -            RUNSTATE,
+5: -            MESSAGE,
+5: -            CMD,
+5: -            CONFIG,
+5: -            INFO,
+5: -            LOGMSG,
+5: -            VARIABLES,
+5: -            CMDERROR,
+5: -            CMDACK,
+5: -            CYCLESTAT,
+5: -            UNKNOWN = 1000
+5: -        };
+5: -
+5: -        enum class Mode
+5: -        {
+5: -            JOINT,
+5: -            CARTBASE,
+5: -            CARTTOOL,
+5: -            PLATFORM,
+5: -            FSM,
+5: -            UNKNOWN = 1000
+5: -        };
+5: -
+5: -        enum class Kinstate
+5: -        {
+5: -            NO_ERROR = 0,
+5: -            JOINT_LIMIT_MIN = 13,
+5: -            JOINT_LIMIT_MAX = 14,
+5: -            CARTESIAN_SINGULARITY_CENTER = 21,
+5: -            CARTESIAN_SINGULARITY_REACH = 23,
+5: -            CARTESIAN_SINGULARITY_WRIST = 24,
+5: -            TOOL_AT_VIRTUAL_BOX_LIMIT_1 = 30,
+5: -            TOOL_AT_VIRTUAL_BOX_LIMIT_2 = 31,
+5: -            TOOL_AT_VIRTUAL_BOX_LIMIT_3 = 32,
+5: -            TOOL_AT_VIRTUAL_BOX_LIMIT_4 = 33,
+5: -            TOOL_AT_VIRTUAL_BOX_LIMIT_5 = 34,
+5: -            TOOL_AT_VIRTUAL_BOX_LIMIT_6 = 35,
+5: -            MOTION_NOT_ALLOWED = 99,
+5: -            UNKNOWN = 1000
+5: -        };
+5: -
+5: -        enum class ErrorJoint
+5: -        {
+5: -            TEMP = 1,       // OverTemperature
+5: -            ESTOP_LOWV = 2, // Energy supply too low
+5: -            MNE = 4,        // Motor not enabled
+5: -            COM = 8,        // Communication watch dog
+5: -            POS = 16,       // Position lag
+5: -            ENC = 32,       // Encoder Error
+5: -            OC = 64,        // Overcurrent
+5: -            DRV = 128       // Driver Error
+5: -        };
+5: -
+5: -        enum class ConfigType
+5: -        {
+5: -            KINEMATICLIMITS,
+5: -            UNKNOWN = 1000
+5: -        };
+5: -
+5: -        enum class LogLevel
+5: -        {
+5: -            DEBUG,
+5: -            APP_INFO,
+5: -            APP_ERROR,
+5: -            INFO,
+5: -            WARN,
+5: -            ERROR,
+5: -            FATAL,
+5: -            UNKNOWN = 1000
+5: -        };
+5: -
+5: -        class CriMessage
+5: -        {
+5: -        public:
+5: -            MessageType GetType()
+5: -            {
+5: -                return type;
+5: -            }
+5: -
+5: -            static MessageType GetMessageType(const std::string &);
+5: -
+5: -        protected:
+5: -            MessageType type;
+5: -            explicit CriMessage(const MessageType &_type) : type(_type) {}
+5: -
+5: -            static std::string ParseMessageString(const std::string &, const std::string::size_type &,
+5: -                                                  const std::string::size_type &, const std::string::size_type &);
+5: -
+5: -            template <class T, std::size_t N>
+5: -            static void FillArray(std::array<T, N> &, const std::string &);
+5: -
+5: -            template <class T>
+5: -            void FillVector(std::vector<T> &, const std::string &);
+5: -
+5: -            template <class T, std::size_t N>
+5: -            static std::string ArrayToString(std::array<T, N> &);
+5: -
+5: -            template <class T>
+5: -            std::string VectorToString(std::vector<T> &vector);
+5: -        };
+5: -
+5: -        class Status : public CriMessage
+5: -        {
+5: -        public:
+5: -            Mode mode;
+5: -            std::array<float, 16> posJointSetPoint;
+5: -            std::array<float, 16> posJointCurrent;
+5: -            std::array<float, 6> posCartRobot;
+5: -            std::array<float, 3> posCartPlattform;
+5: -            float overrideValue;
+5: -            int din;
+5: -            int dout;
+5: -            int eStop;
+5: -            int supply;
+5: -            int currentall;
+5: -            std::array<int, 16> currentjoints;
+5: -            std::string errorSummary;
+5: -            std::array<int, 16> errorJoints;
+5: -            Kinstate kinstate;
+5: -
+5: -            explicit Status(const std::string &);
+5: -            explicit Status();
+5: -            static std::string ModeToString(const Mode &);
+5: -            void Print();
+5: -            void Log();
+5: -
+5: -        private:
+5: -            std::string ToString();
+5: -            Mode GetMode(const std::string &);
+5: -            Kinstate GetKinstate(const std::string &);
+5: -        };
+5: -
+5: -        class Message : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit Message(const std::string &);
+5: -
+5: -            std::string message;
+5: -        };
+5: -
+5: -        class Command : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit Command(const std::string &);
+5: -
+5: -            std::string command;
+5: -        };
+5: -
+5: -        class Info : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit Info(const std::string &);
+5: -
+5: -            std::string info;
+5: -        };
+5: -
+5: -        class LogMsg : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit LogMsg(const std::string &);
+5: -
+5: -            LogLevel logLevel;
+5: -            long timestamp;
+5: -            std::string logMsg;
+5: -
+5: -        private:
+5: -            LogLevel GetLogLevel(const std::string &);
+5: -        };
+5: -
+5: -        class Variables : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit Variables(const std::string &);
+5: -
+5: -            struct NumberVariable
+5: -            {
+5: -                std::string name;
+5: -                double value;
+5: -            };
+5: -
+5: -            struct PositionVariable
+5: -            {
+5: -                std::string name;
+5: -                std::array<double, 15> values;
+5: -            };
+5: -
+5: -            std::vector<NumberVariable> numberVariables;
+5: -            std::vector<PositionVariable> positionVariables;
+5: -
+5: -        private:
+5: -            std::string GetMatchString(const std::smatch &);
+5: -        };
+5: -
+5: -        class CmdError : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit CmdError(const std::string &);
+5: -            int recjectedCmd;
+5: -            std::string error;
+5: -        };
+5: -
+5: -        class CmdAck : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit CmdAck(const std::string &);
+5: -            int acceptedCmd;
+5: -        };
+5: -
+5: -        class Cyclestat : public CriMessage
+5: -        {
+5: -        public:
+5: -            explicit Cyclestat(const std::string &);
+5: -            int cycletime;
+5: -            int workload;
+5: -        };
+5: -
+5: -        class Config : public CriMessage
+5: -        {
+5: -        public:
+5: -            ConfigType configType;
+5: -            static ConfigType GetConfigType(const std::string &);
+5: -
+5: -        protected:
+5: -            explicit Config(const ConfigType &_configType) : CriMessage(MessageType::CONFIG), configType(_configType) {}
+5: -        };
+5: -
+5: -        class KinematicLimits : public Config
+5: -        {
+5: -        public:
+5: -            explicit KinematicLimits(const std::string &);
+5: +namespace CriMessages
+5: +{
+5: +enum class MessageType
+5: +{
+5: +  STATUS,
+5: +  OPINFO,
+5: +  GSIG,
+5: +  GRIPPERSTATE,
+5: +  RUNSTATE,
+5: +  MESSAGE,
+5: +  CMD,
+5: +  CONFIG,
+5: +  INFO,
+5: +  LOGMSG,
+5: +  VARIABLES,
+5: +  CMDERROR,
+5: +  CMDACK,
+5: +  CYCLESTAT,
+5: +  UNKNOWN = 1000
+5: +};
+5: +
+5: +enum class Mode
+5: +{
+5: +  JOINT,
+5: +  CARTBASE,
+5: +  CARTTOOL,
+5: +  PLATFORM,
+5: +  FSM,
+5: +  UNKNOWN = 1000
+5: +};
+5: +
+5: +enum class Kinstate
+5: +{
+5: +  NO_ERROR = 0,
+5: +  JOINT_LIMIT_MIN = 13,
+5: +  JOINT_LIMIT_MAX = 14,
+5: +  CARTESIAN_SINGULARITY_CENTER = 21,
+5: +  CARTESIAN_SINGULARITY_REACH = 23,
+5: +  CARTESIAN_SINGULARITY_WRIST = 24,
+5: +  TOOL_AT_VIRTUAL_BOX_LIMIT_1 = 30,
+5: +  TOOL_AT_VIRTUAL_BOX_LIMIT_2 = 31,
+5: +  TOOL_AT_VIRTUAL_BOX_LIMIT_3 = 32,
+5: +  TOOL_AT_VIRTUAL_BOX_LIMIT_4 = 33,
+5: +  TOOL_AT_VIRTUAL_BOX_LIMIT_5 = 34,
+5: +  TOOL_AT_VIRTUAL_BOX_LIMIT_6 = 35,
+5: +  MOTION_NOT_ALLOWED = 99,
+5: +  UNKNOWN = 1000
+5: +};
+5: +
+5: +enum class ErrorJoint
+5: +{
+5: +  TEMP = 1,                 // OverTemperature
+5: +  ESTOP_LOWV = 2,           // Energy supply too low
+5: +  MNE = 4,                  // Motor not enabled
+5: +  COM = 8,                  // Communication watch dog
+5: +  POS = 16,                 // Position lag
+5: +  ENC = 32,                 // Encoder Error
+5: +  OC = 64,                  // Overcurrent
+5: +  DRV = 128                 // Driver Error
+5: +};
+5: +
+5: +enum class ConfigType
+5: +{
+5: +  KINEMATICLIMITS,
+5: +  UNKNOWN = 1000
+5: +};
+5: +
+5: +enum class LogLevel
+5: +{
+5: +  DEBUG,
+5: +  APP_INFO,
+5: +  APP_ERROR,
+5: +  INFO,
+5: +  WARN,
+5: +  ERROR,
+5: +  FATAL,
+5: +  UNKNOWN = 1000
+5: +};
+5: +
+5: +class CriMessage
+5: +{
+5: +public:
+5: +  MessageType GetType()
+5: +  {
+5: +    return type;
+5: +  }
+5: +
+5: +  static MessageType GetMessageType(const std::string &);
+5: +
+5: +protected:
+5: +  MessageType type;
+5: +  explicit CriMessage(const MessageType & _type)
+5: +  : type(_type) {}
+5: +
+5: +  static std::string ParseMessageString(
+5: +    const std::string &, const std::string::size_type &,
+5: +    const std::string::size_type &, const std::string::size_type &);
+5: +
+5: +  template<class T, std::size_t N>
+5: +  static void FillArray(std::array<T, N> &, const std::string &);
+5: +
+5: +  template<class T>
+5: +  void FillVector(std::vector<T> &, const std::string &);
+5: +
+5: +  template<class T, std::size_t N>
+5: +  static std::string ArrayToString(std::array<T, N> &);
+5: +
+5: +  template<class T>
+5: +  std::string VectorToString(std::vector<T> & vector);
+5: +};
+5: +
+5: +class Status : public CriMessage
+5: +{
+5: +public:
+5: +  Mode mode;
+5: +  std::array<float, 16> posJointSetPoint;
+5: +  std::array<float, 16> posJointCurrent;
+5: +  std::array<float, 6> posCartRobot;
+5: +  std::array<float, 3> posCartPlattform;
+5: +  float overrideValue;
+5: +  int din;
+5: +  int dout;
+5: +  int eStop;
+5: +  int supply;
+5: +  int currentall;
+5: +  std::array<int, 16> currentjoints;
+5: +  std::string errorSummary;
+5: +  std::array<int, 16> errorJoints;
+5: +  Kinstate kinstate;
+5: +
+5: +  explicit Status(const std::string &);
+5: +  explicit Status();
+5: +  static std::string ModeToString(const Mode &);
+5: +  void Print();
+5: +  void Log();
+5: +
+5: +private:
+5: +  std::string ToString();
+5: +  Mode GetMode(const std::string &);
+5: +  Kinstate GetKinstate(const std::string &);
+5: +};
+5: +
+5: +class Message : public CriMessage
+5: +{
+5: +public:
+5: +  explicit Message(const std::string &);
+5: +
+5: +  std::string message;
+5: +};
+5: +
+5: +class Command : public CriMessage
+5: +{
+5: +public:
+5: +  explicit Command(const std::string &);
+5: +
+5: +  std::string command;
+5: +};
+5: +
+5: +class Info : public CriMessage
+5: +{
+5: +public:
+5: +  explicit Info(const std::string &);
+5: +
+5: +  std::string info;
+5: +};
+5: +
+5: +class LogMsg : public CriMessage
+5: +{
+5: +public:
+5: +  explicit LogMsg(const std::string &);
+5: +
+5: +  LogLevel logLevel;
+5: +  long timestamp;
+5: +  std::string logMsg;
+5: +
+5: +private:
+5: +  LogLevel GetLogLevel(const std::string &);
+5: +};
+5: +
+5: +class Variables : public CriMessage
+5: +{
+5: +public:
+5: +  explicit Variables(const std::string &);
+5: +
+5: +  struct NumberVariable
+5: +  {
+5: +    std::string name;
+5: +    double value;
+5: +  };
+5: +
+5: +  struct PositionVariable
+5: +  {
+5: +    std::string name;
+5: +    std::array<double, 15> values;
+5: +  };
+5: +
+5: +  std::vector<NumberVariable> numberVariables;
+5: +  std::vector<PositionVariable> positionVariables;
+5: +
+5: +private:
+5: +  std::string GetMatchString(const std::smatch &);
+5: +};
+5: +
+5: +class CmdError : public CriMessage
+5: +{
+5: +public:
+5: +  explicit CmdError(const std::string &);
+5: +  int recjectedCmd;
+5: +  std::string error;
+5: +};
+5: +
+5: +class CmdAck : public CriMessage
+5: +{
+5: +public:
+5: +  explicit CmdAck(const std::string &);
+5: +  int acceptedCmd;
+5: +};
+5: +
+5: +class Cyclestat : public CriMessage
+5: +{
+5: +public:
+5: +  explicit Cyclestat(const std::string &);
+5: +  int cycletime;
+5: +  int workload;
+5: +};
+5: +
+5: +class Config : public CriMessage
+5: +{
+5: +public:
+5: +  ConfigType configType;
+5: +  static ConfigType GetConfigType(const std::string &);
+5: +
+5: +protected:
+5: +  explicit Config(const ConfigType & _configType)
+5: +  : CriMessage(MessageType::CONFIG), configType(_configType) {}
+5: +};
+5: +
+5: +class KinematicLimits : public Config
+5: +{
+5: +public:
+5: +  explicit KinematicLimits(const std::string &);
+5: @@ -263,6 +266,5 @@
+5: -            std::vector<std::pair<float, float>> minMaxPairs;
+5: -
+5: -            std::string ToString();
+5: -            void Print();
+5: -        };
+5: -    }
+5: +  std::vector<std::pair<float, float>> minMaxPairs;
+5: +
+5: +  std::string ToString();
+5: +  void Print();
+5: +};
+5: @@ -269,0 +272 @@
+5: +}
+5: 
+5: Code style divergence in file 'include/igus_rebel/Rebel.hpp':
+5: 
+5: --- include/igus_rebel/Rebel.hpp
+5: +++ include/igus_rebel/Rebel.hpp.uncrustify
+5: @@ -20,8 +20,8 @@
+5: -    class Rebel : public SystemInterface
+5: -    {
+5: -    public:
+5: -        enum class ControlMode
+5: -        {
+5: -            POSITION,
+5: -            VELOCITY
+5: -        };
+5: +class Rebel : public SystemInterface
+5: +{
+5: +public:
+5: +  enum class ControlMode
+5: +  {
+5: +    POSITION,
+5: +    VELOCITY
+5: +  };
+5: @@ -29,5 +29,5 @@
+5: -    private:
+5: -        rclcpp::Node::SharedPtr node_;
+5: -        
+5: -        std::shared_ptr<RebelSocket> rebelSocket;
+5: -        CriMessages::Status currentStatus;
+5: +private:
+5: +  rclcpp::Node::SharedPtr node_;
+5: +
+5: +  std::shared_ptr<RebelSocket> rebelSocket;
+5: +  CriMessages::Status currentStatus;
+5: @@ -36,2 +36,2 @@
+5: -        float j1, j2, j3, j4, j5, j6;
+5: -        ControlMode controlMode;
+5: +  float j1, j2, j3, j4, j5, j6;
+5: +  ControlMode controlMode;
+5: @@ -39,5 +39,5 @@
+5: -        bool continueAlive;
+5: -        bool continueMessage;
+5: -        std::thread aliveThread;
+5: -        std::thread messageThread;
+5: -        int aliveWaitMs;
+5: +  bool continueAlive;
+5: +  bool continueMessage;
+5: +  std::thread aliveThread;
+5: +  std::thread messageThread;
+5: +  int aliveWaitMs;
+5: @@ -45,3 +45,3 @@
+5: -        int current_ccnt;
+5: -        std::mutex cntLock;
+5: -        std::mutex aliveLock;
+5: +  int current_ccnt;
+5: +  std::mutex cntLock;
+5: +  std::mutex aliveLock;
+5: @@ -49,5 +49,5 @@
+5: -        double vel_cmd[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: -        double pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: -        double last_pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: -        double vel[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: -        double eff[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: +  double vel_cmd[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: +  double pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: +  double last_pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: +  double vel[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: +  double eff[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+5: @@ -55,3 +55,3 @@
+5: -        CriMessages::Kinstate lastKinstate;
+5: -        std::array<int, 16> lastErrorJoints;
+5: -        std::string kinstateMessage;
+5: +  CriMessages::Kinstate lastKinstate;
+5: +  std::array<int, 16> lastErrorJoints;
+5: +  std::string kinstateMessage;
+5: @@ -59 +59 @@
+5: -        std::unordered_map<int, std::string> unacknowledgedCommands;
+5: +  std::unordered_map<int, std::string> unacknowledgedCommands;
+5: @@ -62 +62 @@
+5: -        rclcpp::Service<igus_rebel_msgs::srv::SetDigitalOutput>::SharedPtr digital_output_srv_;
+5: +  rclcpp::Service<igus_rebel_msgs::srv::SetDigitalOutput>::SharedPtr digital_output_srv_;
+5: @@ -65,2 +65,2 @@
+5: -        void AliveThreadFunction();
+5: -        void MessageThreadFunction();
+5: +  void AliveThreadFunction();
+5: +  void MessageThreadFunction();
+5: @@ -69,4 +69,4 @@
+5: -        int Ccnt();
+5: -        void Command(const std::string &);
+5: -        void GetConfig(const std::string &);
+5: -        void SetControlMode(const ControlMode &);
+5: +  int Ccnt();
+5: +  void Command(const std::string &);
+5: +  void GetConfig(const std::string &);
+5: +  void SetControlMode(const ControlMode &);
+5: @@ -75,2 +75,2 @@
+5: -        void ProcessStatus(const CriMessages::Status &);
+5: -        void SetUpRosHardwareInterface();
+5: +  void ProcessStatus(const CriMessages::Status &);
+5: +  void SetUpRosHardwareInterface();
+5: @@ -78,3 +78,3 @@
+5: -    public:
+5: -        const std::vector<std::string> JOINT_NAME = {
+5: -            "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"};
+5: +public:
+5: +  const std::vector<std::string> JOINT_NAME = {
+5: +    "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"};
+5: @@ -83 +83 @@
+5: -        const double degToRad = 0.0174532925199432957692369076848861271344287188854172545609719144;
+5: +  const double degToRad = 0.0174532925199432957692369076848861271344287188854172545609719144;
+5: @@ -86,2 +86,2 @@
+5: -        const std::string ip = "192.168.3.11";
+5: -        const int port = 3920;
+5: +  const std::string ip = "192.168.3.11";
+5: +  const int port = 3920;
+5: @@ -89,2 +89,2 @@
+5: -        Rebel();
+5: -        ~Rebel();
+5: +  Rebel();
+5: +  ~Rebel();
+5: @@ -92,3 +92,5 @@
+5: -        void SetJog(const float &, const float &, const float &, const float &, const float &, const float &);
+5: -        void GetJoints(float &, float &, float &, float &, float &, float &);
+5: -        void SetDigitalOut(const int &, const bool &);
+5: +  void SetJog(
+5: +    const float &, const float &, const float &, const float &, const float &,
+5: +    const float &);
+5: +  void GetJoints(float &, float &, float &, float &, float &, float &);
+5: +  void SetDigitalOut(const int &, const bool &);
+5: @@ -97 +99 @@
+5: -        CallbackReturn on_init(const HardwareInfo &hardware_info) override;
+5: +  CallbackReturn on_init(const HardwareInfo & hardware_info) override;
+5: @@ -99,4 +101,4 @@
+5: -        std::vector<StateInterface> export_state_interfaces() override;
+5: -        std::vector<CommandInterface> export_command_interfaces() override;
+5: -        return_type read(const rclcpp::Time &time, const rclcpp::Duration &period) override;
+5: -        return_type write(const rclcpp::Time &time, const rclcpp::Duration &period) override;
+5: +  std::vector<StateInterface> export_state_interfaces() override;
+5: +  std::vector<CommandInterface> export_command_interfaces() override;
+5: +  return_type read(const rclcpp::Time & time, const rclcpp::Duration & period) override;
+5: +  return_type write(const rclcpp::Time & time, const rclcpp::Duration & period) override;
+5: @@ -104,2 +106,2 @@
+5: -        void read();
+5: -        void write();
+5: +  void read();
+5: +  void write();
+5: @@ -107,2 +109,3 @@
+5: -        void dio_callback(const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
+5: -                          std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response);
+5: +  void dio_callback(
+5: +    const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
+5: +    std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response);
+5: @@ -110 +113 @@
+5: -        void GetReferenceInfo();
+5: +  void GetReferenceInfo();
+5: @@ -112,3 +115,3 @@
+5: -        void Start();
+5: -        void Stop();
+5: -    };
+5: +  void Start();
+5: +  void Stop();
+5: +};
+5: @@ -117 +120 @@
+5: -#endif
+5: +#endif
+5: 
+5: Code style divergence in file 'include/igus_rebel/RebelSocket.hpp':
+5: 
+5: --- include/igus_rebel/RebelSocket.hpp
+5: +++ include/igus_rebel/RebelSocket.hpp.uncrustify
+5: @@ -14,8 +14,8 @@
+5: -    class RebelSocket
+5: -    {
+5: -    private:
+5: -        int sock;
+5: -        std::string ip;
+5: -        int port;
+5: -        int timeout;
+5: -        std::list<std::string> unprocessedMessages;
+5: +class RebelSocket
+5: +{
+5: +private:
+5: +  int sock;
+5: +  std::string ip;
+5: +  int port;
+5: +  int timeout;
+5: +  std::list<std::string> unprocessedMessages;
+5: @@ -23,8 +23,8 @@
+5: -        bool continueReceive = false;
+5: -        std::thread receiveThread;
+5: -        std::thread listCheckThread;
+5: -        std::mutex socketWriteLock;
+5: -        std::mutex connectionLock;
+5: -        std::mutex messageLock;
+5: -        unsigned long maxUnprocessedMessages = 25;
+5: -        int listCheckWaitMs = 500;
+5: +  bool continueReceive = false;
+5: +  std::thread receiveThread;
+5: +  std::thread listCheckThread;
+5: +  std::mutex socketWriteLock;
+5: +  std::mutex connectionLock;
+5: +  std::mutex messageLock;
+5: +  unsigned long maxUnprocessedMessages = 25;
+5: +  int listCheckWaitMs = 500;
+5: @@ -32,2 +32,2 @@
+5: -        bool connectionNeeded = false;
+5: -        static const int bufferSize = 4096;
+5: +  bool connectionNeeded = false;
+5: +  static const int bufferSize = 4096;
+5: @@ -35,2 +35,2 @@
+5: -        char fragmentBuffer[bufferSize];
+5: -        int fragmentLength = 0;
+5: +  char fragmentBuffer[bufferSize];
+5: +  int fragmentLength = 0;
+5: @@ -38,2 +38,2 @@
+5: -        void MakeConnection();
+5: -        void SeparateMessages(const char *);
+5: +  void MakeConnection();
+5: +  void SeparateMessages(const char *);
+5: @@ -41,2 +41,2 @@
+5: -        void ReceiveThreadFunction();
+5: -        void ListCheckThreadFunction();
+5: +  void ReceiveThreadFunction();
+5: +  void ListCheckThreadFunction();
+5: @@ -44 +44 @@
+5: -        bool IsSocketOk();
+5: +  bool IsSocketOk();
+5: @@ -46,3 +46,3 @@
+5: -    public:
+5: -        RebelSocket(const std::string &, const int &, const int &);
+5: -        ~RebelSocket();
+5: +public:
+5: +  RebelSocket(const std::string &, const int &, const int &);
+5: +  ~RebelSocket();
+5: @@ -50,6 +50,6 @@
+5: -        void Start();
+5: -        void Stop();
+5: -        bool HasMessage();
+5: -        std::string GetMessage();
+5: -        void SendMessage(const std::string &);
+5: -    };
+5: +  void Start();
+5: +  void Stop();
+5: +  bool HasMessage();
+5: +  std::string GetMessage();
+5: +  void SendMessage(const std::string &);
+5: +};
+5: 
+5: Code style divergence in file 'src/CriMessages.cpp':
+5: 
+5: --- src/CriMessages.cpp
+5: +++ src/CriMessages.cpp.uncrustify
+5: @@ -10,5 +10,5 @@
+5: -    namespace CriMessages
+5: -    {
+5: -        MessageType CriMessage::GetMessageType(const std::string &msg)
+5: -        {
+5: -            std::string::size_type typeStart;
+5: +namespace CriMessages
+5: +{
+5: +MessageType CriMessage::GetMessageType(const std::string & msg)
+5: +{
+5: +  std::string::size_type typeStart;
+5: @@ -16,247 +16,224 @@
+5: -            if (msg.at(0) == ' ')
+5: -            {
+5: -                typeStart = msg.find(" ", 1) + 1;
+5: -            }
+5: -            else
+5: -            {
+5: -                typeStart = msg.find(" ") + 1;
+5: -            }
+5: -            std::string::size_type typeEnd = msg.find(" ", typeStart);
+5: -
+5: -            std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
+5: -
+5: -            if (typeString == CriKeywords::TYPE_STATUS)
+5: -            {
+5: -                return MessageType::STATUS;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_OPINFO)
+5: -            {
+5: -                return MessageType::OPINFO;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_GSIG)
+5: -            {
+5: -                return MessageType::GSIG;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_GRIPPERSTATE)
+5: -            {
+5: -                return MessageType::GRIPPERSTATE;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_RUNSTATE)
+5: -            {
+5: -                return MessageType::RUNSTATE;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_MESSAGE)
+5: -            {
+5: -                return MessageType::MESSAGE;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_CMD)
+5: -            {
+5: -                return MessageType::CMD;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_CONFIG)
+5: -            {
+5: -                return MessageType::CONFIG;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_INFO)
+5: -            {
+5: -                return MessageType::INFO;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_LOGMSG)
+5: -            {
+5: -                return MessageType::LOGMSG;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_VARIABLES)
+5: -            {
+5: -                return MessageType::VARIABLES;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_CMDERROR)
+5: -            {
+5: -                return MessageType::CMDERROR;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_CMDACK)
+5: -            {
+5: -                return MessageType::CMDACK;
+5: -            }
+5: -
+5: -            if (typeString == CriKeywords::TYPE_CYCLESTAT)
+5: -            {
+5: -                return MessageType::CYCLESTAT;
+5: -            }
+5: -
+5: -            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown message type: \"%s\"", typeString.c_str());
+5: -            return MessageType::UNKNOWN;
+5: -        }
+5: -
+5: -        std::string CriMessage::ParseMessageString(const std::string &statusString, const std::string::size_type &begin,
+5: -                                                   const std::string::size_type &end, const std::string::size_type &keywordLength)
+5: -        {
+5: -            int start = begin + keywordLength + 1;
+5: -            int length = end - start - 1;
+5: -
+5: -            return statusString.substr(start, length);
+5: -        }
+5: -
+5: -        template <class T, std::size_t N>
+5: -        void CriMessage::FillArray(std::array<T, N> &array, const std::string &spaceSeparatedValues)
+5: -        {
+5: -            typename std::array<T, N>::size_type idx = 0;
+5: -            std::string::size_type begin = 0;
+5: -            std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
+5: -
+5: -            while (end != std::string::npos)
+5: -            {
+5: -                if (idx >= N)
+5: -                {
+5: -                    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Parsing error");
+5: -                    return;
+5: -                }
+5: -
+5: -                std::string value = spaceSeparatedValues.substr(begin, end - begin);
+5: -
+5: -                if (std::is_same<float, T>::value)
+5: -                {
+5: -                    array.at(idx) = std::stof(value);
+5: -                }
+5: -
+5: -                if (std::is_same<int, T>::value)
+5: -                {
+5: -                    array.at(idx) = std::stoi(value);
+5: -                }
+5: -
+5: -                begin = spaceSeparatedValues.find(" ", end);
+5: -                end = spaceSeparatedValues.find(" ", begin + 1);
+5: -                idx++;
+5: -            }
+5: -
+5: -            std::string value = spaceSeparatedValues.substr(begin);
+5: -
+5: -            if (std::is_same<float, T>::value)
+5: -            {
+5: -                array.at(idx) = std::stof(value);
+5: -            }
+5: -
+5: -            if (std::is_same<int, T>::value)
+5: -            {
+5: -                array.at(idx) = std::stoi(value);
+5: -            }
+5: -        }
+5: -
+5: -        template <class T>
+5: -        void CriMessage::FillVector(std::vector<T> &vector, const std::string &spaceSeparatedValues)
+5: -        {
+5: -            std::string::size_type begin = 0;
+5: -            std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
+5: -
+5: -            while (end != std::string::npos)
+5: -            {
+5: -                std::string value = spaceSeparatedValues.substr(begin, end - begin);
+5: -
+5: -                if (std::is_same<float, T>::value)
+5: -                {
+5: -                    vector.push_back(std::stof(value));
+5: -                }
+5: -
+5: -                if (std::is_same<int, T>::value)
+5: -                {
+5: -                    vector.push_back(std::stoi(value));
+5: -                }
+5: -
+5: -                begin = spaceSeparatedValues.find(" ", end);
+5: -                end = spaceSeparatedValues.find(" ", begin + 1);
+5: -            }
+5: -
+5: -            std::string value = spaceSeparatedValues.substr(begin);
+5: -
+5: -            if (std::is_same<float, T>::value)
+5: -            {
+5: -                vector.push_back(std::stof(value));
+5: -            }
+5: -
+5: -            if (std::is_same<int, T>::value)
+5: -            {
+5: -                vector.push_back(std::stoi(value));
+5: -            }
+5: -        }
+5: -
+5: -        template <class T, std::size_t N>
+5: -        std::string CriMessage::ArrayToString(std::array<T, N> &array)
+5: -        {
+5: -            std::ostringstream msg;
+5: -            msg << std::showpoint;
+5: -            msg << std::fixed;
+5: -            msg << std::setprecision(FLOAT_PRINT_PRECISION);
+5: -
+5: -            for (T val : array)
+5: -            {
+5: -                msg << val << " ";
+5: -            }
+5: -
+5: -            return msg.str();
+5: -        }
+5: -
+5: -        template <class T>
+5: -        std::string CriMessage::VectorToString(std::vector<T> &vector)
+5: -        {
+5: -            std::ostringstream msg;
+5: -            msg << std::showpoint;
+5: -            msg << std::fixed;
+5: -            msg << std::setprecision(FLOAT_PRINT_PRECISION);
+5: -
+5: -            for (T val : vector)
+5: -            {
+5: -                msg << val << " ";
+5: -            }
+5: -
+5: -            return msg.str();
+5: -        }
+5: -
+5: -        Status::Status(const std::string &messageString) : CriMessage(MessageType::STATUS)
+5: -        {
+5: -            std::string::size_type modeStart = messageString.find(CriKeywords::STATUS_MODE);
+5: -            std::string::size_type posJointSetPointStart = messageString.find(CriKeywords::STATUS_POSJOINTSETPOINT);
+5: -            std::string::size_type posJointCurrentStart = messageString.find(CriKeywords::STATUS_POSJOINTCURRENT);
+5: -            std::string::size_type posCartRobotStart = messageString.find(CriKeywords::STATUS_POSCARTROBOT);
+5: -            std::string::size_type posCartPlattformStart = messageString.find(CriKeywords::STATUS_POSCARTPLATTFORM);
+5: -            std::string::size_type overrideValueStart = messageString.find(CriKeywords::STATUS_OVERRIDE);
+5: -            std::string::size_type dinStart = messageString.find(CriKeywords::STATUS_DIN);
+5: -            std::string::size_type doutStart = messageString.find(CriKeywords::STATUS_DOUT);
+5: -            std::string::size_type eStopStart = messageString.find(CriKeywords::STATUS_ESTOP);
+5: -            std::string::size_type supplyStart = messageString.find(CriKeywords::STATUS_SUPPLY);
+5: -            std::string::size_type currentallStart = messageString.find(CriKeywords::STATUS_CURRENTALL);
+5: -            std::string::size_type currentjointsStart = messageString.find(CriKeywords::STATUS_CURRENTJOINTS);
+5: -            std::string::size_type errorStart = messageString.find(CriKeywords::STATUS_ERROR);
+5: -            std::string::size_type kinstateStart = messageString.find(CriKeywords::STATUS_KINSTATE);
+5: -
+5: -            if (
+5: -                !(
+5: -                    (modeStart < posJointSetPointStart) &&
+5: -                    (posJointSetPointStart < posJointCurrentStart) &&
+5: -                    (posJointCurrentStart < posCartRobotStart) &&
+5: -                    (posCartRobotStart < posCartPlattformStart) &&
+5: -                    (posCartPlattformStart < overrideValueStart) &&
+5: -                    (overrideValueStart < dinStart) &&
+5: -                    (dinStart < doutStart) &&
+5: -                    (doutStart < eStopStart) &&
+5: -                    (eStopStart < supplyStart) &&
+5: -                    (supplyStart < currentallStart) &&
+5: -                    (currentallStart < currentjointsStart) &&
+5: -                    (currentjointsStart < errorStart) &&
+5: -                    (errorStart < kinstateStart)))
+5: -            {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Bad parsing error for message \"%s\"", messageString.c_str());
+5: -                return;
+5: -            }
+5: -
+5: -            std::string modeString = ParseMessageString(messageString, modeStart, posJointSetPointStart,
+5: +  if (msg.at(0) == ' ') {
+5: +    typeStart = msg.find(" ", 1) + 1;
+5: +  } else {
+5: +    typeStart = msg.find(" ") + 1;
+5: +  }
+5: +  std::string::size_type typeEnd = msg.find(" ", typeStart);
+5: +
+5: +  std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
+5: +
+5: +  if (typeString == CriKeywords::TYPE_STATUS) {
+5: +    return MessageType::STATUS;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_OPINFO) {
+5: +    return MessageType::OPINFO;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_GSIG) {
+5: +    return MessageType::GSIG;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_GRIPPERSTATE) {
+5: +    return MessageType::GRIPPERSTATE;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_RUNSTATE) {
+5: +    return MessageType::RUNSTATE;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_MESSAGE) {
+5: +    return MessageType::MESSAGE;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_CMD) {
+5: +    return MessageType::CMD;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_CONFIG) {
+5: +    return MessageType::CONFIG;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_INFO) {
+5: +    return MessageType::INFO;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_LOGMSG) {
+5: +    return MessageType::LOGMSG;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_VARIABLES) {
+5: +    return MessageType::VARIABLES;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_CMDERROR) {
+5: +    return MessageType::CMDERROR;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_CMDACK) {
+5: +    return MessageType::CMDACK;
+5: +  }
+5: +
+5: +  if (typeString == CriKeywords::TYPE_CYCLESTAT) {
+5: +    return MessageType::CYCLESTAT;
+5: +  }
+5: +
+5: +  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown message type: \"%s\"",
+5: +        typeString.c_str());
+5: +  return MessageType::UNKNOWN;
+5: +}
+5: +
+5: +std::string CriMessage::ParseMessageString(
+5: +  const std::string & statusString, const std::string::size_type & begin,
+5: +  const std::string::size_type & end, const std::string::size_type & keywordLength)
+5: +{
+5: +  int start = begin + keywordLength + 1;
+5: +  int length = end - start - 1;
+5: +
+5: +  return statusString.substr(start, length);
+5: +}
+5: +
+5: +template<class T, std::size_t N>
+5: +void CriMessage::FillArray(std::array<T, N> & array, const std::string & spaceSeparatedValues)
+5: +{
+5: +  typename std::array<T, N>::size_type idx = 0;
+5: +  std::string::size_type begin = 0;
+5: +  std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
+5: +
+5: +  while (end != std::string::npos) {
+5: +    if (idx >= N) {
+5: +      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Parsing error");
+5: +      return;
+5: +    }
+5: +
+5: +    std::string value = spaceSeparatedValues.substr(begin, end - begin);
+5: +
+5: +    if (std::is_same<float, T>::value) {
+5: +      array.at(idx) = std::stof(value);
+5: +    }
+5: +
+5: +    if (std::is_same<int, T>::value) {
+5: +      array.at(idx) = std::stoi(value);
+5: +    }
+5: +
+5: +    begin = spaceSeparatedValues.find(" ", end);
+5: +    end = spaceSeparatedValues.find(" ", begin + 1);
+5: +    idx++;
+5: +  }
+5: +
+5: +  std::string value = spaceSeparatedValues.substr(begin);
+5: +
+5: +  if (std::is_same<float, T>::value) {
+5: +    array.at(idx) = std::stof(value);
+5: +  }
+5: +
+5: +  if (std::is_same<int, T>::value) {
+5: +    array.at(idx) = std::stoi(value);
+5: +  }
+5: +}
+5: +
+5: +template<class T>
+5: +void CriMessage::FillVector(std::vector<T> & vector, const std::string & spaceSeparatedValues)
+5: +{
+5: +  std::string::size_type begin = 0;
+5: +  std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
+5: +
+5: +  while (end != std::string::npos) {
+5: +    std::string value = spaceSeparatedValues.substr(begin, end - begin);
+5: +
+5: +    if (std::is_same<float, T>::value) {
+5: +      vector.push_back(std::stof(value));
+5: +    }
+5: +
+5: +    if (std::is_same<int, T>::value) {
+5: +      vector.push_back(std::stoi(value));
+5: +    }
+5: +
+5: +    begin = spaceSeparatedValues.find(" ", end);
+5: +    end = spaceSeparatedValues.find(" ", begin + 1);
+5: +  }
+5: +
+5: +  std::string value = spaceSeparatedValues.substr(begin);
+5: +
+5: +  if (std::is_same<float, T>::value) {
+5: +    vector.push_back(std::stof(value));
+5: +  }
+5: +
+5: +  if (std::is_same<int, T>::value) {
+5: +    vector.push_back(std::stoi(value));
+5: +  }
+5: +}
+5: +
+5: +template<class T, std::size_t N>
+5: +std::string CriMessage::ArrayToString(std::array<T, N> & array)
+5: +{
+5: +  std::ostringstream msg;
+5: +  msg << std::showpoint;
+5: +  msg << std::fixed;
+5: +  msg << std::setprecision(FLOAT_PRINT_PRECISION);
+5: +
+5: +  for (T val : array) {
+5: +    msg << val << " ";
+5: +  }
+5: +
+5: +  return msg.str();
+5: +}
+5: +
+5: +template<class T>
+5: +std::string CriMessage::VectorToString(std::vector<T> & vector)
+5: +{
+5: +  std::ostringstream msg;
+5: +  msg << std::showpoint;
+5: +  msg << std::fixed;
+5: +  msg << std::setprecision(FLOAT_PRINT_PRECISION);
+5: +
+5: +  for (T val : vector) {
+5: +    msg << val << " ";
+5: +  }
+5: +
+5: +  return msg.str();
+5: +}
+5: +
+5: +Status::Status(const std::string & messageString)
+5: +: CriMessage(MessageType::STATUS)
+5: +{
+5: +  std::string::size_type modeStart = messageString.find(CriKeywords::STATUS_MODE);
+5: +  std::string::size_type posJointSetPointStart =
+5: +    messageString.find(CriKeywords::STATUS_POSJOINTSETPOINT);
+5: +  std::string::size_type posJointCurrentStart =
+5: +    messageString.find(CriKeywords::STATUS_POSJOINTCURRENT);
+5: +  std::string::size_type posCartRobotStart = messageString.find(CriKeywords::STATUS_POSCARTROBOT);
+5: +  std::string::size_type posCartPlattformStart =
+5: +    messageString.find(CriKeywords::STATUS_POSCARTPLATTFORM);
+5: +  std::string::size_type overrideValueStart = messageString.find(CriKeywords::STATUS_OVERRIDE);
+5: +  std::string::size_type dinStart = messageString.find(CriKeywords::STATUS_DIN);
+5: +  std::string::size_type doutStart = messageString.find(CriKeywords::STATUS_DOUT);
+5: +  std::string::size_type eStopStart = messageString.find(CriKeywords::STATUS_ESTOP);
+5: +  std::string::size_type supplyStart = messageString.find(CriKeywords::STATUS_SUPPLY);
+5: +  std::string::size_type currentallStart = messageString.find(CriKeywords::STATUS_CURRENTALL);
+5: +  std::string::size_type currentjointsStart = messageString.find(CriKeywords::STATUS_CURRENTJOINTS);
+5: +  std::string::size_type errorStart = messageString.find(CriKeywords::STATUS_ERROR);
+5: +  std::string::size_type kinstateStart = messageString.find(CriKeywords::STATUS_KINSTATE);
+5: +
+5: +  if (
+5: +    !(
+5: +      (modeStart < posJointSetPointStart) &&
+5: +      (posJointSetPointStart < posJointCurrentStart) &&
+5: +      (posJointCurrentStart < posCartRobotStart) &&
+5: +      (posCartRobotStart < posCartPlattformStart) &&
+5: +      (posCartPlattformStart < overrideValueStart) &&
+5: +      (overrideValueStart < dinStart) &&
+5: +      (dinStart < doutStart) &&
+5: +      (doutStart < eStopStart) &&
+5: +      (eStopStart < supplyStart) &&
+5: +      (supplyStart < currentallStart) &&
+5: +      (currentallStart < currentjointsStart) &&
+5: +      (currentjointsStart < errorStart) &&
+5: +      (errorStart < kinstateStart)))
+5: +  {
+5: +    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Bad parsing error for message \"%s\"",
+5: +          messageString.c_str());
+5: +    return;
+5: +  }
+5: +
+5: +  std::string modeString = ParseMessageString(messageString, modeStart, posJointSetPointStart,
+5: @@ -264,11 +241,16 @@
+5: -            std::string posJointSetPointString = ParseMessageString(messageString, posJointSetPointStart,
+5: -                                                                    posJointCurrentStart, CriKeywords::STATUS_POSJOINTSETPOINT.size());
+5: -            std::string posJointCurrentString = ParseMessageString(messageString, posJointCurrentStart,
+5: -                                                                   posCartRobotStart, CriKeywords::STATUS_POSJOINTCURRENT.size());
+5: -            std::string posCartRobotString = ParseMessageString(messageString, posCartRobotStart,
+5: -                                                                posCartPlattformStart, CriKeywords::STATUS_POSCARTROBOT.size());
+5: -            std::string posCartPlattformString = ParseMessageString(messageString, posCartPlattformStart,
+5: -                                                                    overrideValueStart, CriKeywords::STATUS_POSCARTPLATTFORM.size());
+5: -            std::string overrideValueString = ParseMessageString(messageString, overrideValueStart,
+5: -                                                                 dinStart, CriKeywords::STATUS_OVERRIDE.size());
+5: -            std::string dinString = ParseMessageString(messageString, dinStart, doutStart,
+5: +  std::string posJointSetPointString = ParseMessageString(messageString, posJointSetPointStart,
+5: +                                                                    posJointCurrentStart,
+5: +        CriKeywords::STATUS_POSJOINTSETPOINT.size());
+5: +  std::string posJointCurrentString = ParseMessageString(messageString, posJointCurrentStart,
+5: +                                                                   posCartRobotStart,
+5: +        CriKeywords::STATUS_POSJOINTCURRENT.size());
+5: +  std::string posCartRobotString = ParseMessageString(messageString, posCartRobotStart,
+5: +                                                                posCartPlattformStart,
+5: +        CriKeywords::STATUS_POSCARTROBOT.size());
+5: +  std::string posCartPlattformString = ParseMessageString(messageString, posCartPlattformStart,
+5: +                                                                    overrideValueStart,
+5: +        CriKeywords::STATUS_POSCARTPLATTFORM.size());
+5: +  std::string overrideValueString = ParseMessageString(messageString, overrideValueStart,
+5: +                                                                 dinStart,
+5: +        CriKeywords::STATUS_OVERRIDE.size());
+5: +  std::string dinString = ParseMessageString(messageString, dinStart, doutStart,
+5: @@ -276 +258 @@
+5: -            std::string doutString = ParseMessageString(messageString, doutStart, eStopStart,
+5: +  std::string doutString = ParseMessageString(messageString, doutStart, eStopStart,
+5: @@ -278 +260 @@
+5: -            std::string eStopString = ParseMessageString(messageString, eStopStart, supplyStart,
+5: +  std::string eStopString = ParseMessageString(messageString, eStopStart, supplyStart,
+5: @@ -280 +262 @@
+5: -            std::string supplyString = ParseMessageString(messageString, supplyStart, currentallStart,
+5: +  std::string supplyString = ParseMessageString(messageString, supplyStart, currentallStart,
+5: @@ -282 +264,2 @@
+5: -            std::string currentallString = ParseMessageString(messageString, currentallStart, currentjointsStart,
+5: +  std::string currentallString = ParseMessageString(messageString, currentallStart,
+5: +        currentjointsStart,
+5: @@ -284,3 +267,5 @@
+5: -            std::string currentjointsString = ParseMessageString(messageString, currentjointsStart, errorStart,
+5: -                                                                 CriKeywords::STATUS_CURRENTJOINTS.size());
+5: -            std::string errorString = ParseMessageString(messageString, errorStart, kinstateStart,
+5: +  std::string currentjointsString = ParseMessageString(messageString, currentjointsStart,
+5: +        errorStart,
+5: +                                                                 CriKeywords::STATUS_CURRENTJOINTS.
+5: +      size());
+5: +  std::string errorString = ParseMessageString(messageString, errorStart, kinstateStart,
+5: @@ -288 +273,2 @@
+5: -            std::string kinstateString = ParseMessageString(messageString, kinstateStart, messageString.size() + 1,
+5: +  std::string kinstateString = ParseMessageString(messageString, kinstateStart,
+5: +        messageString.size() + 1,
+5: @@ -291,20 +277,20 @@
+5: -            std::string::size_type errorSummaryEnd = errorString.find(" ");
+5: -            errorSummary = errorString.substr(0, errorSummaryEnd);
+5: -            std::string errorJointsString = errorString.substr(errorSummaryEnd + 1);
+5: -
+5: -            mode = GetMode(modeString);
+5: -            FillArray(posJointSetPoint, posJointSetPointString);
+5: -            FillArray(posJointCurrent, posJointCurrentString);
+5: -            FillArray(posCartRobot, posCartRobotString);
+5: -            FillArray(posCartPlattform, posCartPlattformString);
+5: -            try {
+5: -                overrideValue = std::stof(overrideValueString);
+5: -                din = std::stoi(dinString);     // TODO: Process further to actual meaning
+5: -                dout = std::stoi(doutString);   // TODO: Process further to actual meaning
+5: -                eStop = std::stoi(eStopString); // TODO: Process further to actual meaning
+5: -                supply = std::stoi(supplyString);
+5: -                currentall = std::stoi(currentallString);
+5: -            } catch (const std::invalid_argument &e) {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing status message: %s", e.what());
+5: -            }
+5: -            FillArray(currentjoints, currentjointsString);
+5: +  std::string::size_type errorSummaryEnd = errorString.find(" ");
+5: +  errorSummary = errorString.substr(0, errorSummaryEnd);
+5: +  std::string errorJointsString = errorString.substr(errorSummaryEnd + 1);
+5: +
+5: +  mode = GetMode(modeString);
+5: +  FillArray(posJointSetPoint, posJointSetPointString);
+5: +  FillArray(posJointCurrent, posJointCurrentString);
+5: +  FillArray(posCartRobot, posCartRobotString);
+5: +  FillArray(posCartPlattform, posCartPlattformString);
+5: +  try {
+5: +    overrideValue = std::stof(overrideValueString);
+5: +    din = std::stoi(dinString);                 // TODO: Process further to actual meaning
+5: +    dout = std::stoi(doutString);               // TODO: Process further to actual meaning
+5: +    eStop = std::stoi(eStopString);             // TODO: Process further to actual meaning
+5: +    supply = std::stoi(supplyString);
+5: +    currentall = std::stoi(currentallString);
+5: +  } catch (const std::invalid_argument & e) {
+5: +    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing status message: %s", e.what());
+5: +  }
+5: +  FillArray(currentjoints, currentjointsString);
+5: @@ -312,59 +298,60 @@
+5: -            FillArray(errorJoints, errorJointsString); // TODO: Process further to actual meaning
+5: -            kinstate = GetKinstate(kinstateString);
+5: -        }
+5: -
+5: -        Status::Status() : CriMessage(MessageType::STATUS)
+5: -        {
+5: -            mode = Mode::UNKNOWN;
+5: -            posJointSetPoint.fill(0.0f);
+5: -            posJointCurrent.fill(0.0f);
+5: -            posCartRobot.fill(0.0f);
+5: -            posCartPlattform.fill(0.0f);
+5: -            overrideValue = 0.0f;
+5: -            din = 0;
+5: -            dout = 0;
+5: -            eStop = 0;
+5: -            supply = 0;
+5: -            currentall = 0;
+5: -            currentjoints.fill(0);
+5: -            errorSummary = "NotInitialized";
+5: -            errorJoints.fill(0);
+5: -            kinstate = Kinstate::UNKNOWN;
+5: -        }
+5: -
+5: -        std::string Status::ModeToString(const Mode &mode)
+5: -        {
+5: -            switch (mode)
+5: -            {
+5: -            case Mode::JOINT:
+5: -                return "Joint";
+5: -            case Mode::CARTBASE:
+5: -                return "Cartesian (base)";
+5: -            case Mode::CARTTOOL:
+5: -                return "Cartesian (tool)";
+5: -            case Mode::PLATFORM:
+5: -                return "Platform";
+5: -            case Mode::FSM:
+5: -                return "FSM";
+5: -            case Mode::UNKNOWN:
+5: -                return "Unknown";
+5: -            }
+5: -
+5: -            return std::string();
+5: -        }
+5: -
+5: -        void Status::Print()
+5: -        {
+5: -            std::cout << ToString();
+5: -        }
+5: -
+5: -        void Status::Log()
+5: -        {
+5: -            rclcpp::Clock::SharedPtr clock_ = std::make_shared<rclcpp::Clock>(RCL_SYSTEM_TIME);
+5: -            RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *clock_, 60, "Rebel status:\n%s", ToString().c_str());
+5: -        }
+5: -
+5: -        std::string Status::ToString()
+5: -        {
+5: -            std::ostringstream msg;
+5: -            msg << std::showpoint
+5: +  FillArray(errorJoints, errorJointsString);           // TODO: Process further to actual meaning
+5: +  kinstate = GetKinstate(kinstateString);
+5: +}
+5: +
+5: +Status::Status()
+5: +: CriMessage(MessageType::STATUS)
+5: +{
+5: +  mode = Mode::UNKNOWN;
+5: +  posJointSetPoint.fill(0.0f);
+5: +  posJointCurrent.fill(0.0f);
+5: +  posCartRobot.fill(0.0f);
+5: +  posCartPlattform.fill(0.0f);
+5: +  overrideValue = 0.0f;
+5: +  din = 0;
+5: +  dout = 0;
+5: +  eStop = 0;
+5: +  supply = 0;
+5: +  currentall = 0;
+5: +  currentjoints.fill(0);
+5: +  errorSummary = "NotInitialized";
+5: +  errorJoints.fill(0);
+5: +  kinstate = Kinstate::UNKNOWN;
+5: +}
+5: +
+5: +std::string Status::ModeToString(const Mode & mode)
+5: +{
+5: +  switch (mode) {
+5: +    case Mode::JOINT:
+5: +      return "Joint";
+5: +    case Mode::CARTBASE:
+5: +      return "Cartesian (base)";
+5: +    case Mode::CARTTOOL:
+5: +      return "Cartesian (tool)";
+5: +    case Mode::PLATFORM:
+5: +      return "Platform";
+5: +    case Mode::FSM:
+5: +      return "FSM";
+5: +    case Mode::UNKNOWN:
+5: +      return "Unknown";
+5: +  }
+5: +
+5: +  return std::string();
+5: +}
+5: +
+5: +void Status::Print()
+5: +{
+5: +  std::cout << ToString();
+5: +}
+5: +
+5: +void Status::Log()
+5: +{
+5: +  rclcpp::Clock::SharedPtr clock_ = std::make_shared<rclcpp::Clock>(RCL_SYSTEM_TIME);
+5: +  RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *clock_, 60, "Rebel status:\n%s",
+5: +        ToString().c_str());
+5: +}
+5: +
+5: +std::string Status::ToString()
+5: +{
+5: +  std::ostringstream msg;
+5: +  msg           << std::showpoint
+5: @@ -390,303 +377,175 @@
+5: -            return msg.str();
+5: -        }
+5: -
+5: -        Mode Status::GetMode(const std::string &modeString)
+5: -        {
+5: -            if (modeString == CriKeywords::MODE_JOINT)
+5: -            {
+5: -                return Mode::JOINT;
+5: -            }
+5: -
+5: -            if (modeString == CriKeywords::MODE_CARTBASE)
+5: -            {
+5: -                return Mode::CARTBASE;
+5: -            }
+5: -
+5: -            if (modeString == CriKeywords::MODE_CARTTOOL)
+5: -            {
+5: -                return Mode::CARTTOOL;
+5: -            }
+5: -
+5: -            if (modeString == CriKeywords::MODE_PLATFORM)
+5: -            {
+5: -                return Mode::PLATFORM;
+5: -            }
+5: -
+5: -            if (modeString == CriKeywords::MODE_FSM)
+5: -            {
+5: -                return Mode::FSM;
+5: -            }
+5: -
+5: -            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown robot mode during parsing: %s", modeString.c_str());
+5: -            return Mode::UNKNOWN;
+5: -        }
+5: -
+5: -        Kinstate Status::GetKinstate(const std::string &kinstateString)
+5: -        {
+5: -            int kinstateInt = std::stoi(kinstateString);
+5: -
+5: -            switch (kinstateInt)
+5: -            {
+5: -            case (int)Kinstate::NO_ERROR:
+5: -                return Kinstate::NO_ERROR;
+5: -
+5: -            case (int)Kinstate::JOINT_LIMIT_MIN:
+5: -                return Kinstate::JOINT_LIMIT_MIN;
+5: -
+5: -            case (int)Kinstate::JOINT_LIMIT_MAX:
+5: -                return Kinstate::JOINT_LIMIT_MAX;
+5: -
+5: -            case (int)Kinstate::CARTESIAN_SINGULARITY_CENTER:
+5: -                return Kinstate::CARTESIAN_SINGULARITY_CENTER;
+5: -
+5: -            case (int)Kinstate::CARTESIAN_SINGULARITY_REACH:
+5: -                return Kinstate::CARTESIAN_SINGULARITY_REACH;
+5: -
+5: -            case (int)Kinstate::CARTESIAN_SINGULARITY_WRIST:
+5: -                return Kinstate::CARTESIAN_SINGULARITY_WRIST;
+5: -
+5: -            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
+5: -                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1;
+5: -
+5: -            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
+5: -                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2;
+5: -
+5: -            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
+5: -                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3;
+5: -
+5: -            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
+5: -                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4;
+5: -
+5: -            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
+5: -                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5;
+5: -
+5: -            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
+5: -                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6;
+5: -
+5: -            case (int)Kinstate::MOTION_NOT_ALLOWED:
+5: -                return Kinstate::MOTION_NOT_ALLOWED;
+5: -
+5: -            default:
+5: -                return Kinstate::UNKNOWN;
+5: -            }
+5: -        }
+5: -
+5: -        Message::Message(const std::string &messageString) : CriMessage(MessageType::MESSAGE)
+5: -        {
+5: -            std::string::size_type messageStart =
+5: -                messageString.find(CriKeywords::TYPE_MESSAGE) + CriKeywords::TYPE_MESSAGE.size() + 1;
+5: -            message = messageString.substr(messageStart);
+5: -        }
+5: -
+5: -        Command::Command(const std::string &messageString) : CriMessage(MessageType::CMD)
+5: -        {
+5: -            std::string::size_type commandStart =
+5: -                messageString.find(CriKeywords::TYPE_CMD) + CriKeywords::TYPE_CMD.size() + 1;
+5: -            command = messageString.substr(commandStart);
+5: -        }
+5: -
+5: -        Info::Info(const std::string &messageString) : CriMessage(MessageType::INFO)
+5: -        {
+5: -            std::string::size_type infoStart =
+5: -                messageString.find(CriKeywords::TYPE_INFO) + CriKeywords::TYPE_INFO.size() + 1;
+5: -            info = messageString.substr(infoStart);
+5: -        }
+5: -
+5: -        LogMsg::LogMsg(const std::string &messageString) : CriMessage(MessageType::LOGMSG)
+5: -        {
+5: -            std::string::size_type logLvlStart = messageString.find(CriKeywords::TYPE_LOGMSG) + CriKeywords::TYPE_LOGMSG.size() + 1;
+5: -            std::string::size_type timestampStart = messageString.find(" ", logLvlStart) + 1;
+5: -            std::string::size_type msgStart = messageString.find(" ", timestampStart) + 1;
+5: -
+5: -            logLevel = GetLogLevel(messageString.substr(logLvlStart, (timestampStart - logLvlStart - 1)));
+5: -            timestamp = std::stol(messageString.substr(timestampStart, (msgStart - timestampStart - 1)));
+5: -            logMsg = messageString.substr(msgStart);
+5: -        }
+5: -
+5: -        LogLevel LogMsg::GetLogLevel(const std::string &logLvlString)
+5: -        {
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_DEBUG)
+5: -            {
+5: -                return LogLevel::DEBUG;
+5: -            }
+5: -
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_APP_INFO)
+5: -            {
+5: -                return LogLevel::APP_INFO;
+5: -            }
+5: -
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_APP_ERROR)
+5: -            {
+5: -                return LogLevel::APP_ERROR;
+5: -            }
+5: -
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_INFO)
+5: -            {
+5: -                return LogLevel::INFO;
+5: -            }
+5: -
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_WARN)
+5: -            {
+5: -                return LogLevel::WARN;
+5: -            }
+5: -
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_ERROR)
+5: -            {
+5: -                return LogLevel::ERROR;
+5: -            }
+5: -
+5: -            if (logLvlString == CriKeywords::LOG_LEVEL_FATAL)
+5: -            {
+5: -                return LogLevel::FATAL;
+5: -            }
+5: -
+5: -            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown log level during parsing: %s", logLvlString.c_str());
+5: -            return LogLevel::UNKNOWN;
+5: -        }
+5: -
+5: -        Variables::Variables(const std::string &messageString) : CriMessage(MessageType::VARIABLES),
+5: -                                                                 numberVariables(),
+5: -                                                                 positionVariables()
+5: -        {
+5: -            std::regex variables_regex("\\S+");
+5: -            auto variables_begin = std::sregex_iterator(messageString.begin(), messageString.end(), variables_regex);
+5: -            auto variables_end = std::sregex_iterator();
+5: -
+5: -            std::sregex_iterator it = variables_begin;
+5: -            while (it != variables_end)
+5: -            {
+5: -                std::string matchStr = GetMatchString((*it));
+5: -
+5: -                if (matchStr.compare(CriKeywords::VARIABLES_NR_VARIABLE) == 0)
+5: -                {
+5: -                    NumberVariable nv;
+5: -
+5: -                    it++;
+5: -                    nv.name = GetMatchString(*it);
+5: -
+5: -                    it++;
+5: -                    nv.value = std::stod(GetMatchString(*it));
+5: -
+5: -                    numberVariables.push_back(nv);
+5: -                }
+5: -
+5: -                if (matchStr.compare(CriKeywords::VARIABLES_POS_VARIABLE) == 0)
+5: -                {
+5: -                    PositionVariable pv;
+5: -
+5: -                    it++;
+5: -                    pv.name = GetMatchString(*it);
+5: -
+5: -                    for (auto i = 0; i < 15; i++)
+5: -                    {
+5: -                        it++;
+5: -                        pv.values[i] = std::stod(GetMatchString(*it));
+5: -                    }
+5: -                    positionVariables.push_back(pv);
+5: -                }
+5: -
+5: -                it++;
+5: -            }
+5: -        }
+5: -
+5: -        std::string Variables::GetMatchString(const std::smatch &smatch)
+5: -        {
+5: -            std::string matchStr = smatch.str();
+5: -            if (matchStr.length() > 0 && matchStr.back() == ',')
+5: -            {
+5: -                matchStr.pop_back();
+5: -            }
+5: -            return matchStr;
+5: -        }
+5: -
+5: -        CmdError::CmdError(const std::string &messageString) : CriMessage(MessageType::CMDERROR)
+5: -        {
+5: -            std::string::size_type commandErrorStart = messageString.find(CriKeywords::TYPE_CMDERROR) + CriKeywords::TYPE_CMDERROR.size();
+5: -            std::string::size_type countStart = messageString.find(" ", commandErrorStart) + 1;
+5: -            std::string::size_type errorMsgStart = messageString.find(" ", countStart) + 1;
+5: -
+5: -            recjectedCmd = std::stoi(messageString.substr(countStart, errorMsgStart - countStart - 1));
+5: -            error = messageString.substr(errorMsgStart);
+5: -        }
+5: -
+5: -        CmdAck::CmdAck(const std::string &messageString) : CriMessage(MessageType::CMDACK)
+5: -        {
+5: -            std::string::size_type commandAckStart = messageString.find(CriKeywords::TYPE_CMDACK) + CriKeywords::TYPE_CMDACK.size();
+5: -            acceptedCmd = std::stoi(messageString.substr(commandAckStart));
+5: -        }
+5: -
+5: -        Cyclestat::Cyclestat(const std::string &messageString) : CriMessage(MessageType::CYCLESTAT)
+5: -        {
+5: -            std::string::size_type cyclestatStart = messageString.find(CriKeywords::TYPE_CYCLESTAT) + CriKeywords::TYPE_CYCLESTAT.size();
+5: -            std::string::size_type cycletimeStart = messageString.find(" ", cyclestatStart) + 1;
+5: -            std::string::size_type workloadStart = messageString.find(" ", cycletimeStart) + 1;
+5: -
+5: -            cycletime = std::stoi(messageString.substr(cycletimeStart, workloadStart - cycletimeStart));
+5: -            workload = std::stoi(messageString.substr(workloadStart));
+5: -        }
+5: -
+5: -        ConfigType Config::GetConfigType(const std::string &msg)
+5: -        {
+5: -            std::string::size_type typeStart = msg.find(" ") + 1;
+5: -            std::string::size_type typeEnd = msg.find(" ", typeStart);
+5: -
+5: -            std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
+5: -
+5: -            if (typeString != CriKeywords::TYPE_CONFIG)
+5: -            {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Got message to parse for config data that was not a config message.");
+5: -                return ConfigType::UNKNOWN;
+5: -            }
+5: -
+5: -            std::string::size_type configTypeStart = typeEnd + 1;
+5: -            std::string::size_type configTypeEnd = msg.find(" ", configTypeStart + 1);
+5: -
+5: -            std::string configTypeString = msg.substr(configTypeStart, configTypeEnd - configTypeStart);
+5: -
+5: -            if (configTypeString == CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER)
+5: -            {
+5: -                return ConfigType::KINEMATICLIMITS;
+5: -            }
+5: -
+5: -            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config type: \"%s\"", configTypeString.c_str());
+5: -            return ConfigType::UNKNOWN;
+5: -        }
+5: -
+5: -        KinematicLimits::KinematicLimits(const std::string &messageString) : Config(ConfigType::KINEMATICLIMITS)
+5: -        {
+5: -            std::string::size_type answerStart = messageString.find(CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER);
+5: -            answerStart += CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER.size() + 1;
+5: -
+5: -            std::vector<float> minMax;
+5: -            FillVector(minMax, messageString.substr(answerStart));
+5: -
+5: -            if (minMax.size() % 2 != 0)
+5: -            {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing config message of type %d", (int)configType);
+5: -                return;
+5: -            }
+5: -
+5: -            for (size_t i = 0; i < minMax.size(); i += 2)
+5: -            {
+5: -                minMaxPairs.push_back(std::pair<float, float>(minMax.at(i), minMax.at(i + 1)));
+5: -            }
+5: -        }
+5: -
+5: -        std::string KinematicLimits::ToString()
+5: -        {
+5: -            std::ostringstream msg;
+5: -
+5: -            for (size_t i = 0; i < minMaxPairs.size() - 1; i++)
+5: -            {
+5: -                msg << "(" << minMaxPairs.at(i).first << ", " << minMaxPairs.at(i).second << ") ";
+5: -            }
+5: -
+5: -            msg << "(" << minMaxPairs.at(minMaxPairs.size() - 1).first << ", " << minMaxPairs.at(minMaxPairs.size() - 1).second << ")";
+5: -
+5: -            return msg.str();
+5: -        }
+5: -
+5: -        void KinematicLimits::Print()
+5: -        {
+5: -            std::cout << "Kinematic limits: " << ToString() << std::endl;
+5: -        }
+5: +  return msg.str();
+5: +}
+5: +
+5: +Mode Status::GetMode(const std::string & modeString)
+5: +{
+5: +  if (modeString == CriKeywords::MODE_JOINT) {
+5: +    return Mode::JOINT;
+5: +  }
+5: +
+5: +  if (modeString == CriKeywords::MODE_CARTBASE) {
+5: +    return Mode::CARTBASE;
+5: +  }
+5: +
+5: +  if (modeString == CriKeywords::MODE_CARTTOOL) {
+5: +    return Mode::CARTTOOL;
+5: +  }
+5: +
+5: +  if (modeString == CriKeywords::MODE_PLATFORM) {
+5: +    return Mode::PLATFORM;
+5: +  }
+5: +
+5: +  if (modeString == CriKeywords::MODE_FSM) {
+5: +    return Mode::FSM;
+5: +  }
+5: +
+5: +  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown robot mode during parsing: %s",
+5: +        modeString.c_str());
+5: +  return Mode::UNKNOWN;
+5: +}
+5: +
+5: +Kinstate Status::GetKinstate(const std::string & kinstateString)
+5: +{
+5: +  int kinstateInt = std::stoi(kinstateString);
+5: +
+5: +  switch (kinstateInt) {
+5: +    case (int)Kinstate::NO_ERROR:
+5: +      return Kinstate::NO_ERROR;
+5: +
+5: +    case (int)Kinstate::JOINT_LIMIT_MIN:
+5: +      return Kinstate::JOINT_LIMIT_MIN;
+5: +
+5: +    case (int)Kinstate::JOINT_LIMIT_MAX:
+5: +      return Kinstate::JOINT_LIMIT_MAX;
+5: +
+5: +    case (int)Kinstate::CARTESIAN_SINGULARITY_CENTER:
+5: +      return Kinstate::CARTESIAN_SINGULARITY_CENTER;
+5: +
+5: +    case (int)Kinstate::CARTESIAN_SINGULARITY_REACH:
+5: +      return Kinstate::CARTESIAN_SINGULARITY_REACH;
+5: +
+5: +    case (int)Kinstate::CARTESIAN_SINGULARITY_WRIST:
+5: +      return Kinstate::CARTESIAN_SINGULARITY_WRIST;
+5: +
+5: +    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
+5: +      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1;
+5: +
+5: +    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
+5: +      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2;
+5: +
+5: +    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
+5: +      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3;
+5: +
+5: +    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
+5: +      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4;
+5: +
+5: +    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
+5: +      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5;
+5: +
+5: +    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
+5: +      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6;
+5: +
+5: +    case (int)Kinstate::MOTION_NOT_ALLOWED:
+5: +      return Kinstate::MOTION_NOT_ALLOWED;
+5: +
+5: +    default:
+5: +      return Kinstate::UNKNOWN;
+5: +  }
+5: +}
+5: +
+5: +Message::Message(const std::string & messageString)
+5: +: CriMessage(MessageType::MESSAGE)
+5: +{
+5: +  std::string::size_type messageStart =
+5: +    messageString.find(CriKeywords::TYPE_MESSAGE) + CriKeywords::TYPE_MESSAGE.size() + 1;
+5: +  message = messageString.substr(messageStart);
+5: +}
+5: +
+5: +Command::Command(const std::string & messageString)
+5: +: CriMessage(MessageType::CMD)
+5: +{
+5: +  std::string::size_type commandStart =
+5: +    messageString.find(CriKeywords::TYPE_CMD) + CriKeywords::TYPE_CMD.size() + 1;
+5: +  command = messageString.substr(commandStart);
+5: +}
+5: +
+5: +Info::Info(const std::string & messageString)
+5: +: CriMessage(MessageType::INFO)
+5: +{
+5: +  std::string::size_type infoStart =
+5: +    messageString.find(CriKeywords::TYPE_INFO) + CriKeywords::TYPE_INFO.size() + 1;
+5: +  info = messageString.substr(infoStart);
+5: +}
+5: +
+5: +LogMsg::LogMsg(const std::string & messageString)
+5: +: CriMessage(MessageType::LOGMSG)
+5: +{
+5: +  std::string::size_type logLvlStart = messageString.find(CriKeywords::TYPE_LOGMSG) +
+5: +    CriKeywords::TYPE_LOGMSG.size() + 1;
+5: +  std::string::size_type timestampStart = messageString.find(" ", logLvlStart) + 1;
+5: +  std::string::size_type msgStart = messageString.find(" ", timestampStart) + 1;
+5: +
+5: +  logLevel = GetLogLevel(messageString.substr(logLvlStart, (timestampStart - logLvlStart - 1)));
+5: +  timestamp = std::stol(messageString.substr(timestampStart, (msgStart - timestampStart - 1)));
+5: +  logMsg = messageString.substr(msgStart);
+5: +}
+5: +
+5: +LogLevel LogMsg::GetLogLevel(const std::string & logLvlString)
+5: +{
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_DEBUG) {
+5: +    return LogLevel::DEBUG;
+5: +  }
+5: +
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_APP_INFO) {
+5: +    return LogLevel::APP_INFO;
+5: +  }
+5: +
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_APP_ERROR) {
+5: +    return LogLevel::APP_ERROR;
+5: +  }
+5: +
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_INFO) {
+5: +    return LogLevel::INFO;
+5: +  }
+5: +
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_WARN) {
+5: +    return LogLevel::WARN;
+5: +  }
+5: +
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_ERROR) {
+5: +    return LogLevel::ERROR;
+5: +  }
+5: +
+5: +  if (logLvlString == CriKeywords::LOG_LEVEL_FATAL) {
+5: +    return LogLevel::FATAL;
+5: +  }
+5: +
+5: +  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown log level during parsing: %s",
+5: +        logLvlString.c_str());
+5: +  return LogLevel::UNKNOWN;
+5: +}
+5: +
+5: +Variables::Variables(const std::string & messageString)
+5: +: CriMessage(MessageType::VARIABLES),
+5: +  numberVariables(),
+5: +  positionVariables()
+5: +{
+5: +  std::regex variables_regex("\\S+");
+5: +  auto variables_begin = std::sregex_iterator(messageString.begin(), messageString.end(),
+5: +        variables_regex);
+5: +  auto variables_end = std::sregex_iterator();
+5: +
+5: +  std::sregex_iterator it = variables_begin;
+5: +  while (it != variables_end) {
+5: +    std::string matchStr = GetMatchString((*it));
+5: +
+5: +    if (matchStr.compare(CriKeywords::VARIABLES_NR_VARIABLE) == 0) {
+5: +      NumberVariable nv;
+5: +
+5: +      it++;
+5: +      nv.name = GetMatchString(*it);
+5: +
+5: +      it++;
+5: +      nv.value = std::stod(GetMatchString(*it));
+5: +
+5: +      numberVariables.push_back(nv);
+5: @@ -694 +553,127 @@
+5: -}
+5: +
+5: +    if (matchStr.compare(CriKeywords::VARIABLES_POS_VARIABLE) == 0) {
+5: +      PositionVariable pv;
+5: +
+5: +      it++;
+5: +      pv.name = GetMatchString(*it);
+5: +
+5: +      for (auto i = 0; i < 15; i++) {
+5: +        it++;
+5: +        pv.values[i] = std::stod(GetMatchString(*it));
+5: +      }
+5: +      positionVariables.push_back(pv);
+5: +    }
+5: +
+5: +    it++;
+5: +  }
+5: +}
+5: +
+5: +std::string Variables::GetMatchString(const std::smatch & smatch)
+5: +{
+5: +  std::string matchStr = smatch.str();
+5: +  if (matchStr.length() > 0 && matchStr.back() == ',') {
+5: +    matchStr.pop_back();
+5: +  }
+5: +  return matchStr;
+5: +}
+5: +
+5: +CmdError::CmdError(const std::string & messageString)
+5: +: CriMessage(MessageType::CMDERROR)
+5: +{
+5: +  std::string::size_type commandErrorStart = messageString.find(CriKeywords::TYPE_CMDERROR) +
+5: +    CriKeywords::TYPE_CMDERROR.size();
+5: +  std::string::size_type countStart = messageString.find(" ", commandErrorStart) + 1;
+5: +  std::string::size_type errorMsgStart = messageString.find(" ", countStart) + 1;
+5: +
+5: +  recjectedCmd = std::stoi(messageString.substr(countStart, errorMsgStart - countStart - 1));
+5: +  error = messageString.substr(errorMsgStart);
+5: +}
+5: +
+5: +CmdAck::CmdAck(const std::string & messageString)
+5: +: CriMessage(MessageType::CMDACK)
+5: +{
+5: +  std::string::size_type commandAckStart = messageString.find(CriKeywords::TYPE_CMDACK) +
+5: +    CriKeywords::TYPE_CMDACK.size();
+5: +  acceptedCmd = std::stoi(messageString.substr(commandAckStart));
+5: +}
+5: +
+5: +Cyclestat::Cyclestat(const std::string & messageString)
+5: +: CriMessage(MessageType::CYCLESTAT)
+5: +{
+5: +  std::string::size_type cyclestatStart = messageString.find(CriKeywords::TYPE_CYCLESTAT) +
+5: +    CriKeywords::TYPE_CYCLESTAT.size();
+5: +  std::string::size_type cycletimeStart = messageString.find(" ", cyclestatStart) + 1;
+5: +  std::string::size_type workloadStart = messageString.find(" ", cycletimeStart) + 1;
+5: +
+5: +  cycletime = std::stoi(messageString.substr(cycletimeStart, workloadStart - cycletimeStart));
+5: +  workload = std::stoi(messageString.substr(workloadStart));
+5: +}
+5: +
+5: +ConfigType Config::GetConfigType(const std::string & msg)
+5: +{
+5: +  std::string::size_type typeStart = msg.find(" ") + 1;
+5: +  std::string::size_type typeEnd = msg.find(" ", typeStart);
+5: +
+5: +  std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
+5: +
+5: +  if (typeString != CriKeywords::TYPE_CONFIG) {
+5: +    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +          "Got message to parse for config data that was not a config message.");
+5: +    return ConfigType::UNKNOWN;
+5: +  }
+5: +
+5: +  std::string::size_type configTypeStart = typeEnd + 1;
+5: +  std::string::size_type configTypeEnd = msg.find(" ", configTypeStart + 1);
+5: +
+5: +  std::string configTypeString = msg.substr(configTypeStart, configTypeEnd - configTypeStart);
+5: +
+5: +  if (configTypeString == CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER) {
+5: +    return ConfigType::KINEMATICLIMITS;
+5: +  }
+5: +
+5: +  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config type: \"%s\"",
+5: +        configTypeString.c_str());
+5: +  return ConfigType::UNKNOWN;
+5: +}
+5: +
+5: +KinematicLimits::KinematicLimits(const std::string & messageString)
+5: +: Config(ConfigType::KINEMATICLIMITS)
+5: +{
+5: +  std::string::size_type answerStart =
+5: +    messageString.find(CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER);
+5: +  answerStart += CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER.size() + 1;
+5: +
+5: +  std::vector<float> minMax;
+5: +  FillVector(minMax, messageString.substr(answerStart));
+5: +
+5: +  if (minMax.size() % 2 != 0) {
+5: +    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing config message of type %d",
+5: +      (int)configType);
+5: +    return;
+5: +  }
+5: +
+5: +  for (size_t i = 0; i < minMax.size(); i += 2) {
+5: +    minMaxPairs.push_back(std::pair<float, float>(minMax.at(i), minMax.at(i + 1)));
+5: +  }
+5: +}
+5: +
+5: +std::string KinematicLimits::ToString()
+5: +{
+5: +  std::ostringstream msg;
+5: +
+5: +  for (size_t i = 0; i < minMaxPairs.size() - 1; i++) {
+5: +    msg << "(" << minMaxPairs.at(i).first << ", " << minMaxPairs.at(i).second << ") ";
+5: +  }
+5: +
+5: +  msg << "(" << minMaxPairs.at(minMaxPairs.size() - 1).first << ", " <<
+5: +    minMaxPairs.at(minMaxPairs.size() - 1).second << ")";
+5: +
+5: +  return msg.str();
+5: +}
+5: +
+5: +void KinematicLimits::Print()
+5: +{
+5: +  std::cout << "Kinematic limits: " << ToString() << std::endl;
+5: +}
+5: +}
+5: +}
+5: 
+5: Code style divergence in file 'src/Rebel.cpp':
+5: 
+5: --- src/Rebel.cpp
+5: +++ src/Rebel.cpp.uncrustify
+5: @@ -15,8 +15,8 @@
+5: -    Rebel::Rebel()
+5: -    {
+5: -    }
+5: -
+5: -    Rebel::~Rebel()
+5: -    {
+5: -        Stop();
+5: -    }
+5: +Rebel::Rebel()
+5: +{
+5: +}
+5: +
+5: +Rebel::~Rebel()
+5: +{
+5: +  Stop();
+5: +}
+5: @@ -27 +27,17 @@
+5: -    void Rebel::AliveThreadFunction()
+5: +void Rebel::AliveThreadFunction()
+5: +{
+5: +  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to send ALIVEJOG");
+5: +
+5: +  while (continueAlive) {
+5: +    std::ostringstream msg;
+5: +    msg << std::showpoint;
+5: +    msg << std::fixed;
+5: +    msg << std::setprecision(8);
+5: +    msg << "CRISTART " << Ccnt() << " ";
+5: +    msg << "ALIVEJOG ";
+5: +    msg << j1 << " " << j2 << " " << j3 << " ";
+5: +    msg << j4 << " " << j5 << " " << j6 << " ";
+5: +    msg << 0.0f << " " << 0.0f << " " << 0.0f << " ";
+5: +    msg << "CRIEND" << std::endl;
+5: +
+5: +            // std::cout << msg.str();
+5: @@ -29,3 +45,272 @@
+5: -        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to send ALIVEJOG");
+5: -
+5: -        while (continueAlive)
+5: +      std::lock_guard<std::mutex> lockGuard(aliveLock);
+5: +      rebelSocket->SendMessage(msg.str());
+5: +    }
+5: +
+5: +    std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs));
+5: +  }
+5: +
+5: +  RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to send ALIVEJOG");
+5: +}
+5: +
+5: +void Rebel::MessageThreadFunction()
+5: +{
+5: +  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to process robot messages");
+5: +
+5: +  while (continueMessage) {
+5: +    if (rebelSocket->HasMessage()) {
+5: +      std::string msg = rebelSocket->GetMessage();
+5: +
+5: +      CriMessages::MessageType type = CriMessages::CriMessage::GetMessageType(msg);
+5: +
+5: +      switch (type) {
+5: +        case CriMessages::MessageType::STATUS:
+5: +          {
+5: +            CriMessages::Status status = CriMessages::Status(msg);
+5: +                    // status.Print();
+5: +            status.Log();
+5: +            currentStatus = status;
+5: +            ProcessStatus(currentStatus);
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::RUNSTATE:
+5: +          {
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::MESSAGE:
+5: +          {
+5: +            CriMessages::Message message = CriMessages::Message(msg);
+5: +            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel MESSAGE: %s",
+5: +              message.message.c_str());
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::CMD:
+5: +          {
+5: +            CriMessages::Command command = CriMessages::Command(msg);
+5: +
+5: +                    // Not sure if the ROS node should display these?
+5: +            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "CMD: %s", command.command.c_str());
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::CONFIG:
+5: +          {
+5: +            CriMessages::ConfigType configType = CriMessages::Config::GetConfigType(msg);
+5: +
+5: +            switch (configType) {
+5: +              case CriMessages::ConfigType::KINEMATICLIMITS:
+5: +                {
+5: +                  CriMessages::KinematicLimits kinematicLimits = CriMessages::KinematicLimits(msg);
+5: +                  kinematicLimits.Print();
+5: +                  break;
+5: +                }
+5: +              case CriMessages::ConfigType::UNKNOWN:
+5: +                {
+5: +                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config message: %s",
+5: +                  msg.c_str());
+5: +                  break;
+5: +                }
+5: +
+5: +            }
+5: +
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::INFO:
+5: +          {
+5: +            CriMessages::Info info = CriMessages::Info(msg);
+5: +            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "INFO: %s", info.info.c_str());
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::LOGMSG:
+5: +          {
+5: +            CriMessages::LogMsg log = CriMessages::LogMsg(msg);
+5: +
+5: +            switch (log.logLevel) {
+5: +              case CriMessages::LogLevel::DEBUG:
+5: +                {
+5: +                  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
+5: +                  log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::APP_INFO:
+5: +                {
+5: +                  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG (APP_INFO): %s (%ld ms)",
+5: +                  log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::APP_ERROR:
+5: +                {
+5: +                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +                  "REBEL LOG (APP_ERROR): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::INFO:
+5: +                {
+5: +                        // The Rebel is pretty chatty with its INFO level log messages, so I've set them to output only to the ROS DEBUG level.
+5: +                  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
+5: +                  log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::WARN:
+5: +                {
+5: +                  RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
+5: +                  log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::ERROR:
+5: +                {
+5: +                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
+5: +                  log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::FATAL:
+5: +                {
+5: +                  RCLCPP_FATAL(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
+5: +                  log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +
+5: +              case CriMessages::LogLevel::UNKNOWN:
+5: +                {
+5: +                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +                  "REBEL LOG (UNKNOWN LOG LEVEL): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: +                  break;
+5: +                }
+5: +            }
+5: +
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::VARIABLES:
+5: +          {
+5: +                    // CriMessages::Variables vars = CriMessages::Variables(msg);
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::CMDERROR:
+5: +          {
+5: +            CriMessages::CmdError error = CriMessages::CmdError(msg);
+5: +
+5: +            try {
+5: +              std::string command = unacknowledgedCommands.at(error.recjectedCmd);
+5: +              unacknowledgedCommands.erase(error.recjectedCmd);
+5: +              RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +                "Rebel did not accept command: %s. Error message: %s", command.c_str(),
+5: +                error.error.c_str());
+5: +            } catch (const std::out_of_range & e) {
+5: +              RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +                "Rebel did not accept unknown command. Error message: %s (%d)", error.error.c_str(),
+5: +                error.recjectedCmd);
+5: +            }
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::CMDACK:
+5: +          {
+5: +            CriMessages::CmdAck ack = CriMessages::CmdAck(msg);
+5: +
+5: +            try {
+5: +              std::string command = unacknowledgedCommands.at(ack.acceptedCmd);
+5: +              unacknowledgedCommands.erase(ack.acceptedCmd);
+5: +              RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel accepted command: %s",
+5: +                command.c_str());
+5: +              break;
+5: +            } catch (const std::out_of_range & e) {
+5: +              RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Rebel accepted unknown command: %d",
+5: +                ack.acceptedCmd);
+5: +              break;
+5: +            }
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::CYCLESTAT:
+5: +          {
+5: +            CriMessages::Cyclestat cyclestat = CriMessages::Cyclestat(msg);
+5: +                    // Will only output this once every 2 minutes, because this is sent every 0.5 seconds.
+5: +            RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *node_->get_clock(), 120,
+5: +              "Rebel cycle statistics -- Cycletime: %d -- Workload: %d%%", cyclestat.cycletime,
+5: +              cyclestat.workload);
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::UNKNOWN:
+5: +          {
+5: +            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "UNKNOW MESSAGE: %s", msg.c_str());
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::OPINFO:
+5: +          {
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::MessageType::GSIG:
+5: +          {
+5: +            break;
+5: +          }
+5: +        case CriMessages::MessageType::GRIPPERSTATE:
+5: +          {
+5: +            break;
+5: +          }
+5: +      }
+5: +    }
+5: +  }
+5: +
+5: +  RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to process robot messages");
+5: +}
+5: +
+5: +int Rebel::Ccnt()
+5: +{
+5: +  std::lock_guard<std::mutex> lockGuard(cntLock);
+5: +  int current = current_ccnt;
+5: +  current_ccnt = (current_ccnt % 9999) + 1;
+5: +  return current;
+5: +}
+5: +
+5: +void Rebel::SetDigitalOut(const int & output, const bool & is_on)
+5: +{
+5: +  std::ostringstream cmd;
+5: +  cmd << CriKeywords::COMMAND_DOUT << " " << output << " " << (is_on ? "true" : "false");
+5: +  Command(cmd.str());
+5: +}
+5: +
+5: +void Rebel::Command(const std::string & command)
+5: +{
+5: +  int commandCount = Ccnt();
+5: +  std::ostringstream msg;
+5: +  msg << CriKeywords::START << " " << commandCount << " ";
+5: +  msg << CriKeywords::TYPE_CMD << " ";
+5: +  msg << command << " ";
+5: +  msg << CriKeywords::END << std::endl;
+5: +
+5: +  unacknowledgedCommands[commandCount] = command;
+5: +
+5: +  rebelSocket->SendMessage(msg.str());
+5: +}
+5: +
+5: +void Rebel::GetConfig(const std::string & config)
+5: +{
+5: +  std::ostringstream msg;
+5: +  msg << CriKeywords::START << " " << Ccnt() << " ";
+5: +  msg << CriKeywords::TYPE_CONFIG << " ";
+5: +  msg << config << " ";
+5: +  msg << CriKeywords::END << std::endl;
+5: +
+5: +  rebelSocket->SendMessage(msg.str());
+5: +}
+5: +
+5: +void Rebel::SetControlMode(const ControlMode & mode)
+5: +{
+5: +  switch (mode) {
+5: +    case Rebel::ControlMode::POSITION:
+5: +      {
+5: @@ -33,21 +318,36 @@
+5: -            std::ostringstream msg;
+5: -            msg << std::showpoint;
+5: -            msg << std::fixed;
+5: -            msg << std::setprecision(8);
+5: -            msg << "CRISTART " << Ccnt() << " ";
+5: -            msg << "ALIVEJOG ";
+5: -            msg << j1 << " " << j2 << " " << j3 << " ";
+5: -            msg << j4 << " " << j5 << " " << j6 << " ";
+5: -            msg << 0.0f << " " << 0.0f << " " << 0.0f << " ";
+5: -            msg << "CRIEND" << std::endl;
+5: -
+5: -            // std::cout << msg.str();
+5: -            {
+5: -                std::lock_guard<std::mutex> lockGuard(aliveLock);
+5: -                rebelSocket->SendMessage(msg.str());
+5: -            }
+5: -
+5: -            std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs));
+5: -        }
+5: -
+5: -        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to send ALIVEJOG");
+5: +          std::lock_guard<std::mutex> lockGuard(aliveLock);
+5: +
+5: +          j1 = currentStatus.posJointCurrent.at(0);
+5: +          j2 = currentStatus.posJointCurrent.at(1);
+5: +          j3 = currentStatus.posJointCurrent.at(2);
+5: +          j4 = currentStatus.posJointCurrent.at(3);
+5: +          j5 = currentStatus.posJointCurrent.at(4);
+5: +          j6 = currentStatus.posJointCurrent.at(5);
+5: +
+5: +          Command(CriKeywords::COMMAND_MOTIONTYPECARTBASE);
+5: +          controlMode = mode;
+5: +        }
+5: +        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by position control.");
+5: +        break;
+5: +      }
+5: +
+5: +    case Rebel::ControlMode::VELOCITY:
+5: +      {
+5: +        Command(CriKeywords::COMMAND_MOTIONTYPEJOINT);
+5: +        controlMode = mode;
+5: +        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by velocity control.");
+5: +        break;
+5: +      }
+5: +  }
+5: +}
+5: +
+5: +void Rebel::ProcessStatus(const CriMessages::Status & status)
+5: +{
+5: +  CriMessages::Kinstate currentKinstate = status.kinstate;
+5: +  std::array<int, 16> currentErrorJoints = status.errorJoints;
+5: +
+5: +  if (lastKinstate != currentKinstate) {
+5: +
+5: +    if (lastKinstate != CriMessages::Kinstate::NO_ERROR) {
+5: +      RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Kinematics error resolved [%s]",
+5: +          kinstateMessage.c_str());
+5: @@ -56,208 +356,90 @@
+5: -    void Rebel::MessageThreadFunction()
+5: -    {
+5: -        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to process robot messages");
+5: -
+5: -        while (continueMessage)
+5: -        {
+5: -            if (rebelSocket->HasMessage())
+5: -            {
+5: -                std::string msg = rebelSocket->GetMessage();
+5: -
+5: -                CriMessages::MessageType type = CriMessages::CriMessage::GetMessageType(msg);
+5: -
+5: -                switch (type)
+5: -                {
+5: -                case CriMessages::MessageType::STATUS:
+5: -                {
+5: -                    CriMessages::Status status = CriMessages::Status(msg);
+5: -                    // status.Print();
+5: -                    status.Log();
+5: -                    currentStatus = status;
+5: -                    ProcessStatus(currentStatus);
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::RUNSTATE:
+5: -                {
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::MESSAGE:
+5: -                {
+5: -                    CriMessages::Message message = CriMessages::Message(msg);
+5: -                    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel MESSAGE: %s", message.message.c_str());
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::CMD:
+5: -                {
+5: -                    CriMessages::Command command = CriMessages::Command(msg);
+5: -
+5: -                    // Not sure if the ROS node should display these?
+5: -                    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "CMD: %s", command.command.c_str());
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::CONFIG:
+5: -                {
+5: -                    CriMessages::ConfigType configType = CriMessages::Config::GetConfigType(msg);
+5: -
+5: -                    switch (configType)
+5: -                    {
+5: -                    case CriMessages::ConfigType::KINEMATICLIMITS:
+5: -                    {
+5: -                        CriMessages::KinematicLimits kinematicLimits = CriMessages::KinematicLimits(msg);
+5: -                        kinematicLimits.Print();
+5: -                        break;
+5: -                    }
+5: -                    case CriMessages::ConfigType::UNKNOWN:
+5: -                    {
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config message: %s", msg.c_str());
+5: -                        break;
+5: -                    }
+5: -
+5: -                    }
+5: -
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::INFO:
+5: -                {
+5: -                    CriMessages::Info info = CriMessages::Info(msg);
+5: -                    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "INFO: %s", info.info.c_str());
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::LOGMSG:
+5: -                {
+5: -                    CriMessages::LogMsg log = CriMessages::LogMsg(msg);
+5: -
+5: -                    switch (log.logLevel)
+5: -                    {
+5: -                    case CriMessages::LogLevel::DEBUG:
+5: -                    {
+5: -                        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::APP_INFO:
+5: -                    {
+5: -                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG (APP_INFO): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::APP_ERROR:
+5: -                    {
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG (APP_ERROR): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::INFO:
+5: -                    {
+5: -                        // The Rebel is pretty chatty with its INFO level log messages, so I've set them to output only to the ROS DEBUG level.
+5: -                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::WARN:
+5: -                    {
+5: -                        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::ERROR:
+5: -                    {
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::FATAL:
+5: -                    {
+5: -                        RCLCPP_FATAL(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -
+5: -                    case CriMessages::LogLevel::UNKNOWN:
+5: -                    {
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG (UNKNOWN LOG LEVEL): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+5: -                        break;
+5: -                    }
+5: -                    }
+5: -
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::VARIABLES:
+5: -                {
+5: -                    // CriMessages::Variables vars = CriMessages::Variables(msg);
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::CMDERROR:
+5: -                {
+5: -                    CriMessages::CmdError error = CriMessages::CmdError(msg);
+5: -
+5: -                    try
+5: -                    {
+5: -                        std::string command = unacknowledgedCommands.at(error.recjectedCmd);
+5: -                        unacknowledgedCommands.erase(error.recjectedCmd);
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Rebel did not accept command: %s. Error message: %s", command.c_str(), error.error.c_str());
+5: -                    }
+5: -                    catch (const std::out_of_range& e)
+5: -                    {
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Rebel did not accept unknown command. Error message: %s (%d)", error.error.c_str(), error.recjectedCmd);
+5: -                    }
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::CMDACK:
+5: -                {
+5: -                    CriMessages::CmdAck ack = CriMessages::CmdAck(msg);
+5: -
+5: -                    try
+5: -                    {
+5: -                        std::string command = unacknowledgedCommands.at(ack.acceptedCmd);
+5: -                        unacknowledgedCommands.erase(ack.acceptedCmd);
+5: -                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel accepted command: %s", command.c_str());
+5: -                        break;
+5: -                    }
+5: -                    catch (const std::out_of_range& e)
+5: -                    {
+5: -                        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Rebel accepted unknown command: %d", ack.acceptedCmd);
+5: -                        break;
+5: -                    }
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::CYCLESTAT:
+5: -                {
+5: -                    CriMessages::Cyclestat cyclestat = CriMessages::Cyclestat(msg);
+5: -                    // Will only output this once every 2 minutes, because this is sent every 0.5 seconds.
+5: -                    RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *node_->get_clock(), 120, "Rebel cycle statistics -- Cycletime: %d -- Workload: %d%%", cyclestat.cycletime, cyclestat.workload);
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::UNKNOWN:
+5: -                {
+5: -                    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "UNKNOW MESSAGE: %s", msg.c_str());
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::OPINFO:
+5: -                {
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::MessageType::GSIG:
+5: -                {
+5: -                    break;
+5: -                }
+5: -                case CriMessages::MessageType::GRIPPERSTATE:
+5: -                {
+5: -                    break;
+5: -                }
+5: -                }
+5: -            }
+5: -        }
+5: -
+5: -        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to process robot messages");
+5: +    if (currentKinstate != CriMessages::Kinstate::NO_ERROR) {
+5: +
+5: +      switch (status.kinstate) {
+5: +        case CriMessages::Kinstate::JOINT_LIMIT_MIN:
+5: +          {
+5: +            kinstateMessage = "joint at minimum limit";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::JOINT_LIMIT_MAX:
+5: +          {
+5: +            kinstateMessage = "joint at maximum limit";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::CARTESIAN_SINGULARITY_CENTER:
+5: +          {
+5: +            kinstateMessage = "cartesian singularity (center)";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::CARTESIAN_SINGULARITY_REACH:
+5: +          {
+5: +            kinstateMessage = "cartesian singularity (reach)";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::CARTESIAN_SINGULARITY_WRIST:
+5: +          {
+5: +            kinstateMessage = "cartesian singularity (wrist)";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
+5: +          {
+5: +            kinstateMessage = "tool at virtual box limit 1";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
+5: +          {
+5: +            kinstateMessage = "tool at virtual box limit 2";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
+5: +          {
+5: +            kinstateMessage = "tool at virtual box limit 3";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
+5: +          {
+5: +            kinstateMessage = "tool at virtual box limit 4";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
+5: +          {
+5: +            kinstateMessage = "tool at virtual box limit 5";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
+5: +          {
+5: +            kinstateMessage = "tool at virtual box limit 6";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::MOTION_NOT_ALLOWED:
+5: +          {
+5: +            kinstateMessage = "motion not allowed";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::UNKNOWN:
+5: +          {
+5: +            kinstateMessage = "unknown error";
+5: +            break;
+5: +          }
+5: +
+5: +        case CriMessages::Kinstate::NO_ERROR:
+5: +          {
+5: +            kinstateMessage = "no error";
+5: +            break;
+5: +          }
+5: +      }
+5: +
+5: +      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Kinematics error [%s]",
+5: +          kinstateMessage.c_str());
+5: @@ -265,7 +447,56 @@
+5: -
+5: -    int Rebel::Ccnt()
+5: -    {
+5: -        std::lock_guard<std::mutex> lockGuard(cntLock);
+5: -        int current = current_ccnt;
+5: -        current_ccnt = (current_ccnt % 9999) + 1;
+5: -        return current;
+5: +  }
+5: +
+5: +  if (currentErrorJoints != lastErrorJoints) {
+5: +
+5: +            // loop throught the 6 joint errors
+5: +    for (unsigned int i = 0; i < 6; i++) {
+5: +      int errorJoint = currentErrorJoints.at(i);
+5: +      std::array<int, 8> errorJointBit;
+5: +
+5: +      if (errorJoint != lastErrorJoints.at(i)) {
+5: +
+5: +                    // extract bits from the error to analyze it
+5: +        for (unsigned j = 0; j < 8; j++) {
+5: +          errorJointBit[j] = errorJoint & (int)exp2(j);
+5: +        }
+5: +
+5: +        std::string errorMsg = "";
+5: +        if (errorJointBit.at(0) == static_cast<int>(CriMessages::ErrorJoint::TEMP)) {
+5: +          errorMsg += "'Overtemperature' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(1) == static_cast<int>(CriMessages::ErrorJoint::ESTOP_LOWV)) {
+5: +          errorMsg += "'Supply too low: Is emergency button pressed?' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(2) == static_cast<int>(CriMessages::ErrorJoint::MNE)) {
+5: +          errorMsg += "'Motor not enabled' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(3) == static_cast<int>(CriMessages::ErrorJoint::COM)) {
+5: +          errorMsg += "'Communication watch dog' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(4) == static_cast<int>(CriMessages::ErrorJoint::POS)) {
+5: +          errorMsg += "'Position lag' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(5) == static_cast<int>(CriMessages::ErrorJoint::ENC)) {
+5: +          errorMsg += "'Encoder Error' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(6) == static_cast<int>(CriMessages::ErrorJoint::OC)) {
+5: +          errorMsg += "'Overcurrent' ";
+5: +        }
+5: +
+5: +        if (errorJointBit.at(7) == static_cast<int>(CriMessages::ErrorJoint::DRV)) {
+5: +          errorMsg += "'DriveError/SVM' ";
+5: +        }
+5: +
+5: +        if (errorMsg != "") {
+5: +          RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Joint %i Error: [%s]", i,
+5: +              errorMsg.c_str());
+5: +        } else {
+5: +          RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Joint %i Error: Cleared", i);
+5: +        }
+5: +      }
+5: @@ -273,247 +504,5 @@
+5: -
+5: -    void Rebel::SetDigitalOut(const int &output, const bool &is_on)
+5: -    {
+5: -        std::ostringstream cmd;
+5: -        cmd << CriKeywords::COMMAND_DOUT << " " << output << " " << (is_on ? "true" : "false");
+5: -        Command(cmd.str());
+5: -    }
+5: -
+5: -    void Rebel::Command(const std::string &command)
+5: -    {
+5: -        int commandCount = Ccnt();
+5: -        std::ostringstream msg;
+5: -        msg << CriKeywords::START << " " << commandCount << " ";
+5: -        msg << CriKeywords::TYPE_CMD << " ";
+5: -        msg << command << " ";
+5: -        msg << CriKeywords::END << std::endl;
+5: -
+5: -        unacknowledgedCommands[commandCount] = command;
+5: -
+5: -        rebelSocket->SendMessage(msg.str());
+5: -    }
+5: -
+5: -    void Rebel::GetConfig(const std::string &config)
+5: -    {
+5: -        std::ostringstream msg;
+5: -        msg << CriKeywords::START << " " << Ccnt() << " ";
+5: -        msg << CriKeywords::TYPE_CONFIG << " ";
+5: -        msg << config << " ";
+5: -        msg << CriKeywords::END << std::endl;
+5: -
+5: -        rebelSocket->SendMessage(msg.str());
+5: -    }
+5: -
+5: -    void Rebel::SetControlMode(const ControlMode &mode)
+5: -    {
+5: -        switch (mode)
+5: -        {
+5: -        case Rebel::ControlMode::POSITION:
+5: -        {
+5: -            {
+5: -                std::lock_guard<std::mutex> lockGuard(aliveLock);
+5: -
+5: -                j1 = currentStatus.posJointCurrent.at(0);
+5: -                j2 = currentStatus.posJointCurrent.at(1);
+5: -                j3 = currentStatus.posJointCurrent.at(2);
+5: -                j4 = currentStatus.posJointCurrent.at(3);
+5: -                j5 = currentStatus.posJointCurrent.at(4);
+5: -                j6 = currentStatus.posJointCurrent.at(5);
+5: -
+5: -                Command(CriKeywords::COMMAND_MOTIONTYPECARTBASE);
+5: -                controlMode = mode;
+5: -            }
+5: -            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by position control.");
+5: -            break;
+5: -        }
+5: -
+5: -        case Rebel::ControlMode::VELOCITY:
+5: -        {
+5: -            Command(CriKeywords::COMMAND_MOTIONTYPEJOINT);
+5: -            controlMode = mode;
+5: -            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by velocity control.");
+5: -            break;
+5: -        }
+5: -        }
+5: -    }
+5: -
+5: -    void Rebel::ProcessStatus(const CriMessages::Status &status)
+5: -    {
+5: -        CriMessages::Kinstate currentKinstate = status.kinstate;
+5: -        std::array<int, 16> currentErrorJoints = status.errorJoints;
+5: -
+5: -        if (lastKinstate != currentKinstate)
+5: -        {
+5: -
+5: -            if (lastKinstate != CriMessages::Kinstate::NO_ERROR)
+5: -            {
+5: -                RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Kinematics error resolved [%s]", kinstateMessage.c_str());
+5: -            }
+5: -
+5: -            if (currentKinstate != CriMessages::Kinstate::NO_ERROR)
+5: -            {
+5: -
+5: -                switch (status.kinstate)
+5: -                {
+5: -                case CriMessages::Kinstate::JOINT_LIMIT_MIN:
+5: -                {
+5: -                    kinstateMessage = "joint at minimum limit";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::JOINT_LIMIT_MAX:
+5: -                {
+5: -                    kinstateMessage = "joint at maximum limit";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::CARTESIAN_SINGULARITY_CENTER:
+5: -                {
+5: -                    kinstateMessage = "cartesian singularity (center)";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::CARTESIAN_SINGULARITY_REACH:
+5: -                {
+5: -                    kinstateMessage = "cartesian singularity (reach)";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::CARTESIAN_SINGULARITY_WRIST:
+5: -                {
+5: -                    kinstateMessage = "cartesian singularity (wrist)";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
+5: -                {
+5: -                    kinstateMessage = "tool at virtual box limit 1";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
+5: -                {
+5: -                    kinstateMessage = "tool at virtual box limit 2";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
+5: -                {
+5: -                    kinstateMessage = "tool at virtual box limit 3";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
+5: -                {
+5: -                    kinstateMessage = "tool at virtual box limit 4";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
+5: -                {
+5: -                    kinstateMessage = "tool at virtual box limit 5";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
+5: -                {
+5: -                    kinstateMessage = "tool at virtual box limit 6";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::MOTION_NOT_ALLOWED:
+5: -                {
+5: -                    kinstateMessage = "motion not allowed";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::UNKNOWN:
+5: -                {
+5: -                    kinstateMessage = "unknown error";
+5: -                    break;
+5: -                }
+5: -
+5: -                case CriMessages::Kinstate::NO_ERROR:
+5: -                {
+5: -                    kinstateMessage = "no error";
+5: -                    break;
+5: -                }
+5: -                }
+5: -
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Kinematics error [%s]", kinstateMessage.c_str());
+5: -            }
+5: -        }
+5: -
+5: -        if (currentErrorJoints != lastErrorJoints)
+5: -        {
+5: -
+5: -            // loop throught the 6 joint errors
+5: -            for (unsigned int i = 0; i < 6; i++)
+5: -            {
+5: -                int errorJoint = currentErrorJoints.at(i);
+5: -                std::array<int, 8> errorJointBit;
+5: -
+5: -                if (errorJoint != lastErrorJoints.at(i))
+5: -                {
+5: -
+5: -                    // extract bits from the error to analyze it
+5: -                    for (unsigned j = 0; j < 8; j++)
+5: -                    {
+5: -                        errorJointBit[j] = errorJoint & (int)exp2(j);
+5: -                    }
+5: -
+5: -                    std::string errorMsg = "";
+5: -                    if (errorJointBit.at(0) == static_cast<int>(CriMessages::ErrorJoint::TEMP))
+5: -                    {
+5: -                        errorMsg += "'Overtemperature' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(1) == static_cast<int>(CriMessages::ErrorJoint::ESTOP_LOWV))
+5: -                    {
+5: -                        errorMsg += "'Supply too low: Is emergency button pressed?' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(2) == static_cast<int>(CriMessages::ErrorJoint::MNE))
+5: -                    {
+5: -                        errorMsg += "'Motor not enabled' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(3) == static_cast<int>(CriMessages::ErrorJoint::COM))
+5: -                    {
+5: -                        errorMsg += "'Communication watch dog' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(4) == static_cast<int>(CriMessages::ErrorJoint::POS))
+5: -                    {
+5: -                        errorMsg += "'Position lag' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(5) == static_cast<int>(CriMessages::ErrorJoint::ENC))
+5: -                    {
+5: -                        errorMsg += "'Encoder Error' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(6) == static_cast<int>(CriMessages::ErrorJoint::OC))
+5: -                    {
+5: -                        errorMsg += "'Overcurrent' ";
+5: -                    }
+5: -
+5: -                    if (errorJointBit.at(7) == static_cast<int>(CriMessages::ErrorJoint::DRV))
+5: -                    {
+5: -                        errorMsg += "'DriveError/SVM' ";
+5: -                    }
+5: -
+5: -                    if (errorMsg != "")
+5: -                    {
+5: -                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Joint %i Error: [%s]", i, errorMsg.c_str());
+5: -                    }
+5: -                    else
+5: -                    {
+5: -                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Joint %i Error: Cleared", i);
+5: -                    }
+5: -                }
+5: -            }
+5: -        }
+5: -
+5: -        lastKinstate = currentKinstate;
+5: -        lastErrorJoints = currentErrorJoints;
+5: -    }
+5: +  }
+5: +
+5: +  lastKinstate = currentKinstate;
+5: +  lastErrorJoints = currentErrorJoints;
+5: +}
+5: @@ -524,52 +513,54 @@
+5: -    void Rebel::SetJog(const float &joint1, const float &joint2, const float &joint3,
+5: -                       const float &joint4, const float &joint5, const float &joint6)
+5: -    {
+5: -        j1 = joint1;
+5: -        j2 = joint2;
+5: -        j3 = joint3;
+5: -        j4 = joint4;
+5: -        j5 = joint5;
+5: -        j6 = joint6;
+5: -    }
+5: -
+5: -    void Rebel::GetJoints(float &joint1, float &joint2, float &joint3,
+5: -                          float &joint4, float &joint5, float &joint6)
+5: -    {
+5: -        joint1 = currentStatus.posJointCurrent.at(0);
+5: -        joint2 = currentStatus.posJointCurrent.at(1);
+5: -        joint3 = currentStatus.posJointCurrent.at(2);
+5: -        joint4 = currentStatus.posJointCurrent.at(3);
+5: -        joint5 = currentStatus.posJointCurrent.at(4);
+5: -        joint6 = currentStatus.posJointCurrent.at(5);
+5: -    }
+5: -
+5: -    CallbackReturn Rebel::on_init(const HardwareInfo&)
+5: -    {
+5: -        rebelSocket = std::make_shared<RebelSocket>(ip, port, 200),
+5: -        j1 = 0.0f;
+5: -        j2 = 0.0f;
+5: -        j3 = 0.0f;
+5: -        j4 = 0.0f;
+5: -        j5 = 0.0f;
+5: -        j6 = 0.0f;
+5: -        controlMode = Rebel::ControlMode::VELOCITY;
+5: -        current_ccnt = 1;
+5: -        continueAlive = false;
+5: -        continueMessage = false;
+5: -        aliveWaitMs = 100;
+5: -        lastKinstate = CriMessages::Kinstate::NO_ERROR;
+5: -        kinstateMessage = "";
+5: -        node_ = std::make_shared<rclcpp::Node>("igus_rebel");
+5: -        digital_output_srv_ = node_->create_service<igus_rebel_msgs::srv::SetDigitalOutput>(
+5: -            "set_digital_output", std::bind(&Rebel::dio_callback, this, std::placeholders::_1, std::placeholders::_2));
+5: -        Start();
+5: -        return CallbackReturn::SUCCESS;
+5: -    }
+5: -
+5: -    std::vector<StateInterface> Rebel::export_state_interfaces()
+5: -    {
+5: -        std::vector<StateInterface> state_interfaces;
+5: -
+5: -        for (int i = 0; i < 6; ++i)
+5: -        {
+5: -            state_interfaces.emplace_back(StateInterface(
+5: +void Rebel::SetJog(
+5: +  const float & joint1, const float & joint2, const float & joint3,
+5: +  const float & joint4, const float & joint5, const float & joint6)
+5: +{
+5: +  j1 = joint1;
+5: +  j2 = joint2;
+5: +  j3 = joint3;
+5: +  j4 = joint4;
+5: +  j5 = joint5;
+5: +  j6 = joint6;
+5: +}
+5: +
+5: +void Rebel::GetJoints(
+5: +  float & joint1, float & joint2, float & joint3,
+5: +  float & joint4, float & joint5, float & joint6)
+5: +{
+5: +  joint1 = currentStatus.posJointCurrent.at(0);
+5: +  joint2 = currentStatus.posJointCurrent.at(1);
+5: +  joint3 = currentStatus.posJointCurrent.at(2);
+5: +  joint4 = currentStatus.posJointCurrent.at(3);
+5: +  joint5 = currentStatus.posJointCurrent.at(4);
+5: +  joint6 = currentStatus.posJointCurrent.at(5);
+5: +}
+5: +
+5: +CallbackReturn Rebel::on_init(const HardwareInfo &)
+5: +{
+5: +  rebelSocket = std::make_shared<RebelSocket>(ip, port, 200),
+5: +  j1 = 0.0f;
+5: +  j2 = 0.0f;
+5: +  j3 = 0.0f;
+5: +  j4 = 0.0f;
+5: +  j5 = 0.0f;
+5: +  j6 = 0.0f;
+5: +  controlMode = Rebel::ControlMode::VELOCITY;
+5: +  current_ccnt = 1;
+5: +  continueAlive = false;
+5: +  continueMessage = false;
+5: +  aliveWaitMs = 100;
+5: +  lastKinstate = CriMessages::Kinstate::NO_ERROR;
+5: +  kinstateMessage = "";
+5: +  node_ = std::make_shared<rclcpp::Node>("igus_rebel");
+5: +  digital_output_srv_ = node_->create_service<igus_rebel_msgs::srv::SetDigitalOutput>(
+5: +            "set_digital_output",
+5: +      std::bind(&Rebel::dio_callback, this, std::placeholders::_1, std::placeholders::_2));
+5: +  Start();
+5: +  return CallbackReturn::SUCCESS;
+5: +}
+5: +
+5: +std::vector<StateInterface> Rebel::export_state_interfaces()
+5: +{
+5: +  std::vector<StateInterface> state_interfaces;
+5: +
+5: +  for (int i = 0; i < 6; ++i) {
+5: +    state_interfaces.emplace_back(StateInterface(
+5: @@ -577 +568 @@
+5: -            state_interfaces.emplace_back(StateInterface(
+5: +    state_interfaces.emplace_back(StateInterface(
+5: @@ -579,12 +570,11 @@
+5: -        }
+5: -
+5: -        return state_interfaces;
+5: -    }
+5: -
+5: -    std::vector<CommandInterface> Rebel::export_command_interfaces()
+5: -    {
+5: -        std::vector<CommandInterface> command_interfaces;
+5: -
+5: -        for (int i = 0; i < 6; ++i)
+5: -        {
+5: -            command_interfaces.emplace_back(CommandInterface(
+5: +  }
+5: +
+5: +  return state_interfaces;
+5: +}
+5: +
+5: +std::vector<CommandInterface> Rebel::export_command_interfaces()
+5: +{
+5: +  std::vector<CommandInterface> command_interfaces;
+5: +
+5: +  for (int i = 0; i < 6; ++i) {
+5: +    command_interfaces.emplace_back(CommandInterface(
+5: @@ -592,37 +582,37 @@
+5: -        }
+5: -
+5: -        return command_interfaces;
+5: -    }
+5: -
+5: -    return_type Rebel::read(const rclcpp::Time&, const rclcpp::Duration &period)
+5: -    {
+5: -        read();
+5: -
+5: -        vel[0] = (pos[0] - last_pos[0]) / period.seconds();
+5: -        vel[1] = (pos[1] - last_pos[1]) / period.seconds();
+5: -        vel[2] = (pos[2] - last_pos[2]) / period.seconds();
+5: -        vel[3] = (pos[3] - last_pos[3]) / period.seconds();
+5: -        vel[4] = (pos[4] - last_pos[4]) / period.seconds();
+5: -        vel[5] = (pos[5] - last_pos[5]) / period.seconds();
+5: -
+5: -        last_pos[0] = pos[0];
+5: -        last_pos[1] = pos[1];
+5: -        last_pos[2] = pos[2];
+5: -        last_pos[3] = pos[3];
+5: -        last_pos[4] = pos[4];
+5: -        last_pos[5] = pos[5];
+5: -        return return_type::OK;
+5: -    }
+5: -
+5: -    void Rebel::read()
+5: -    {
+5: -        pos[0] = currentStatus.posJointCurrent.at(0) * degToRad;
+5: -        pos[1] = currentStatus.posJointCurrent.at(1) * degToRad;
+5: -        pos[2] = currentStatus.posJointCurrent.at(2) * degToRad;
+5: -        pos[3] = currentStatus.posJointCurrent.at(3) * degToRad;
+5: -        pos[4] = currentStatus.posJointCurrent.at(4) * degToRad;
+5: -        pos[5] = currentStatus.posJointCurrent.at(5) * degToRad;
+5: -    }
+5: -
+5: -    return_type Rebel::write(const rclcpp::Time&, const rclcpp::Duration&)
+5: -    {
+5: +  }
+5: +
+5: +  return command_interfaces;
+5: +}
+5: +
+5: +return_type Rebel::read(const rclcpp::Time &, const rclcpp::Duration & period)
+5: +{
+5: +  read();
+5: +
+5: +  vel[0] = (pos[0] - last_pos[0]) / period.seconds();
+5: +  vel[1] = (pos[1] - last_pos[1]) / period.seconds();
+5: +  vel[2] = (pos[2] - last_pos[2]) / period.seconds();
+5: +  vel[3] = (pos[3] - last_pos[3]) / period.seconds();
+5: +  vel[4] = (pos[4] - last_pos[4]) / period.seconds();
+5: +  vel[5] = (pos[5] - last_pos[5]) / period.seconds();
+5: +
+5: +  last_pos[0] = pos[0];
+5: +  last_pos[1] = pos[1];
+5: +  last_pos[2] = pos[2];
+5: +  last_pos[3] = pos[3];
+5: +  last_pos[4] = pos[4];
+5: +  last_pos[5] = pos[5];
+5: +  return return_type::OK;
+5: +}
+5: +
+5: +void Rebel::read()
+5: +{
+5: +  pos[0] = currentStatus.posJointCurrent.at(0) * degToRad;
+5: +  pos[1] = currentStatus.posJointCurrent.at(1) * degToRad;
+5: +  pos[2] = currentStatus.posJointCurrent.at(2) * degToRad;
+5: +  pos[3] = currentStatus.posJointCurrent.at(3) * degToRad;
+5: +  pos[4] = currentStatus.posJointCurrent.at(4) * degToRad;
+5: +  pos[5] = currentStatus.posJointCurrent.at(5) * degToRad;
+5: +}
+5: +
+5: +return_type Rebel::write(const rclcpp::Time &, const rclcpp::Duration &)
+5: +{
+5: @@ -630,6 +620,6 @@
+5: -        write();
+5: -        return return_type::OK;
+5: -    }
+5: -
+5: -    void Rebel::write()
+5: -    {
+5: +  write();
+5: +  return return_type::OK;
+5: +}
+5: +
+5: +void Rebel::write()
+5: +{
+5: @@ -637,32 +627,31 @@
+5: -        if (rclcpp::ok())
+5: -        {
+5: -            rclcpp::spin_some(node_);
+5: -        }
+5: -
+5: -        j1 = (float)vel_cmd[0];
+5: -        j2 = (float)vel_cmd[1];
+5: -        j3 = (float)vel_cmd[2];
+5: -        j4 = (float)vel_cmd[3];
+5: -        j5 = (float)vel_cmd[4];
+5: -        j6 = (float)vel_cmd[5];
+5: -    }
+5: -
+5: -    void Rebel::dio_callback(
+5: -        const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
+5: -        std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response)
+5: -    {
+5: -        SetDigitalOut(request->output.output, request->output.is_on);
+5: -        response->success = true;
+5: -    }
+5: -
+5: -    void Rebel::GetReferenceInfo()
+5: -    {
+5: -        Command(std::string("GetReferencingInfo"));
+5: -    }
+5: -
+5: -    void Rebel::Start()
+5: -    {
+5: -        continueMessage = true;
+5: -        messageThread = std::thread(&Rebel::MessageThreadFunction, this);
+5: -
+5: -        rebelSocket->Start();
+5: +  if (rclcpp::ok()) {
+5: +    rclcpp::spin_some(node_);
+5: +  }
+5: +
+5: +  j1 = (float)vel_cmd[0];
+5: +  j2 = (float)vel_cmd[1];
+5: +  j3 = (float)vel_cmd[2];
+5: +  j4 = (float)vel_cmd[3];
+5: +  j5 = (float)vel_cmd[4];
+5: +  j6 = (float)vel_cmd[5];
+5: +}
+5: +
+5: +void Rebel::dio_callback(
+5: +  const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
+5: +  std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response)
+5: +{
+5: +  SetDigitalOut(request->output.output, request->output.is_on);
+5: +  response->success = true;
+5: +}
+5: +
+5: +void Rebel::GetReferenceInfo()
+5: +{
+5: +  Command(std::string("GetReferencingInfo"));
+5: +}
+5: +
+5: +void Rebel::Start()
+5: +{
+5: +  continueMessage = true;
+5: +  messageThread = std::thread(&Rebel::MessageThreadFunction, this);
+5: +
+5: +  rebelSocket->Start();
+5: @@ -673,30 +662,29 @@
+5: -        Command(CriKeywords::COMMAND_SETACTIVE + " true");
+5: -        Command(CriKeywords::COMMAND_RESET);
+5: -        Command(CriKeywords::COMMAND_ENABLE);
+5: -
+5: -        continueAlive = true;
+5: -        aliveThread = std::thread(&Rebel::AliveThreadFunction, this);
+5: -
+5: -        GetConfig(CriKeywords::CONFIG_GETKINEMATICLIMITS);
+5: -        SetControlMode(ControlMode::VELOCITY);
+5: -    }
+5: -
+5: -    void Rebel::Stop()
+5: -    {
+5: -        j1 = 0.0f;
+5: -        j2 = 0.0f;
+5: -        j3 = 0.0f;
+5: -        j4 = 0.0f;
+5: -        j5 = 0.0f;
+5: -        j6 = 0.0f;
+5: -
+5: -        std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs + 10));
+5: -
+5: -        continueAlive = false;
+5: -
+5: -        if (aliveThread.joinable())
+5: -        {
+5: -            aliveThread.join();
+5: -        }
+5: -
+5: -        Command(CriKeywords::COMMAND_DISABLE);
+5: +  Command(CriKeywords::COMMAND_SETACTIVE + " true");
+5: +  Command(CriKeywords::COMMAND_RESET);
+5: +  Command(CriKeywords::COMMAND_ENABLE);
+5: +
+5: +  continueAlive = true;
+5: +  aliveThread = std::thread(&Rebel::AliveThreadFunction, this);
+5: +
+5: +  GetConfig(CriKeywords::CONFIG_GETKINEMATICLIMITS);
+5: +  SetControlMode(ControlMode::VELOCITY);
+5: +}
+5: +
+5: +void Rebel::Stop()
+5: +{
+5: +  j1 = 0.0f;
+5: +  j2 = 0.0f;
+5: +  j3 = 0.0f;
+5: +  j4 = 0.0f;
+5: +  j5 = 0.0f;
+5: +  j6 = 0.0f;
+5: +
+5: +  std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs + 10));
+5: +
+5: +  continueAlive = false;
+5: +
+5: +  if (aliveThread.joinable()) {
+5: +    aliveThread.join();
+5: +  }
+5: +
+5: +  Command(CriKeywords::COMMAND_DISABLE);
+5: @@ -704,11 +692,10 @@
+5: -        Command(CriKeywords::COMMAND_QUIT);
+5: -
+5: -        rebelSocket->Stop();
+5: -
+5: -        continueMessage = false;
+5: -
+5: -        if (messageThread.joinable())
+5: -        {
+5: -            messageThread.join();
+5: -        }
+5: -    }
+5: +  Command(CriKeywords::COMMAND_QUIT);
+5: +
+5: +  rebelSocket->Stop();
+5: +
+5: +  continueMessage = false;
+5: +
+5: +  if (messageThread.joinable()) {
+5: +    messageThread.join();
+5: +  }
+5: +}
+5: 
+5: Code style divergence in file 'src/RebelSocket.cpp':
+5: 
+5: --- src/RebelSocket.cpp
+5: +++ src/RebelSocket.cpp.uncrustify
+5: @@ -15,14 +15,14 @@
+5: -    RebelSocket::RebelSocket(const std::string &ip, const int &port, const int &timeout)
+5: -        : sock(0),
+5: -          ip(ip),
+5: -          port(port),
+5: -          timeout(timeout),
+5: -          unprocessedMessages(),
+5: -          fragmentBuffer{0}
+5: -    {
+5: -    }
+5: -
+5: -    RebelSocket::~RebelSocket()
+5: -    {
+5: -        Stop();
+5: -    }
+5: +RebelSocket::RebelSocket(const std::string & ip, const int & port, const int & timeout)
+5: +: sock(0),
+5: +  ip(ip),
+5: +  port(port),
+5: +  timeout(timeout),
+5: +  unprocessedMessages(),
+5: +  fragmentBuffer{0}
+5: +{
+5: +}
+5: +
+5: +RebelSocket::~RebelSocket()
+5: +{
+5: +  Stop();
+5: +}
+5: @@ -33,2 +33,2 @@
+5: -    void RebelSocket::MakeConnection()
+5: -    {
+5: +void RebelSocket::MakeConnection()
+5: +{
+5: @@ -37,16 +37,14 @@
+5: -        std::lock_guard<std::mutex> lockGuard(connectionLock);
+5: -
+5: -        while (connectionNeeded)
+5: -        {
+5: -            sock = 0;
+5: -            struct sockaddr_in serv_addr;
+5: -
+5: -            if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+5: -            {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket creation error.");
+5: -                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+5: -                continue;
+5: -            }
+5: -
+5: -            serv_addr.sin_family = AF_INET;
+5: -            serv_addr.sin_port = htons(port);
+5: +  std::lock_guard<std::mutex> lockGuard(connectionLock);
+5: +
+5: +  while (connectionNeeded) {
+5: +    sock = 0;
+5: +    struct sockaddr_in serv_addr;
+5: +
+5: +    if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
+5: +      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket creation error.");
+5: +      std::this_thread::sleep_for(std::chrono::milliseconds(100));
+5: +      continue;
+5: +    }
+5: +
+5: +    serv_addr.sin_family = AF_INET;
+5: +    serv_addr.sin_port = htons(port);
+5: @@ -55,16 +53,42 @@
+5: -            if (inet_pton(AF_INET, ip.c_str(), &serv_addr.sin_addr) <= 0)
+5: -            {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Invalid robot IP address / Address not supported.");
+5: -                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+5: -                continue;
+5: -            }
+5: -
+5: -            if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+5: -            {
+5: -                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Connection Failed.");
+5: -                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+5: -                continue;
+5: -            }
+5: -
+5: -            connectionNeeded = false;
+5: -            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Connected to ReBeL at %s:%d", ip.c_str(), port);
+5: +    if (inet_pton(AF_INET, ip.c_str(), &serv_addr.sin_addr) <= 0) {
+5: +      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +          "Invalid robot IP address / Address not supported.");
+5: +      std::this_thread::sleep_for(std::chrono::milliseconds(100));
+5: +      continue;
+5: +    }
+5: +
+5: +    if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
+5: +      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Connection Failed.");
+5: +      std::this_thread::sleep_for(std::chrono::milliseconds(100));
+5: +      continue;
+5: +    }
+5: +
+5: +    connectionNeeded = false;
+5: +    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Connected to ReBeL at %s:%d", ip.c_str(), port);
+5: +  }
+5: +}
+5: +
+5: +void RebelSocket::SeparateMessages(const char *msg)
+5: +{
+5: +  const char *start;
+5: +  const char *end = msg;
+5: +
+5: +  while (true) {
+5: +    start = std::strstr(end, CriKeywords::START.c_str());
+5: +
+5: +    if (start == nullptr) {
+5: +      break;
+5: +    }
+5: +
+5: +    end = std::strstr(start, CriKeywords::END.c_str());
+5: +
+5: +    if (end == nullptr) {
+5: +                // Found a start without end.
+5: +      const char *remainingStart = start + CriKeywords::START.size();
+5: +      const char *remainingEnd = std::strchr(remainingStart, '\0');
+5: +
+5: +      if (remainingEnd != nullptr) {
+5: +        fragmentLength = remainingEnd - remainingStart;
+5: +
+5: +        for (int i = 0; i < fragmentLength; i++) {
+5: +          fragmentBuffer[i] = *(remainingStart + i);
+5: @@ -72,3 +96,8 @@
+5: -    }
+5: -
+5: -    void RebelSocket::SeparateMessages(const char *msg)
+5: +      } else {
+5: +        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
+5: +            "Socket read was not null-terminated, somehow.");
+5: +      }
+5: +
+5: +      break;
+5: +    }
+5: +
+5: @@ -76,40 +105,2 @@
+5: -        const char *start;
+5: -        const char *end = msg;
+5: -
+5: -        while (true)
+5: -        {
+5: -            start = std::strstr(end, CriKeywords::START.c_str());
+5: -
+5: -            if (start == nullptr)
+5: -            {
+5: -                break;
+5: -            }
+5: -
+5: -            end = std::strstr(start, CriKeywords::END.c_str());
+5: -
+5: -            if (end == nullptr)
+5: -            {
+5: -                // Found a start without end.
+5: -                const char *remainingStart = start + CriKeywords::START.size();
+5: -                const char *remainingEnd = std::strchr(remainingStart, '\0');
+5: -
+5: -                if (remainingEnd != nullptr)
+5: -                {
+5: -                    fragmentLength = remainingEnd - remainingStart;
+5: -
+5: -                    for (int i = 0; i < fragmentLength; i++)
+5: -                    {
+5: -                        fragmentBuffer[i] = *(remainingStart + i);
+5: -                    }
+5: -                }
+5: -                else
+5: -                {
+5: -                    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket read was not null-terminated, somehow.");
+5: -                }
+5: -
+5: -                break;
+5: -            }
+5: -
+5: -            {
+5: -                std::lock_guard<std::mutex> lockGuard(messageLock);
+5: -                unprocessedMessages.push_front(
+5: +      std::lock_guard<std::mutex> lockGuard(messageLock);
+5: +      unprocessedMessages.push_front(
+5: @@ -119 +110,29 @@
+5: -            }
+5: +    }
+5: +  }
+5: +}
+5: +
+5: +void RebelSocket::ReceiveThreadFunction()
+5: +{
+5: +  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Starting to receive messages from robot.");
+5: +
+5: +  char buffer[bufferSize * 2] = {0};
+5: +
+5: +  while (continueReceive) {
+5: +    if (connectionNeeded) {
+5: +      MakeConnection();
+5: +    }
+5: +
+5: +    int valread = read(sock, buffer + fragmentLength, bufferSize);
+5: +
+5: +    if (!IsSocketOk()) {
+5: +      connectionNeeded = true;
+5: +    } else {
+5: +      if (valread == 0) {
+5: +        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Empty message received");
+5: +        connectionNeeded = true;
+5: +      } else {
+5: +        if (fragmentLength > 0) {
+5: +          for (int i = 0; i < fragmentLength; i++) {
+5: +            buffer[i] = fragmentBuffer[i];
+5: +          }
+5: +          fragmentLength = 0;
+5: @@ -121,46 +140,4 @@
+5: -    }
+5: -
+5: -    void RebelSocket::ReceiveThreadFunction()
+5: -    {
+5: -        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Starting to receive messages from robot.");
+5: -
+5: -        char buffer[bufferSize * 2] = {0};
+5: -
+5: -        while (continueReceive)
+5: -        {
+5: -            if (connectionNeeded)
+5: -            {
+5: -                MakeConnection();
+5: -            }
+5: -
+5: -            int valread = read(sock, buffer + fragmentLength, bufferSize);
+5: -
+5: -            if (!IsSocketOk())
+5: -            {
+5: -                connectionNeeded = true;
+5: -            }
+5: -            else
+5: -            {
+5: -                if (valread == 0)
+5: -                {
+5: -                    RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Empty message received");
+5: -                    connectionNeeded = true;
+5: -                }
+5: -                else
+5: -                {
+5: -                    if (fragmentLength > 0)
+5: -                    {
+5: -                        for (int i = 0; i < fragmentLength; i++)
+5: -                        {
+5: -                            buffer[i] = fragmentBuffer[i];
+5: -                        }
+5: -                        fragmentLength = 0;
+5: -                    }
+5: -
+5: -                    SeparateMessages(buffer);
+5: -                    for (int i = 0; i < bufferSize * 2; i++)
+5: -                    {
+5: -                        buffer[i] = 0;
+5: -                    }
+5: -                }
+5: -            }
+5: +
+5: +        SeparateMessages(buffer);
+5: +        for (int i = 0; i < bufferSize * 2; i++) {
+5: +          buffer[i] = 0;
+5: @@ -168,3 +145,6 @@
+5: -
+5: -        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Stopped to receive messages from robot.");
+5: -    }
+5: +      }
+5: +    }
+5: +  }
+5: +
+5: +  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Stopped to receive messages from robot.");
+5: +}
+5: @@ -175,42 +155,41 @@
+5: -    void RebelSocket::ListCheckThreadFunction()
+5: -    {
+5: -        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Starting to check if the message list is being processed.");
+5: -
+5: -        while (continueReceive)
+5: -        {
+5: -            if (unprocessedMessages.size() > maxUnprocessedMessages)
+5: -            {
+5: -                RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Robot messages are not processed fast enough. Discarding messages.");
+5: -
+5: -                while (unprocessedMessages.size() > (maxUnprocessedMessages * 0.9))
+5: -                {
+5: -                    unprocessedMessages.pop_back();
+5: -                }
+5: -            }
+5: -
+5: -            std::this_thread::sleep_for(std::chrono::milliseconds(listCheckWaitMs));
+5: -        }
+5: -
+5: -        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Stopped to check if the message list is being processed.");
+5: -    }
+5: -
+5: -    bool RebelSocket::IsSocketOk()
+5: -    {
+5: -        int error = 0;
+5: -        socklen_t len = sizeof(error);
+5: -        int retval = getsockopt(sock, SOL_SOCKET, SO_ERROR, &error, &len);
+5: -
+5: -        if (retval != 0)
+5: -        {
+5: -            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error getting socket error code: %s", strerror(retval));
+5: -            return false;
+5: -        }
+5: -
+5: -        if (error != 0)
+5: -        {
+5: -            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket error: %s", strerror(error));
+5: -            return false;
+5: -        }
+5: -
+5: -        return true;
+5: -    }
+5: +void RebelSocket::ListCheckThreadFunction()
+5: +{
+5: +  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"),
+5: +      "Starting to check if the message list is being processed.");
+5: +
+5: +  while (continueReceive) {
+5: +    if (unprocessedMessages.size() > maxUnprocessedMessages) {
+5: +      RCLCPP_WARN(rclcpp::get_logger("igus_rebel"),
+5: +          "Robot messages are not processed fast enough. Discarding messages.");
+5: +
+5: +      while (unprocessedMessages.size() > (maxUnprocessedMessages * 0.9)) {
+5: +        unprocessedMessages.pop_back();
+5: +      }
+5: +    }
+5: +
+5: +    std::this_thread::sleep_for(std::chrono::milliseconds(listCheckWaitMs));
+5: +  }
+5: +
+5: +  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"),
+5: +      "Stopped to check if the message list is being processed.");
+5: +}
+5: +
+5: +bool RebelSocket::IsSocketOk()
+5: +{
+5: +  int error = 0;
+5: +  socklen_t len = sizeof(error);
+5: +  int retval = getsockopt(sock, SOL_SOCKET, SO_ERROR, &error, &len);
+5: +
+5: +  if (retval != 0) {
+5: +    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error getting socket error code: %s",
+5: +        strerror(retval));
+5: +    return false;
+5: +  }
+5: +
+5: +  if (error != 0) {
+5: +    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket error: %s", strerror(error));
+5: +    return false;
+5: +  }
+5: +
+5: +  return true;
+5: +}
+5: @@ -221,67 +200,61 @@
+5: -    void RebelSocket::Start()
+5: -    {
+5: -        connectionNeeded = true;
+5: -        continueReceive = true;
+5: -
+5: -        listCheckThread = std::thread(&RebelSocket::ListCheckThreadFunction, this);
+5: -        receiveThread = std::thread(&RebelSocket::ReceiveThreadFunction, this);
+5: -    }
+5: -
+5: -    void RebelSocket::Stop()
+5: -    {
+5: -        connectionNeeded = false;
+5: -        continueReceive = false;
+5: -
+5: -        if (receiveThread.joinable())
+5: -        {
+5: -            receiveThread.join();
+5: -        }
+5: -
+5: -        if (listCheckThread.joinable())
+5: -        {
+5: -            listCheckThread.join();
+5: -        }
+5: -    }
+5: -
+5: -    bool RebelSocket::HasMessage()
+5: -    {
+5: -        return unprocessedMessages.size() > 0;
+5: -    }
+5: -
+5: -    std::string RebelSocket::GetMessage()
+5: -    {
+5: -        std::lock_guard<std::mutex> lockGuard(messageLock);
+5: -
+5: -        if (!HasMessage())
+5: -        {
+5: -            return "";
+5: -        }
+5: -
+5: -        std::string msg = unprocessedMessages.back();
+5: -        unprocessedMessages.pop_back();
+5: -
+5: -        return msg;
+5: -    }
+5: -
+5: -    void RebelSocket::SendMessage(const std::string &msg)
+5: -    {
+5: -        std::lock_guard<std::mutex> lockGuard(socketWriteLock);
+5: -
+5: -        if (connectionNeeded)
+5: -        {
+5: -            MakeConnection();
+5: -        }
+5: -
+5: -        int sent = send(sock, msg.c_str(), msg.length(), 0);
+5: -
+5: -        if (!IsSocketOk())
+5: -        {
+5: -            connectionNeeded = true;
+5: -        }
+5: -
+5: -        if (sent < 0)
+5: -        {
+5: -            connectionNeeded = true;
+5: -        }
+5: -    }
+5: -}
+5: +void RebelSocket::Start()
+5: +{
+5: +  connectionNeeded = true;
+5: +  continueReceive = true;
+5: +
+5: +  listCheckThread = std::thread(&RebelSocket::ListCheckThreadFunction, this);
+5: +  receiveThread = std::thread(&RebelSocket::ReceiveThreadFunction, this);
+5: +}
+5: +
+5: +void RebelSocket::Stop()
+5: +{
+5: +  connectionNeeded = false;
+5: +  continueReceive = false;
+5: +
+5: +  if (receiveThread.joinable()) {
+5: +    receiveThread.join();
+5: +  }
+5: +
+5: +  if (listCheckThread.joinable()) {
+5: +    listCheckThread.join();
+5: +  }
+5: +}
+5: +
+5: +bool RebelSocket::HasMessage()
+5: +{
+5: +  return unprocessedMessages.size() > 0;
+5: +}
+5: +
+5: +std::string RebelSocket::GetMessage()
+5: +{
+5: +  std::lock_guard<std::mutex> lockGuard(messageLock);
+5: +
+5: +  if (!HasMessage()) {
+5: +    return "";
+5: +  }
+5: +
+5: +  std::string msg = unprocessedMessages.back();
+5: +  unprocessedMessages.pop_back();
+5: +
+5: +  return msg;
+5: +}
+5: +
+5: +void RebelSocket::SendMessage(const std::string & msg)
+5: +{
+5: +  std::lock_guard<std::mutex> lockGuard(socketWriteLock);
+5: +
+5: +  if (connectionNeeded) {
+5: +    MakeConnection();
+5: +  }
+5: +
+5: +  int sent = send(sock, msg.c_str(), msg.length(), 0);
+5: +
+5: +  if (!IsSocketOk()) {
+5: +    connectionNeeded = true;
+5: +  }
+5: +
+5: +  if (sent < 0) {
+5: +    connectionNeeded = true;
+5: +  }
+5: +}
+5: +}
+5: 
+5: 7 files with code style divergence
+5: -- run_test.py: return code 1
+5: -- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml'
+5/6 Test #5: uncrustify .......................***Failed    0.23 sec
+test 6
+    Start 6: xmllint
+
+6: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_xmllint/xmllint.txt" "--command" "/opt/ros/jazzy/bin/ament_xmllint" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml"
+6: Working Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+6: Test timeout computed to be: 60
+6: -- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+6:  - /opt/ros/jazzy/bin/ament_xmllint --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml
+6: File 'package.xml' is valid
+6: 
+6: File 'rebel.xml' is valid
+6: 
+6: No problems found
+6: -- run_test.py: return code 0
+6: -- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml'
+6/6 Test #6: xmllint ..........................   Passed    0.61 sec
+
+50% tests passed[0;0m, [0;31m3 tests failed[0;0m out of 6
+
+Label Time Summary:
+cppcheck      =   0.10 sec*proc (1 test)
+flake8        =   0.19 sec*proc (1 test)
+lint_cmake    =   0.09 sec*proc (1 test)
+linter        =   1.34 sec*proc (6 tests)
+pep257        =   0.12 sec*proc (1 test)
+uncrustify    =   0.23 sec*proc (1 test)
+xmllint       =   0.61 sec*proc (1 test)
+
+Total Test time (real) =   1.34 sec
+
+The following tests FAILED:
+	[0;31m  2 - flake8 (Failed)[0;0m
+	[0;31m  3 - lint_cmake (Failed)[0;0m
+	[0;31m  5 - uncrustify (Failed)[0;0m

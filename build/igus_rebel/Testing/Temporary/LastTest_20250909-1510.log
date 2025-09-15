@@ -1,0 +1,4415 @@
+Start testing: Sep 09 17:10 CEST
+----------------------------------------------------------
+1/6 Testing: cppcheck
+1/6 Test: cppcheck
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/jazzy/bin/ament_cppcheck" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml" "--include_dirs" "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/include"
+Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+"cppcheck" start time: Sep 09 17:10 CEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+ - /opt/ros/jazzy/bin/ament_cppcheck --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml --include_dirs /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/include
+cppcheck 2.13.0 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/cppcheck.xunit.xml'
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"cppcheck" end time: Sep 09 17:10 CEST
+"cppcheck" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: flake8
+2/6 Test: flake8
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_flake8/flake8.txt" "--command" "/opt/ros/jazzy/bin/ament_flake8" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml"
+Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+"flake8" start time: Sep 09 17:10 CEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+ - /opt/ros/jazzy/bin/ament_flake8 --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml
+from launch.substitutions import Command, FindExecutable, LaunchConfiguration
+^
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+^
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+^
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+^
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+^
+from ament_index_python.packages import get_package_share_directory
+^
+import os
+^
+import os
+^
+    env = {
+    ^
+    
+^
+        "hardware_protocol",
+        ^
+        default_value="rebel",
+                      ^
+        choices=["mock_hardware", "gazebo", "rebel"],
+                 ^
+        choices=["mock_hardware", "gazebo", "rebel"],
+                                  ^
+        choices=["mock_hardware", "gazebo", "rebel"],
+                                            ^
+        description="Which hardware protocol or mock hardware should be used",
+                    ^
+    
+^
+    igus_rebel_pkg = get_package_share_directory("igus_rebel")
+                                                 ^
+    igus_rebel_desc_pkg = get_package_share_directory("igus_rebel_description")
+                                                      ^
+    
+^
+    controller_config_path = os.path.join(igus_rebel_pkg, "config", "controller.yaml")
+                                                          ^
+    controller_config_path = os.path.join(igus_rebel_pkg, "config", "controller.yaml")
+                                                                    ^
+    robot_description = {"robot_description" : Command(
+                         ^
+    robot_description = {"robot_description" : Command(
+                                            ^
+            FindExecutable(name="xacro"),
+                                ^
+            " ",
+            ^
+            " hardware_protocol:=",
+            ^
+            LaunchConfiguration("hardware_protocol"),
+                                ^
+        
+^
+        package="controller_manager",
+                ^
+        executable="ros2_control_node",
+                   ^
+        output="both",
+               ^
+    
+^
+        package="robot_state_publisher",
+                ^
+        executable="robot_state_publisher",
+                   ^
+        output="both",
+               ^
+    
+^
+        package="controller_manager",
+                ^
+        executable="spawner",
+                   ^
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+                   ^
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+                                              ^
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+                                                                      ^
+        output="both",
+               ^
+    
+^
+        package="controller_manager",
+                ^
+        executable="spawner",
+                   ^
+        arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+                   ^
+        arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+                                           ^
+        arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+                                                                   ^
+        output="both",
+               ^
+    
+^
+    ^
+        ^
+1     E203 whitespace before ':'
+2     F401 'launch.actions.IncludeLaunchDescription' imported but unused
+1     F841 local variable 'env' is assigned to but never used
+4     I100 Import statements are in the wrong order. 'from launch.substitutions import Command, FindExecutable, LaunchConfiguration' should be before 'from launch_ros.actions import Node'
+1     I101 Imported names are in the wrong order. Should be DeclareLaunchArgument, IncludeLaunchDescription
+1     I201 Missing newline between import groups. 'import os' is identified as Stdlib and 'from ament_index_python.packages import get_package_share_directory' is identified as Third Party.
+33    Q000 Double quotes found but single quotes preferred
+1     W292 no newline at end of file
+9     W293 blank line contains whitespace
+
+./launch/rebel.launch.py:3:1: I100 Import statements are in the wrong order. 'from launch.substitutions import Command, FindExecutable, LaunchConfiguration' should be before 'from launch_ros.actions import Node'
+
+./launch/rebel.launch.py:4:1: I101 Imported names are in the wrong order. Should be DeclareLaunchArgument, IncludeLaunchDescription
+
+./launch/rebel.launch.py:4:1: I100 Import statements are in the wrong order. 'from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument' should be before 'from launch.substitutions import Command, FindExecutable, LaunchConfiguration'
+
+./launch/rebel.launch.py:4:1: F401 'launch.actions.IncludeLaunchDescription' imported but unused
+
+./launch/rebel.launch.py:5:1: F401 'launch.launch_description_sources.PythonLaunchDescriptionSource' imported but unused
+
+./launch/rebel.launch.py:6:1: I100 Import statements are in the wrong order. 'from ament_index_python.packages import get_package_share_directory' should be before 'from launch.launch_description_sources import PythonLaunchDescriptionSource'
+
+./launch/rebel.launch.py:7:1: I100 Import statements are in the wrong order. 'import os' should be before 'from ament_index_python.packages import get_package_share_directory' and in a different group.
+
+./launch/rebel.launch.py:7:1: I201 Missing newline between import groups. 'import os' is identified as Stdlib and 'from ament_index_python.packages import get_package_share_directory' is identified as Third Party.
+
+./launch/rebel.launch.py:11:5: F841 local variable 'env' is assigned to but never used
+
+./launch/rebel.launch.py:17:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:19:9: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:20:23: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:21:18: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:21:35: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:21:45: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:22:21: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:24:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:25:50: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:26:55: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:27:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:28:59: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:28:69: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:36:26: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:36:45: E203 whitespace before ':'
+
+./launch/rebel.launch.py:38:33: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:39:13: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:41:13: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:42:33: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:45:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:47:17: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:48:20: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:54:16: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:56:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:58:17: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:59:20: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:62:16: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:64:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:66:17: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:67:20: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:68:20: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:68:47: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:68:71: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:69:16: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:71:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:73:17: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:74:20: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:75:20: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:75:44: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:75:68: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:76:16: Q000 Double quotes found but single quotes preferred
+
+./launch/rebel.launch.py:78:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:86:1: W293 blank line contains whitespace
+
+./launch/rebel.launch.py:86:5: W292 no newline at end of file
+
+
+1 files checked
+53 errors
+
+'E'-type errors: 1
+'F'-type errors: 3
+'I'-type errors: 6
+'Q'-type errors: 33
+'W'-type errors: 10
+
+Checked files:
+
+* ./launch/rebel.launch.py
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/flake8.xunit.xml'
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"flake8" end time: Sep 09 17:10 CEST
+"flake8" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: lint_cmake
+3/6 Test: lint_cmake
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/jazzy/bin/ament_lint_cmake" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml"
+Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+"lint_cmake" start time: Sep 09 17:10 CEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+ - /opt/ros/jazzy/bin/ament_lint_cmake --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml
+CMakeLists.txt:6: Line ends in whitespace [whitespace/eol]
+
+
+1 errors
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/lint_cmake.xunit.xml'
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"lint_cmake" end time: Sep 09 17:10 CEST
+"lint_cmake" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: pep257
+4/6 Test: pep257
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_pep257/pep257.txt" "--command" "/opt/ros/jazzy/bin/ament_pep257" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml"
+Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+"pep257" start time: Sep 09 17:10 CEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+ - /opt/ros/jazzy/bin/ament_pep257 --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml
+checking ./launch/rebel.launch.py
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/pep257.xunit.xml'
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"pep257" end time: Sep 09 17:10 CEST
+"pep257" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: uncrustify
+5/6 Test: uncrustify
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/jazzy/bin/ament_uncrustify" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml"
+Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+"uncrustify" start time: Sep 09 17:10 CEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+ - /opt/ros/jazzy/bin/ament_uncrustify --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml
+Code style divergence in file 'include/igus_rebel/CriKeywords.hpp':
+
+--- include/igus_rebel/CriKeywords.hpp
++++ include/igus_rebel/CriKeywords.hpp.uncrustify
+@@ -8,4 +8,4 @@
+-    namespace CriKeywords
+-    {
+-        const std::string START = "CRISTART";
+-        const std::string END = "CRIEND";
++namespace CriKeywords
++{
++const std::string START = "CRISTART";
++const std::string END = "CRIEND";
+@@ -13,14 +13,14 @@
+-        const std::string TYPE_STATUS = "STATUS";
+-        const std::string TYPE_OPINFO = "OPINFO";
+-        const std::string TYPE_GSIG = "GSIG";
+-        const std::string TYPE_GRIPPERSTATE = "GRIPPERSTATE";
+-        const std::string TYPE_RUNSTATE = "RUNSTATE";
+-        const std::string TYPE_MESSAGE = "MESSAGE";
+-        const std::string TYPE_CMD = "CMD";
+-        const std::string TYPE_CONFIG = "CONFIG";
+-        const std::string TYPE_INFO = "INFO";
+-        const std::string TYPE_LOGMSG = "LOGMSG";
+-        const std::string TYPE_VARIABLES = "VARIABLES";
+-        const std::string TYPE_CMDERROR = "CMDERROR";
+-        const std::string TYPE_CMDACK = "CMDACK";
+-        const std::string TYPE_CYCLESTAT = "CYCLESTAT";
++const std::string TYPE_STATUS = "STATUS";
++const std::string TYPE_OPINFO = "OPINFO";
++const std::string TYPE_GSIG = "GSIG";
++const std::string TYPE_GRIPPERSTATE = "GRIPPERSTATE";
++const std::string TYPE_RUNSTATE = "RUNSTATE";
++const std::string TYPE_MESSAGE = "MESSAGE";
++const std::string TYPE_CMD = "CMD";
++const std::string TYPE_CONFIG = "CONFIG";
++const std::string TYPE_INFO = "INFO";
++const std::string TYPE_LOGMSG = "LOGMSG";
++const std::string TYPE_VARIABLES = "VARIABLES";
++const std::string TYPE_CMDERROR = "CMDERROR";
++const std::string TYPE_CMDACK = "CMDACK";
++const std::string TYPE_CYCLESTAT = "CYCLESTAT";
+@@ -28,15 +28,15 @@
+-        const std::string STATUS_MODE = "MODE";
+-        const std::string STATUS_POSJOINTSETPOINT = "POSJOINTSETPOINT";
+-        const std::string STATUS_POSJOINTCURRENT = "POSJOINTCURRENT";
+-        const std::string STATUS_POSCARTROBOT = "POSCARTROBOT";
+-        const std::string STATUS_POSCARTPLATTFORM = "POSCARTPLATTFORM";
+-        const std::string STATUS_OVERRIDE = "OVERRIDE";
+-        const std::string STATUS_DIN = "DIN";
+-        const std::string STATUS_DOUT = "DOUT";
+-        const std::string STATUS_ESTOP = "ESTOP";
+-        const std::string STATUS_SUPPLY = "SUPPLY";
+-        const std::string STATUS_CURRENTALL = "CURRENTALL";
+-        const std::string STATUS_CURRENTJOINTS = "CURRENTJOINTS";
+-        const std::string STATUS_ERROR = "ERROR";
+-        const std::string STATUS_KINSTATE = "KINSTATE";
+-        const std::string STATUS_FRAMEROBOT = "FRAMEROBOT";
++const std::string STATUS_MODE = "MODE";
++const std::string STATUS_POSJOINTSETPOINT = "POSJOINTSETPOINT";
++const std::string STATUS_POSJOINTCURRENT = "POSJOINTCURRENT";
++const std::string STATUS_POSCARTROBOT = "POSCARTROBOT";
++const std::string STATUS_POSCARTPLATTFORM = "POSCARTPLATTFORM";
++const std::string STATUS_OVERRIDE = "OVERRIDE";
++const std::string STATUS_DIN = "DIN";
++const std::string STATUS_DOUT = "DOUT";
++const std::string STATUS_ESTOP = "ESTOP";
++const std::string STATUS_SUPPLY = "SUPPLY";
++const std::string STATUS_CURRENTALL = "CURRENTALL";
++const std::string STATUS_CURRENTJOINTS = "CURRENTJOINTS";
++const std::string STATUS_ERROR = "ERROR";
++const std::string STATUS_KINSTATE = "KINSTATE";
++const std::string STATUS_FRAMEROBOT = "FRAMEROBOT";
+@@ -44,10 +44,10 @@
+-        const std::string COMMAND_CONNECT = "Connect";
+-        const std::string COMMAND_RESET = "Reset";
+-        const std::string COMMAND_ENABLE = "Enable";
+-        const std::string COMMAND_DISABLE = "Disable";
+-        const std::string COMMAND_DISCONNECT = "Disconnect";
+-        const std::string COMMAND_MOTIONTYPEJOINT = "MotionTypeJoint";
+-        const std::string COMMAND_MOTIONTYPECARTBASE = "MotionTypeCartBase";
+-        const std::string COMMAND_QUIT = "QUIT";
+-        const std::string COMMAND_SETACTIVE = "SetActive";
+-        const std::string COMMAND_DOUT = "DOUT";
++const std::string COMMAND_CONNECT = "Connect";
++const std::string COMMAND_RESET = "Reset";
++const std::string COMMAND_ENABLE = "Enable";
++const std::string COMMAND_DISABLE = "Disable";
++const std::string COMMAND_DISCONNECT = "Disconnect";
++const std::string COMMAND_MOTIONTYPEJOINT = "MotionTypeJoint";
++const std::string COMMAND_MOTIONTYPECARTBASE = "MotionTypeCartBase";
++const std::string COMMAND_QUIT = "QUIT";
++const std::string COMMAND_SETACTIVE = "SetActive";
++const std::string COMMAND_DOUT = "DOUT";
+@@ -55,2 +55,2 @@
+-        const std::string CONFIG_GETKINEMATICLIMITS = "GetKinematicLimits";
+-        const std::string CONFIG_GETKINEMATICLIMITS_ANSWER = "KinematicLimits";
++const std::string CONFIG_GETKINEMATICLIMITS = "GetKinematicLimits";
++const std::string CONFIG_GETKINEMATICLIMITS_ANSWER = "KinematicLimits";
+@@ -58,5 +58,5 @@
+-        const std::string MODE_JOINT = "joint";
+-        const std::string MODE_CARTBASE = "cartbase";
+-        const std::string MODE_CARTTOOL = "carttool";
+-        const std::string MODE_PLATFORM = "platform";
+-        const std::string MODE_FSM = "fsm";
++const std::string MODE_JOINT = "joint";
++const std::string MODE_CARTBASE = "cartbase";
++const std::string MODE_CARTTOOL = "carttool";
++const std::string MODE_PLATFORM = "platform";
++const std::string MODE_FSM = "fsm";
+@@ -64,7 +64,7 @@
+-        const std::string LOG_LEVEL_DEBUG = "DEBUG";
+-        const std::string LOG_LEVEL_APP_INFO = "APP_INFO";
+-        const std::string LOG_LEVEL_APP_ERROR = "APP_ERROR";
+-        const std::string LOG_LEVEL_INFO = "INFO";
+-        const std::string LOG_LEVEL_WARN = "WARN";
+-        const std::string LOG_LEVEL_ERROR = "ERROR";
+-        const std::string LOG_LEVEL_FATAL = "FATAL";
++const std::string LOG_LEVEL_DEBUG = "DEBUG";
++const std::string LOG_LEVEL_APP_INFO = "APP_INFO";
++const std::string LOG_LEVEL_APP_ERROR = "APP_ERROR";
++const std::string LOG_LEVEL_INFO = "INFO";
++const std::string LOG_LEVEL_WARN = "WARN";
++const std::string LOG_LEVEL_ERROR = "ERROR";
++const std::string LOG_LEVEL_FATAL = "FATAL";
+@@ -72,3 +72,3 @@
+-        const std::string VARIABLES_NR_VARIABLE = "ValueNrVariable";
+-        const std::string VARIABLES_POS_VARIABLE = "ValuePosVariable";
+-    }
++const std::string VARIABLES_NR_VARIABLE = "ValueNrVariable";
++const std::string VARIABLES_POS_VARIABLE = "ValuePosVariable";
++}
+
+Code style divergence in file 'include/igus_rebel/CriMessages.hpp':
+
+--- include/igus_rebel/CriMessages.hpp
++++ include/igus_rebel/CriMessages.hpp.uncrustify
+@@ -21,238 +21,241 @@
+-    namespace CriMessages
+-    {
+-        enum class MessageType
+-        {
+-            STATUS,
+-            OPINFO,
+-            GSIG,
+-            GRIPPERSTATE,
+-            RUNSTATE,
+-            MESSAGE,
+-            CMD,
+-            CONFIG,
+-            INFO,
+-            LOGMSG,
+-            VARIABLES,
+-            CMDERROR,
+-            CMDACK,
+-            CYCLESTAT,
+-            UNKNOWN = 1000
+-        };
+-
+-        enum class Mode
+-        {
+-            JOINT,
+-            CARTBASE,
+-            CARTTOOL,
+-            PLATFORM,
+-            FSM,
+-            UNKNOWN = 1000
+-        };
+-
+-        enum class Kinstate
+-        {
+-            NO_ERROR = 0,
+-            JOINT_LIMIT_MIN = 13,
+-            JOINT_LIMIT_MAX = 14,
+-            CARTESIAN_SINGULARITY_CENTER = 21,
+-            CARTESIAN_SINGULARITY_REACH = 23,
+-            CARTESIAN_SINGULARITY_WRIST = 24,
+-            TOOL_AT_VIRTUAL_BOX_LIMIT_1 = 30,
+-            TOOL_AT_VIRTUAL_BOX_LIMIT_2 = 31,
+-            TOOL_AT_VIRTUAL_BOX_LIMIT_3 = 32,
+-            TOOL_AT_VIRTUAL_BOX_LIMIT_4 = 33,
+-            TOOL_AT_VIRTUAL_BOX_LIMIT_5 = 34,
+-            TOOL_AT_VIRTUAL_BOX_LIMIT_6 = 35,
+-            MOTION_NOT_ALLOWED = 99,
+-            UNKNOWN = 1000
+-        };
+-
+-        enum class ErrorJoint
+-        {
+-            TEMP = 1,       // OverTemperature
+-            ESTOP_LOWV = 2, // Energy supply too low
+-            MNE = 4,        // Motor not enabled
+-            COM = 8,        // Communication watch dog
+-            POS = 16,       // Position lag
+-            ENC = 32,       // Encoder Error
+-            OC = 64,        // Overcurrent
+-            DRV = 128       // Driver Error
+-        };
+-
+-        enum class ConfigType
+-        {
+-            KINEMATICLIMITS,
+-            UNKNOWN = 1000
+-        };
+-
+-        enum class LogLevel
+-        {
+-            DEBUG,
+-            APP_INFO,
+-            APP_ERROR,
+-            INFO,
+-            WARN,
+-            ERROR,
+-            FATAL,
+-            UNKNOWN = 1000
+-        };
+-
+-        class CriMessage
+-        {
+-        public:
+-            MessageType GetType()
+-            {
+-                return type;
+-            }
+-
+-            static MessageType GetMessageType(const std::string &);
+-
+-        protected:
+-            MessageType type;
+-            explicit CriMessage(const MessageType &_type) : type(_type) {}
+-
+-            static std::string ParseMessageString(const std::string &, const std::string::size_type &,
+-                                                  const std::string::size_type &, const std::string::size_type &);
+-
+-            template <class T, std::size_t N>
+-            static void FillArray(std::array<T, N> &, const std::string &);
+-
+-            template <class T>
+-            void FillVector(std::vector<T> &, const std::string &);
+-
+-            template <class T, std::size_t N>
+-            static std::string ArrayToString(std::array<T, N> &);
+-
+-            template <class T>
+-            std::string VectorToString(std::vector<T> &vector);
+-        };
+-
+-        class Status : public CriMessage
+-        {
+-        public:
+-            Mode mode;
+-            std::array<float, 16> posJointSetPoint;
+-            std::array<float, 16> posJointCurrent;
+-            std::array<float, 6> posCartRobot;
+-            std::array<float, 3> posCartPlattform;
+-            float overrideValue;
+-            int din;
+-            int dout;
+-            int eStop;
+-            int supply;
+-            int currentall;
+-            std::array<int, 16> currentjoints;
+-            std::string errorSummary;
+-            std::array<int, 16> errorJoints;
+-            Kinstate kinstate;
+-
+-            explicit Status(const std::string &);
+-            explicit Status();
+-            static std::string ModeToString(const Mode &);
+-            void Print();
+-            void Log();
+-
+-        private:
+-            std::string ToString();
+-            Mode GetMode(const std::string &);
+-            Kinstate GetKinstate(const std::string &);
+-        };
+-
+-        class Message : public CriMessage
+-        {
+-        public:
+-            explicit Message(const std::string &);
+-
+-            std::string message;
+-        };
+-
+-        class Command : public CriMessage
+-        {
+-        public:
+-            explicit Command(const std::string &);
+-
+-            std::string command;
+-        };
+-
+-        class Info : public CriMessage
+-        {
+-        public:
+-            explicit Info(const std::string &);
+-
+-            std::string info;
+-        };
+-
+-        class LogMsg : public CriMessage
+-        {
+-        public:
+-            explicit LogMsg(const std::string &);
+-
+-            LogLevel logLevel;
+-            long timestamp;
+-            std::string logMsg;
+-
+-        private:
+-            LogLevel GetLogLevel(const std::string &);
+-        };
+-
+-        class Variables : public CriMessage
+-        {
+-        public:
+-            explicit Variables(const std::string &);
+-
+-            struct NumberVariable
+-            {
+-                std::string name;
+-                double value;
+-            };
+-
+-            struct PositionVariable
+-            {
+-                std::string name;
+-                std::array<double, 15> values;
+-            };
+-
+-            std::vector<NumberVariable> numberVariables;
+-            std::vector<PositionVariable> positionVariables;
+-
+-        private:
+-            std::string GetMatchString(const std::smatch &);
+-        };
+-
+-        class CmdError : public CriMessage
+-        {
+-        public:
+-            explicit CmdError(const std::string &);
+-            int recjectedCmd;
+-            std::string error;
+-        };
+-
+-        class CmdAck : public CriMessage
+-        {
+-        public:
+-            explicit CmdAck(const std::string &);
+-            int acceptedCmd;
+-        };
+-
+-        class Cyclestat : public CriMessage
+-        {
+-        public:
+-            explicit Cyclestat(const std::string &);
+-            int cycletime;
+-            int workload;
+-        };
+-
+-        class Config : public CriMessage
+-        {
+-        public:
+-            ConfigType configType;
+-            static ConfigType GetConfigType(const std::string &);
+-
+-        protected:
+-            explicit Config(const ConfigType &_configType) : CriMessage(MessageType::CONFIG), configType(_configType) {}
+-        };
+-
+-        class KinematicLimits : public Config
+-        {
+-        public:
+-            explicit KinematicLimits(const std::string &);
++namespace CriMessages
++{
++enum class MessageType
++{
++  STATUS,
++  OPINFO,
++  GSIG,
++  GRIPPERSTATE,
++  RUNSTATE,
++  MESSAGE,
++  CMD,
++  CONFIG,
++  INFO,
++  LOGMSG,
++  VARIABLES,
++  CMDERROR,
++  CMDACK,
++  CYCLESTAT,
++  UNKNOWN = 1000
++};
++
++enum class Mode
++{
++  JOINT,
++  CARTBASE,
++  CARTTOOL,
++  PLATFORM,
++  FSM,
++  UNKNOWN = 1000
++};
++
++enum class Kinstate
++{
++  NO_ERROR = 0,
++  JOINT_LIMIT_MIN = 13,
++  JOINT_LIMIT_MAX = 14,
++  CARTESIAN_SINGULARITY_CENTER = 21,
++  CARTESIAN_SINGULARITY_REACH = 23,
++  CARTESIAN_SINGULARITY_WRIST = 24,
++  TOOL_AT_VIRTUAL_BOX_LIMIT_1 = 30,
++  TOOL_AT_VIRTUAL_BOX_LIMIT_2 = 31,
++  TOOL_AT_VIRTUAL_BOX_LIMIT_3 = 32,
++  TOOL_AT_VIRTUAL_BOX_LIMIT_4 = 33,
++  TOOL_AT_VIRTUAL_BOX_LIMIT_5 = 34,
++  TOOL_AT_VIRTUAL_BOX_LIMIT_6 = 35,
++  MOTION_NOT_ALLOWED = 99,
++  UNKNOWN = 1000
++};
++
++enum class ErrorJoint
++{
++  TEMP = 1,                 // OverTemperature
++  ESTOP_LOWV = 2,           // Energy supply too low
++  MNE = 4,                  // Motor not enabled
++  COM = 8,                  // Communication watch dog
++  POS = 16,                 // Position lag
++  ENC = 32,                 // Encoder Error
++  OC = 64,                  // Overcurrent
++  DRV = 128                 // Driver Error
++};
++
++enum class ConfigType
++{
++  KINEMATICLIMITS,
++  UNKNOWN = 1000
++};
++
++enum class LogLevel
++{
++  DEBUG,
++  APP_INFO,
++  APP_ERROR,
++  INFO,
++  WARN,
++  ERROR,
++  FATAL,
++  UNKNOWN = 1000
++};
++
++class CriMessage
++{
++public:
++  MessageType GetType()
++  {
++    return type;
++  }
++
++  static MessageType GetMessageType(const std::string &);
++
++protected:
++  MessageType type;
++  explicit CriMessage(const MessageType & _type)
++  : type(_type) {}
++
++  static std::string ParseMessageString(
++    const std::string &, const std::string::size_type &,
++    const std::string::size_type &, const std::string::size_type &);
++
++  template<class T, std::size_t N>
++  static void FillArray(std::array<T, N> &, const std::string &);
++
++  template<class T>
++  void FillVector(std::vector<T> &, const std::string &);
++
++  template<class T, std::size_t N>
++  static std::string ArrayToString(std::array<T, N> &);
++
++  template<class T>
++  std::string VectorToString(std::vector<T> & vector);
++};
++
++class Status : public CriMessage
++{
++public:
++  Mode mode;
++  std::array<float, 16> posJointSetPoint;
++  std::array<float, 16> posJointCurrent;
++  std::array<float, 6> posCartRobot;
++  std::array<float, 3> posCartPlattform;
++  float overrideValue;
++  int din;
++  int dout;
++  int eStop;
++  int supply;
++  int currentall;
++  std::array<int, 16> currentjoints;
++  std::string errorSummary;
++  std::array<int, 16> errorJoints;
++  Kinstate kinstate;
++
++  explicit Status(const std::string &);
++  explicit Status();
++  static std::string ModeToString(const Mode &);
++  void Print();
++  void Log();
++
++private:
++  std::string ToString();
++  Mode GetMode(const std::string &);
++  Kinstate GetKinstate(const std::string &);
++};
++
++class Message : public CriMessage
++{
++public:
++  explicit Message(const std::string &);
++
++  std::string message;
++};
++
++class Command : public CriMessage
++{
++public:
++  explicit Command(const std::string &);
++
++  std::string command;
++};
++
++class Info : public CriMessage
++{
++public:
++  explicit Info(const std::string &);
++
++  std::string info;
++};
++
++class LogMsg : public CriMessage
++{
++public:
++  explicit LogMsg(const std::string &);
++
++  LogLevel logLevel;
++  long timestamp;
++  std::string logMsg;
++
++private:
++  LogLevel GetLogLevel(const std::string &);
++};
++
++class Variables : public CriMessage
++{
++public:
++  explicit Variables(const std::string &);
++
++  struct NumberVariable
++  {
++    std::string name;
++    double value;
++  };
++
++  struct PositionVariable
++  {
++    std::string name;
++    std::array<double, 15> values;
++  };
++
++  std::vector<NumberVariable> numberVariables;
++  std::vector<PositionVariable> positionVariables;
++
++private:
++  std::string GetMatchString(const std::smatch &);
++};
++
++class CmdError : public CriMessage
++{
++public:
++  explicit CmdError(const std::string &);
++  int recjectedCmd;
++  std::string error;
++};
++
++class CmdAck : public CriMessage
++{
++public:
++  explicit CmdAck(const std::string &);
++  int acceptedCmd;
++};
++
++class Cyclestat : public CriMessage
++{
++public:
++  explicit Cyclestat(const std::string &);
++  int cycletime;
++  int workload;
++};
++
++class Config : public CriMessage
++{
++public:
++  ConfigType configType;
++  static ConfigType GetConfigType(const std::string &);
++
++protected:
++  explicit Config(const ConfigType & _configType)
++  : CriMessage(MessageType::CONFIG), configType(_configType) {}
++};
++
++class KinematicLimits : public Config
++{
++public:
++  explicit KinematicLimits(const std::string &);
+@@ -263,6 +266,5 @@
+-            std::vector<std::pair<float, float>> minMaxPairs;
+-
+-            std::string ToString();
+-            void Print();
+-        };
+-    }
++  std::vector<std::pair<float, float>> minMaxPairs;
++
++  std::string ToString();
++  void Print();
++};
+@@ -269,0 +272 @@
++}
+
+Code style divergence in file 'include/igus_rebel/Rebel.hpp':
+
+--- include/igus_rebel/Rebel.hpp
++++ include/igus_rebel/Rebel.hpp.uncrustify
+@@ -20,8 +20,8 @@
+-    class Rebel : public SystemInterface
+-    {
+-    public:
+-        enum class ControlMode
+-        {
+-            POSITION,
+-            VELOCITY
+-        };
++class Rebel : public SystemInterface
++{
++public:
++  enum class ControlMode
++  {
++    POSITION,
++    VELOCITY
++  };
+@@ -29,5 +29,5 @@
+-    private:
+-        rclcpp::Node::SharedPtr node_;
+-        
+-        std::shared_ptr<RebelSocket> rebelSocket;
+-        CriMessages::Status currentStatus;
++private:
++  rclcpp::Node::SharedPtr node_;
++
++  std::shared_ptr<RebelSocket> rebelSocket;
++  CriMessages::Status currentStatus;
+@@ -36,2 +36,2 @@
+-        float j1, j2, j3, j4, j5, j6;
+-        ControlMode controlMode;
++  float j1, j2, j3, j4, j5, j6;
++  ControlMode controlMode;
+@@ -39,5 +39,5 @@
+-        bool continueAlive;
+-        bool continueMessage;
+-        std::thread aliveThread;
+-        std::thread messageThread;
+-        int aliveWaitMs;
++  bool continueAlive;
++  bool continueMessage;
++  std::thread aliveThread;
++  std::thread messageThread;
++  int aliveWaitMs;
+@@ -45,3 +45,3 @@
+-        int current_ccnt;
+-        std::mutex cntLock;
+-        std::mutex aliveLock;
++  int current_ccnt;
++  std::mutex cntLock;
++  std::mutex aliveLock;
+@@ -49,5 +49,5 @@
+-        double vel_cmd[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+-        double pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+-        double last_pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+-        double vel[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+-        double eff[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++  double vel_cmd[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++  double pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++  double last_pos[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++  double vel[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
++  double eff[6] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+@@ -55,3 +55,3 @@
+-        CriMessages::Kinstate lastKinstate;
+-        std::array<int, 16> lastErrorJoints;
+-        std::string kinstateMessage;
++  CriMessages::Kinstate lastKinstate;
++  std::array<int, 16> lastErrorJoints;
++  std::string kinstateMessage;
+@@ -59 +59 @@
+-        std::unordered_map<int, std::string> unacknowledgedCommands;
++  std::unordered_map<int, std::string> unacknowledgedCommands;
+@@ -62 +62 @@
+-        rclcpp::Service<igus_rebel_msgs::srv::SetDigitalOutput>::SharedPtr digital_output_srv_;
++  rclcpp::Service<igus_rebel_msgs::srv::SetDigitalOutput>::SharedPtr digital_output_srv_;
+@@ -65,2 +65,2 @@
+-        void AliveThreadFunction();
+-        void MessageThreadFunction();
++  void AliveThreadFunction();
++  void MessageThreadFunction();
+@@ -69,4 +69,4 @@
+-        int Ccnt();
+-        void Command(const std::string &);
+-        void GetConfig(const std::string &);
+-        void SetControlMode(const ControlMode &);
++  int Ccnt();
++  void Command(const std::string &);
++  void GetConfig(const std::string &);
++  void SetControlMode(const ControlMode &);
+@@ -75,2 +75,2 @@
+-        void ProcessStatus(const CriMessages::Status &);
+-        void SetUpRosHardwareInterface();
++  void ProcessStatus(const CriMessages::Status &);
++  void SetUpRosHardwareInterface();
+@@ -78,3 +78,3 @@
+-    public:
+-        const std::vector<std::string> JOINT_NAME = {
+-            "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"};
++public:
++  const std::vector<std::string> JOINT_NAME = {
++    "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"};
+@@ -83 +83 @@
+-        const double degToRad = 0.0174532925199432957692369076848861271344287188854172545609719144;
++  const double degToRad = 0.0174532925199432957692369076848861271344287188854172545609719144;
+@@ -86,2 +86,2 @@
+-        const std::string ip = "192.168.3.11";
+-        const int port = 3920;
++  const std::string ip = "192.168.3.11";
++  const int port = 3920;
+@@ -89,2 +89,2 @@
+-        Rebel();
+-        ~Rebel();
++  Rebel();
++  ~Rebel();
+@@ -92,3 +92,5 @@
+-        void SetJog(const float &, const float &, const float &, const float &, const float &, const float &);
+-        void GetJoints(float &, float &, float &, float &, float &, float &);
+-        void SetDigitalOut(const int &, const bool &);
++  void SetJog(
++    const float &, const float &, const float &, const float &, const float &,
++    const float &);
++  void GetJoints(float &, float &, float &, float &, float &, float &);
++  void SetDigitalOut(const int &, const bool &);
+@@ -97 +99 @@
+-        CallbackReturn on_init(const HardwareInfo &hardware_info) override;
++  CallbackReturn on_init(const HardwareInfo & hardware_info) override;
+@@ -99,4 +101,4 @@
+-        std::vector<StateInterface> export_state_interfaces() override;
+-        std::vector<CommandInterface> export_command_interfaces() override;
+-        return_type read(const rclcpp::Time &time, const rclcpp::Duration &period) override;
+-        return_type write(const rclcpp::Time &time, const rclcpp::Duration &period) override;
++  std::vector<StateInterface> export_state_interfaces() override;
++  std::vector<CommandInterface> export_command_interfaces() override;
++  return_type read(const rclcpp::Time & time, const rclcpp::Duration & period) override;
++  return_type write(const rclcpp::Time & time, const rclcpp::Duration & period) override;
+@@ -104,2 +106,2 @@
+-        void read();
+-        void write();
++  void read();
++  void write();
+@@ -107,2 +109,3 @@
+-        void dio_callback(const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
+-                          std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response);
++  void dio_callback(
++    const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
++    std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response);
+@@ -110 +113 @@
+-        void GetReferenceInfo();
++  void GetReferenceInfo();
+@@ -112,3 +115,3 @@
+-        void Start();
+-        void Stop();
+-    };
++  void Start();
++  void Stop();
++};
+@@ -117 +120 @@
+-#endif
++#endif
+
+Code style divergence in file 'include/igus_rebel/RebelSocket.hpp':
+
+--- include/igus_rebel/RebelSocket.hpp
++++ include/igus_rebel/RebelSocket.hpp.uncrustify
+@@ -14,8 +14,8 @@
+-    class RebelSocket
+-    {
+-    private:
+-        int sock;
+-        std::string ip;
+-        int port;
+-        int timeout;
+-        std::list<std::string> unprocessedMessages;
++class RebelSocket
++{
++private:
++  int sock;
++  std::string ip;
++  int port;
++  int timeout;
++  std::list<std::string> unprocessedMessages;
+@@ -23,8 +23,8 @@
+-        bool continueReceive = false;
+-        std::thread receiveThread;
+-        std::thread listCheckThread;
+-        std::mutex socketWriteLock;
+-        std::mutex connectionLock;
+-        std::mutex messageLock;
+-        unsigned long maxUnprocessedMessages = 25;
+-        int listCheckWaitMs = 500;
++  bool continueReceive = false;
++  std::thread receiveThread;
++  std::thread listCheckThread;
++  std::mutex socketWriteLock;
++  std::mutex connectionLock;
++  std::mutex messageLock;
++  unsigned long maxUnprocessedMessages = 25;
++  int listCheckWaitMs = 500;
+@@ -32,2 +32,2 @@
+-        bool connectionNeeded = false;
+-        static const int bufferSize = 4096;
++  bool connectionNeeded = false;
++  static const int bufferSize = 4096;
+@@ -35,2 +35,2 @@
+-        char fragmentBuffer[bufferSize];
+-        int fragmentLength = 0;
++  char fragmentBuffer[bufferSize];
++  int fragmentLength = 0;
+@@ -38,2 +38,2 @@
+-        void MakeConnection();
+-        void SeparateMessages(const char *);
++  void MakeConnection();
++  void SeparateMessages(const char *);
+@@ -41,2 +41,2 @@
+-        void ReceiveThreadFunction();
+-        void ListCheckThreadFunction();
++  void ReceiveThreadFunction();
++  void ListCheckThreadFunction();
+@@ -44 +44 @@
+-        bool IsSocketOk();
++  bool IsSocketOk();
+@@ -46,3 +46,3 @@
+-    public:
+-        RebelSocket(const std::string &, const int &, const int &);
+-        ~RebelSocket();
++public:
++  RebelSocket(const std::string &, const int &, const int &);
++  ~RebelSocket();
+@@ -50,6 +50,6 @@
+-        void Start();
+-        void Stop();
+-        bool HasMessage();
+-        std::string GetMessage();
+-        void SendMessage(const std::string &);
+-    };
++  void Start();
++  void Stop();
++  bool HasMessage();
++  std::string GetMessage();
++  void SendMessage(const std::string &);
++};
+
+Code style divergence in file 'src/CriMessages.cpp':
+
+--- src/CriMessages.cpp
++++ src/CriMessages.cpp.uncrustify
+@@ -10,5 +10,5 @@
+-    namespace CriMessages
+-    {
+-        MessageType CriMessage::GetMessageType(const std::string &msg)
+-        {
+-            std::string::size_type typeStart;
++namespace CriMessages
++{
++MessageType CriMessage::GetMessageType(const std::string & msg)
++{
++  std::string::size_type typeStart;
+@@ -16,247 +16,224 @@
+-            if (msg.at(0) == ' ')
+-            {
+-                typeStart = msg.find(" ", 1) + 1;
+-            }
+-            else
+-            {
+-                typeStart = msg.find(" ") + 1;
+-            }
+-            std::string::size_type typeEnd = msg.find(" ", typeStart);
+-
+-            std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
+-
+-            if (typeString == CriKeywords::TYPE_STATUS)
+-            {
+-                return MessageType::STATUS;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_OPINFO)
+-            {
+-                return MessageType::OPINFO;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_GSIG)
+-            {
+-                return MessageType::GSIG;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_GRIPPERSTATE)
+-            {
+-                return MessageType::GRIPPERSTATE;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_RUNSTATE)
+-            {
+-                return MessageType::RUNSTATE;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_MESSAGE)
+-            {
+-                return MessageType::MESSAGE;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_CMD)
+-            {
+-                return MessageType::CMD;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_CONFIG)
+-            {
+-                return MessageType::CONFIG;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_INFO)
+-            {
+-                return MessageType::INFO;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_LOGMSG)
+-            {
+-                return MessageType::LOGMSG;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_VARIABLES)
+-            {
+-                return MessageType::VARIABLES;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_CMDERROR)
+-            {
+-                return MessageType::CMDERROR;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_CMDACK)
+-            {
+-                return MessageType::CMDACK;
+-            }
+-
+-            if (typeString == CriKeywords::TYPE_CYCLESTAT)
+-            {
+-                return MessageType::CYCLESTAT;
+-            }
+-
+-            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown message type: \"%s\"", typeString.c_str());
+-            return MessageType::UNKNOWN;
+-        }
+-
+-        std::string CriMessage::ParseMessageString(const std::string &statusString, const std::string::size_type &begin,
+-                                                   const std::string::size_type &end, const std::string::size_type &keywordLength)
+-        {
+-            int start = begin + keywordLength + 1;
+-            int length = end - start - 1;
+-
+-            return statusString.substr(start, length);
+-        }
+-
+-        template <class T, std::size_t N>
+-        void CriMessage::FillArray(std::array<T, N> &array, const std::string &spaceSeparatedValues)
+-        {
+-            typename std::array<T, N>::size_type idx = 0;
+-            std::string::size_type begin = 0;
+-            std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
+-
+-            while (end != std::string::npos)
+-            {
+-                if (idx >= N)
+-                {
+-                    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Parsing error");
+-                    return;
+-                }
+-
+-                std::string value = spaceSeparatedValues.substr(begin, end - begin);
+-
+-                if (std::is_same<float, T>::value)
+-                {
+-                    array.at(idx) = std::stof(value);
+-                }
+-
+-                if (std::is_same<int, T>::value)
+-                {
+-                    array.at(idx) = std::stoi(value);
+-                }
+-
+-                begin = spaceSeparatedValues.find(" ", end);
+-                end = spaceSeparatedValues.find(" ", begin + 1);
+-                idx++;
+-            }
+-
+-            std::string value = spaceSeparatedValues.substr(begin);
+-
+-            if (std::is_same<float, T>::value)
+-            {
+-                array.at(idx) = std::stof(value);
+-            }
+-
+-            if (std::is_same<int, T>::value)
+-            {
+-                array.at(idx) = std::stoi(value);
+-            }
+-        }
+-
+-        template <class T>
+-        void CriMessage::FillVector(std::vector<T> &vector, const std::string &spaceSeparatedValues)
+-        {
+-            std::string::size_type begin = 0;
+-            std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
+-
+-            while (end != std::string::npos)
+-            {
+-                std::string value = spaceSeparatedValues.substr(begin, end - begin);
+-
+-                if (std::is_same<float, T>::value)
+-                {
+-                    vector.push_back(std::stof(value));
+-                }
+-
+-                if (std::is_same<int, T>::value)
+-                {
+-                    vector.push_back(std::stoi(value));
+-                }
+-
+-                begin = spaceSeparatedValues.find(" ", end);
+-                end = spaceSeparatedValues.find(" ", begin + 1);
+-            }
+-
+-            std::string value = spaceSeparatedValues.substr(begin);
+-
+-            if (std::is_same<float, T>::value)
+-            {
+-                vector.push_back(std::stof(value));
+-            }
+-
+-            if (std::is_same<int, T>::value)
+-            {
+-                vector.push_back(std::stoi(value));
+-            }
+-        }
+-
+-        template <class T, std::size_t N>
+-        std::string CriMessage::ArrayToString(std::array<T, N> &array)
+-        {
+-            std::ostringstream msg;
+-            msg << std::showpoint;
+-            msg << std::fixed;
+-            msg << std::setprecision(FLOAT_PRINT_PRECISION);
+-
+-            for (T val : array)
+-            {
+-                msg << val << " ";
+-            }
+-
+-            return msg.str();
+-        }
+-
+-        template <class T>
+-        std::string CriMessage::VectorToString(std::vector<T> &vector)
+-        {
+-            std::ostringstream msg;
+-            msg << std::showpoint;
+-            msg << std::fixed;
+-            msg << std::setprecision(FLOAT_PRINT_PRECISION);
+-
+-            for (T val : vector)
+-            {
+-                msg << val << " ";
+-            }
+-
+-            return msg.str();
+-        }
+-
+-        Status::Status(const std::string &messageString) : CriMessage(MessageType::STATUS)
+-        {
+-            std::string::size_type modeStart = messageString.find(CriKeywords::STATUS_MODE);
+-            std::string::size_type posJointSetPointStart = messageString.find(CriKeywords::STATUS_POSJOINTSETPOINT);
+-            std::string::size_type posJointCurrentStart = messageString.find(CriKeywords::STATUS_POSJOINTCURRENT);
+-            std::string::size_type posCartRobotStart = messageString.find(CriKeywords::STATUS_POSCARTROBOT);
+-            std::string::size_type posCartPlattformStart = messageString.find(CriKeywords::STATUS_POSCARTPLATTFORM);
+-            std::string::size_type overrideValueStart = messageString.find(CriKeywords::STATUS_OVERRIDE);
+-            std::string::size_type dinStart = messageString.find(CriKeywords::STATUS_DIN);
+-            std::string::size_type doutStart = messageString.find(CriKeywords::STATUS_DOUT);
+-            std::string::size_type eStopStart = messageString.find(CriKeywords::STATUS_ESTOP);
+-            std::string::size_type supplyStart = messageString.find(CriKeywords::STATUS_SUPPLY);
+-            std::string::size_type currentallStart = messageString.find(CriKeywords::STATUS_CURRENTALL);
+-            std::string::size_type currentjointsStart = messageString.find(CriKeywords::STATUS_CURRENTJOINTS);
+-            std::string::size_type errorStart = messageString.find(CriKeywords::STATUS_ERROR);
+-            std::string::size_type kinstateStart = messageString.find(CriKeywords::STATUS_KINSTATE);
+-
+-            if (
+-                !(
+-                    (modeStart < posJointSetPointStart) &&
+-                    (posJointSetPointStart < posJointCurrentStart) &&
+-                    (posJointCurrentStart < posCartRobotStart) &&
+-                    (posCartRobotStart < posCartPlattformStart) &&
+-                    (posCartPlattformStart < overrideValueStart) &&
+-                    (overrideValueStart < dinStart) &&
+-                    (dinStart < doutStart) &&
+-                    (doutStart < eStopStart) &&
+-                    (eStopStart < supplyStart) &&
+-                    (supplyStart < currentallStart) &&
+-                    (currentallStart < currentjointsStart) &&
+-                    (currentjointsStart < errorStart) &&
+-                    (errorStart < kinstateStart)))
+-            {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Bad parsing error for message \"%s\"", messageString.c_str());
+-                return;
+-            }
+-
+-            std::string modeString = ParseMessageString(messageString, modeStart, posJointSetPointStart,
++  if (msg.at(0) == ' ') {
++    typeStart = msg.find(" ", 1) + 1;
++  } else {
++    typeStart = msg.find(" ") + 1;
++  }
++  std::string::size_type typeEnd = msg.find(" ", typeStart);
++
++  std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
++
++  if (typeString == CriKeywords::TYPE_STATUS) {
++    return MessageType::STATUS;
++  }
++
++  if (typeString == CriKeywords::TYPE_OPINFO) {
++    return MessageType::OPINFO;
++  }
++
++  if (typeString == CriKeywords::TYPE_GSIG) {
++    return MessageType::GSIG;
++  }
++
++  if (typeString == CriKeywords::TYPE_GRIPPERSTATE) {
++    return MessageType::GRIPPERSTATE;
++  }
++
++  if (typeString == CriKeywords::TYPE_RUNSTATE) {
++    return MessageType::RUNSTATE;
++  }
++
++  if (typeString == CriKeywords::TYPE_MESSAGE) {
++    return MessageType::MESSAGE;
++  }
++
++  if (typeString == CriKeywords::TYPE_CMD) {
++    return MessageType::CMD;
++  }
++
++  if (typeString == CriKeywords::TYPE_CONFIG) {
++    return MessageType::CONFIG;
++  }
++
++  if (typeString == CriKeywords::TYPE_INFO) {
++    return MessageType::INFO;
++  }
++
++  if (typeString == CriKeywords::TYPE_LOGMSG) {
++    return MessageType::LOGMSG;
++  }
++
++  if (typeString == CriKeywords::TYPE_VARIABLES) {
++    return MessageType::VARIABLES;
++  }
++
++  if (typeString == CriKeywords::TYPE_CMDERROR) {
++    return MessageType::CMDERROR;
++  }
++
++  if (typeString == CriKeywords::TYPE_CMDACK) {
++    return MessageType::CMDACK;
++  }
++
++  if (typeString == CriKeywords::TYPE_CYCLESTAT) {
++    return MessageType::CYCLESTAT;
++  }
++
++  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown message type: \"%s\"",
++        typeString.c_str());
++  return MessageType::UNKNOWN;
++}
++
++std::string CriMessage::ParseMessageString(
++  const std::string & statusString, const std::string::size_type & begin,
++  const std::string::size_type & end, const std::string::size_type & keywordLength)
++{
++  int start = begin + keywordLength + 1;
++  int length = end - start - 1;
++
++  return statusString.substr(start, length);
++}
++
++template<class T, std::size_t N>
++void CriMessage::FillArray(std::array<T, N> & array, const std::string & spaceSeparatedValues)
++{
++  typename std::array<T, N>::size_type idx = 0;
++  std::string::size_type begin = 0;
++  std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
++
++  while (end != std::string::npos) {
++    if (idx >= N) {
++      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Parsing error");
++      return;
++    }
++
++    std::string value = spaceSeparatedValues.substr(begin, end - begin);
++
++    if (std::is_same<float, T>::value) {
++      array.at(idx) = std::stof(value);
++    }
++
++    if (std::is_same<int, T>::value) {
++      array.at(idx) = std::stoi(value);
++    }
++
++    begin = spaceSeparatedValues.find(" ", end);
++    end = spaceSeparatedValues.find(" ", begin + 1);
++    idx++;
++  }
++
++  std::string value = spaceSeparatedValues.substr(begin);
++
++  if (std::is_same<float, T>::value) {
++    array.at(idx) = std::stof(value);
++  }
++
++  if (std::is_same<int, T>::value) {
++    array.at(idx) = std::stoi(value);
++  }
++}
++
++template<class T>
++void CriMessage::FillVector(std::vector<T> & vector, const std::string & spaceSeparatedValues)
++{
++  std::string::size_type begin = 0;
++  std::string::size_type end = spaceSeparatedValues.find(" ", begin + 1);
++
++  while (end != std::string::npos) {
++    std::string value = spaceSeparatedValues.substr(begin, end - begin);
++
++    if (std::is_same<float, T>::value) {
++      vector.push_back(std::stof(value));
++    }
++
++    if (std::is_same<int, T>::value) {
++      vector.push_back(std::stoi(value));
++    }
++
++    begin = spaceSeparatedValues.find(" ", end);
++    end = spaceSeparatedValues.find(" ", begin + 1);
++  }
++
++  std::string value = spaceSeparatedValues.substr(begin);
++
++  if (std::is_same<float, T>::value) {
++    vector.push_back(std::stof(value));
++  }
++
++  if (std::is_same<int, T>::value) {
++    vector.push_back(std::stoi(value));
++  }
++}
++
++template<class T, std::size_t N>
++std::string CriMessage::ArrayToString(std::array<T, N> & array)
++{
++  std::ostringstream msg;
++  msg << std::showpoint;
++  msg << std::fixed;
++  msg << std::setprecision(FLOAT_PRINT_PRECISION);
++
++  for (T val : array) {
++    msg << val << " ";
++  }
++
++  return msg.str();
++}
++
++template<class T>
++std::string CriMessage::VectorToString(std::vector<T> & vector)
++{
++  std::ostringstream msg;
++  msg << std::showpoint;
++  msg << std::fixed;
++  msg << std::setprecision(FLOAT_PRINT_PRECISION);
++
++  for (T val : vector) {
++    msg << val << " ";
++  }
++
++  return msg.str();
++}
++
++Status::Status(const std::string & messageString)
++: CriMessage(MessageType::STATUS)
++{
++  std::string::size_type modeStart = messageString.find(CriKeywords::STATUS_MODE);
++  std::string::size_type posJointSetPointStart =
++    messageString.find(CriKeywords::STATUS_POSJOINTSETPOINT);
++  std::string::size_type posJointCurrentStart =
++    messageString.find(CriKeywords::STATUS_POSJOINTCURRENT);
++  std::string::size_type posCartRobotStart = messageString.find(CriKeywords::STATUS_POSCARTROBOT);
++  std::string::size_type posCartPlattformStart =
++    messageString.find(CriKeywords::STATUS_POSCARTPLATTFORM);
++  std::string::size_type overrideValueStart = messageString.find(CriKeywords::STATUS_OVERRIDE);
++  std::string::size_type dinStart = messageString.find(CriKeywords::STATUS_DIN);
++  std::string::size_type doutStart = messageString.find(CriKeywords::STATUS_DOUT);
++  std::string::size_type eStopStart = messageString.find(CriKeywords::STATUS_ESTOP);
++  std::string::size_type supplyStart = messageString.find(CriKeywords::STATUS_SUPPLY);
++  std::string::size_type currentallStart = messageString.find(CriKeywords::STATUS_CURRENTALL);
++  std::string::size_type currentjointsStart = messageString.find(CriKeywords::STATUS_CURRENTJOINTS);
++  std::string::size_type errorStart = messageString.find(CriKeywords::STATUS_ERROR);
++  std::string::size_type kinstateStart = messageString.find(CriKeywords::STATUS_KINSTATE);
++
++  if (
++    !(
++      (modeStart < posJointSetPointStart) &&
++      (posJointSetPointStart < posJointCurrentStart) &&
++      (posJointCurrentStart < posCartRobotStart) &&
++      (posCartRobotStart < posCartPlattformStart) &&
++      (posCartPlattformStart < overrideValueStart) &&
++      (overrideValueStart < dinStart) &&
++      (dinStart < doutStart) &&
++      (doutStart < eStopStart) &&
++      (eStopStart < supplyStart) &&
++      (supplyStart < currentallStart) &&
++      (currentallStart < currentjointsStart) &&
++      (currentjointsStart < errorStart) &&
++      (errorStart < kinstateStart)))
++  {
++    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Bad parsing error for message \"%s\"",
++          messageString.c_str());
++    return;
++  }
++
++  std::string modeString = ParseMessageString(messageString, modeStart, posJointSetPointStart,
+@@ -264,11 +241,16 @@
+-            std::string posJointSetPointString = ParseMessageString(messageString, posJointSetPointStart,
+-                                                                    posJointCurrentStart, CriKeywords::STATUS_POSJOINTSETPOINT.size());
+-            std::string posJointCurrentString = ParseMessageString(messageString, posJointCurrentStart,
+-                                                                   posCartRobotStart, CriKeywords::STATUS_POSJOINTCURRENT.size());
+-            std::string posCartRobotString = ParseMessageString(messageString, posCartRobotStart,
+-                                                                posCartPlattformStart, CriKeywords::STATUS_POSCARTROBOT.size());
+-            std::string posCartPlattformString = ParseMessageString(messageString, posCartPlattformStart,
+-                                                                    overrideValueStart, CriKeywords::STATUS_POSCARTPLATTFORM.size());
+-            std::string overrideValueString = ParseMessageString(messageString, overrideValueStart,
+-                                                                 dinStart, CriKeywords::STATUS_OVERRIDE.size());
+-            std::string dinString = ParseMessageString(messageString, dinStart, doutStart,
++  std::string posJointSetPointString = ParseMessageString(messageString, posJointSetPointStart,
++                                                                    posJointCurrentStart,
++        CriKeywords::STATUS_POSJOINTSETPOINT.size());
++  std::string posJointCurrentString = ParseMessageString(messageString, posJointCurrentStart,
++                                                                   posCartRobotStart,
++        CriKeywords::STATUS_POSJOINTCURRENT.size());
++  std::string posCartRobotString = ParseMessageString(messageString, posCartRobotStart,
++                                                                posCartPlattformStart,
++        CriKeywords::STATUS_POSCARTROBOT.size());
++  std::string posCartPlattformString = ParseMessageString(messageString, posCartPlattformStart,
++                                                                    overrideValueStart,
++        CriKeywords::STATUS_POSCARTPLATTFORM.size());
++  std::string overrideValueString = ParseMessageString(messageString, overrideValueStart,
++                                                                 dinStart,
++        CriKeywords::STATUS_OVERRIDE.size());
++  std::string dinString = ParseMessageString(messageString, dinStart, doutStart,
+@@ -276 +258 @@
+-            std::string doutString = ParseMessageString(messageString, doutStart, eStopStart,
++  std::string doutString = ParseMessageString(messageString, doutStart, eStopStart,
+@@ -278 +260 @@
+-            std::string eStopString = ParseMessageString(messageString, eStopStart, supplyStart,
++  std::string eStopString = ParseMessageString(messageString, eStopStart, supplyStart,
+@@ -280 +262 @@
+-            std::string supplyString = ParseMessageString(messageString, supplyStart, currentallStart,
++  std::string supplyString = ParseMessageString(messageString, supplyStart, currentallStart,
+@@ -282 +264,2 @@
+-            std::string currentallString = ParseMessageString(messageString, currentallStart, currentjointsStart,
++  std::string currentallString = ParseMessageString(messageString, currentallStart,
++        currentjointsStart,
+@@ -284,3 +267,5 @@
+-            std::string currentjointsString = ParseMessageString(messageString, currentjointsStart, errorStart,
+-                                                                 CriKeywords::STATUS_CURRENTJOINTS.size());
+-            std::string errorString = ParseMessageString(messageString, errorStart, kinstateStart,
++  std::string currentjointsString = ParseMessageString(messageString, currentjointsStart,
++        errorStart,
++                                                                 CriKeywords::STATUS_CURRENTJOINTS.
++      size());
++  std::string errorString = ParseMessageString(messageString, errorStart, kinstateStart,
+@@ -288 +273,2 @@
+-            std::string kinstateString = ParseMessageString(messageString, kinstateStart, messageString.size() + 1,
++  std::string kinstateString = ParseMessageString(messageString, kinstateStart,
++        messageString.size() + 1,
+@@ -291,20 +277,20 @@
+-            std::string::size_type errorSummaryEnd = errorString.find(" ");
+-            errorSummary = errorString.substr(0, errorSummaryEnd);
+-            std::string errorJointsString = errorString.substr(errorSummaryEnd + 1);
+-
+-            mode = GetMode(modeString);
+-            FillArray(posJointSetPoint, posJointSetPointString);
+-            FillArray(posJointCurrent, posJointCurrentString);
+-            FillArray(posCartRobot, posCartRobotString);
+-            FillArray(posCartPlattform, posCartPlattformString);
+-            try {
+-                overrideValue = std::stof(overrideValueString);
+-                din = std::stoi(dinString);     // TODO: Process further to actual meaning
+-                dout = std::stoi(doutString);   // TODO: Process further to actual meaning
+-                eStop = std::stoi(eStopString); // TODO: Process further to actual meaning
+-                supply = std::stoi(supplyString);
+-                currentall = std::stoi(currentallString);
+-            } catch (const std::invalid_argument &e) {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing status message: %s", e.what());
+-            }
+-            FillArray(currentjoints, currentjointsString);
++  std::string::size_type errorSummaryEnd = errorString.find(" ");
++  errorSummary = errorString.substr(0, errorSummaryEnd);
++  std::string errorJointsString = errorString.substr(errorSummaryEnd + 1);
++
++  mode = GetMode(modeString);
++  FillArray(posJointSetPoint, posJointSetPointString);
++  FillArray(posJointCurrent, posJointCurrentString);
++  FillArray(posCartRobot, posCartRobotString);
++  FillArray(posCartPlattform, posCartPlattformString);
++  try {
++    overrideValue = std::stof(overrideValueString);
++    din = std::stoi(dinString);                 // TODO: Process further to actual meaning
++    dout = std::stoi(doutString);               // TODO: Process further to actual meaning
++    eStop = std::stoi(eStopString);             // TODO: Process further to actual meaning
++    supply = std::stoi(supplyString);
++    currentall = std::stoi(currentallString);
++  } catch (const std::invalid_argument & e) {
++    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing status message: %s", e.what());
++  }
++  FillArray(currentjoints, currentjointsString);
+@@ -312,59 +298,60 @@
+-            FillArray(errorJoints, errorJointsString); // TODO: Process further to actual meaning
+-            kinstate = GetKinstate(kinstateString);
+-        }
+-
+-        Status::Status() : CriMessage(MessageType::STATUS)
+-        {
+-            mode = Mode::UNKNOWN;
+-            posJointSetPoint.fill(0.0f);
+-            posJointCurrent.fill(0.0f);
+-            posCartRobot.fill(0.0f);
+-            posCartPlattform.fill(0.0f);
+-            overrideValue = 0.0f;
+-            din = 0;
+-            dout = 0;
+-            eStop = 0;
+-            supply = 0;
+-            currentall = 0;
+-            currentjoints.fill(0);
+-            errorSummary = "NotInitialized";
+-            errorJoints.fill(0);
+-            kinstate = Kinstate::UNKNOWN;
+-        }
+-
+-        std::string Status::ModeToString(const Mode &mode)
+-        {
+-            switch (mode)
+-            {
+-            case Mode::JOINT:
+-                return "Joint";
+-            case Mode::CARTBASE:
+-                return "Cartesian (base)";
+-            case Mode::CARTTOOL:
+-                return "Cartesian (tool)";
+-            case Mode::PLATFORM:
+-                return "Platform";
+-            case Mode::FSM:
+-                return "FSM";
+-            case Mode::UNKNOWN:
+-                return "Unknown";
+-            }
+-
+-            return std::string();
+-        }
+-
+-        void Status::Print()
+-        {
+-            std::cout << ToString();
+-        }
+-
+-        void Status::Log()
+-        {
+-            rclcpp::Clock::SharedPtr clock_ = std::make_shared<rclcpp::Clock>(RCL_SYSTEM_TIME);
+-            RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *clock_, 60, "Rebel status:\n%s", ToString().c_str());
+-        }
+-
+-        std::string Status::ToString()
+-        {
+-            std::ostringstream msg;
+-            msg << std::showpoint
++  FillArray(errorJoints, errorJointsString);           // TODO: Process further to actual meaning
++  kinstate = GetKinstate(kinstateString);
++}
++
++Status::Status()
++: CriMessage(MessageType::STATUS)
++{
++  mode = Mode::UNKNOWN;
++  posJointSetPoint.fill(0.0f);
++  posJointCurrent.fill(0.0f);
++  posCartRobot.fill(0.0f);
++  posCartPlattform.fill(0.0f);
++  overrideValue = 0.0f;
++  din = 0;
++  dout = 0;
++  eStop = 0;
++  supply = 0;
++  currentall = 0;
++  currentjoints.fill(0);
++  errorSummary = "NotInitialized";
++  errorJoints.fill(0);
++  kinstate = Kinstate::UNKNOWN;
++}
++
++std::string Status::ModeToString(const Mode & mode)
++{
++  switch (mode) {
++    case Mode::JOINT:
++      return "Joint";
++    case Mode::CARTBASE:
++      return "Cartesian (base)";
++    case Mode::CARTTOOL:
++      return "Cartesian (tool)";
++    case Mode::PLATFORM:
++      return "Platform";
++    case Mode::FSM:
++      return "FSM";
++    case Mode::UNKNOWN:
++      return "Unknown";
++  }
++
++  return std::string();
++}
++
++void Status::Print()
++{
++  std::cout << ToString();
++}
++
++void Status::Log()
++{
++  rclcpp::Clock::SharedPtr clock_ = std::make_shared<rclcpp::Clock>(RCL_SYSTEM_TIME);
++  RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *clock_, 60, "Rebel status:\n%s",
++        ToString().c_str());
++}
++
++std::string Status::ToString()
++{
++  std::ostringstream msg;
++  msg           << std::showpoint
+@@ -390,303 +377,175 @@
+-            return msg.str();
+-        }
+-
+-        Mode Status::GetMode(const std::string &modeString)
+-        {
+-            if (modeString == CriKeywords::MODE_JOINT)
+-            {
+-                return Mode::JOINT;
+-            }
+-
+-            if (modeString == CriKeywords::MODE_CARTBASE)
+-            {
+-                return Mode::CARTBASE;
+-            }
+-
+-            if (modeString == CriKeywords::MODE_CARTTOOL)
+-            {
+-                return Mode::CARTTOOL;
+-            }
+-
+-            if (modeString == CriKeywords::MODE_PLATFORM)
+-            {
+-                return Mode::PLATFORM;
+-            }
+-
+-            if (modeString == CriKeywords::MODE_FSM)
+-            {
+-                return Mode::FSM;
+-            }
+-
+-            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown robot mode during parsing: %s", modeString.c_str());
+-            return Mode::UNKNOWN;
+-        }
+-
+-        Kinstate Status::GetKinstate(const std::string &kinstateString)
+-        {
+-            int kinstateInt = std::stoi(kinstateString);
+-
+-            switch (kinstateInt)
+-            {
+-            case (int)Kinstate::NO_ERROR:
+-                return Kinstate::NO_ERROR;
+-
+-            case (int)Kinstate::JOINT_LIMIT_MIN:
+-                return Kinstate::JOINT_LIMIT_MIN;
+-
+-            case (int)Kinstate::JOINT_LIMIT_MAX:
+-                return Kinstate::JOINT_LIMIT_MAX;
+-
+-            case (int)Kinstate::CARTESIAN_SINGULARITY_CENTER:
+-                return Kinstate::CARTESIAN_SINGULARITY_CENTER;
+-
+-            case (int)Kinstate::CARTESIAN_SINGULARITY_REACH:
+-                return Kinstate::CARTESIAN_SINGULARITY_REACH;
+-
+-            case (int)Kinstate::CARTESIAN_SINGULARITY_WRIST:
+-                return Kinstate::CARTESIAN_SINGULARITY_WRIST;
+-
+-            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
+-                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1;
+-
+-            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
+-                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2;
+-
+-            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
+-                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3;
+-
+-            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
+-                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4;
+-
+-            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
+-                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5;
+-
+-            case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
+-                return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6;
+-
+-            case (int)Kinstate::MOTION_NOT_ALLOWED:
+-                return Kinstate::MOTION_NOT_ALLOWED;
+-
+-            default:
+-                return Kinstate::UNKNOWN;
+-            }
+-        }
+-
+-        Message::Message(const std::string &messageString) : CriMessage(MessageType::MESSAGE)
+-        {
+-            std::string::size_type messageStart =
+-                messageString.find(CriKeywords::TYPE_MESSAGE) + CriKeywords::TYPE_MESSAGE.size() + 1;
+-            message = messageString.substr(messageStart);
+-        }
+-
+-        Command::Command(const std::string &messageString) : CriMessage(MessageType::CMD)
+-        {
+-            std::string::size_type commandStart =
+-                messageString.find(CriKeywords::TYPE_CMD) + CriKeywords::TYPE_CMD.size() + 1;
+-            command = messageString.substr(commandStart);
+-        }
+-
+-        Info::Info(const std::string &messageString) : CriMessage(MessageType::INFO)
+-        {
+-            std::string::size_type infoStart =
+-                messageString.find(CriKeywords::TYPE_INFO) + CriKeywords::TYPE_INFO.size() + 1;
+-            info = messageString.substr(infoStart);
+-        }
+-
+-        LogMsg::LogMsg(const std::string &messageString) : CriMessage(MessageType::LOGMSG)
+-        {
+-            std::string::size_type logLvlStart = messageString.find(CriKeywords::TYPE_LOGMSG) + CriKeywords::TYPE_LOGMSG.size() + 1;
+-            std::string::size_type timestampStart = messageString.find(" ", logLvlStart) + 1;
+-            std::string::size_type msgStart = messageString.find(" ", timestampStart) + 1;
+-
+-            logLevel = GetLogLevel(messageString.substr(logLvlStart, (timestampStart - logLvlStart - 1)));
+-            timestamp = std::stol(messageString.substr(timestampStart, (msgStart - timestampStart - 1)));
+-            logMsg = messageString.substr(msgStart);
+-        }
+-
+-        LogLevel LogMsg::GetLogLevel(const std::string &logLvlString)
+-        {
+-            if (logLvlString == CriKeywords::LOG_LEVEL_DEBUG)
+-            {
+-                return LogLevel::DEBUG;
+-            }
+-
+-            if (logLvlString == CriKeywords::LOG_LEVEL_APP_INFO)
+-            {
+-                return LogLevel::APP_INFO;
+-            }
+-
+-            if (logLvlString == CriKeywords::LOG_LEVEL_APP_ERROR)
+-            {
+-                return LogLevel::APP_ERROR;
+-            }
+-
+-            if (logLvlString == CriKeywords::LOG_LEVEL_INFO)
+-            {
+-                return LogLevel::INFO;
+-            }
+-
+-            if (logLvlString == CriKeywords::LOG_LEVEL_WARN)
+-            {
+-                return LogLevel::WARN;
+-            }
+-
+-            if (logLvlString == CriKeywords::LOG_LEVEL_ERROR)
+-            {
+-                return LogLevel::ERROR;
+-            }
+-
+-            if (logLvlString == CriKeywords::LOG_LEVEL_FATAL)
+-            {
+-                return LogLevel::FATAL;
+-            }
+-
+-            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown log level during parsing: %s", logLvlString.c_str());
+-            return LogLevel::UNKNOWN;
+-        }
+-
+-        Variables::Variables(const std::string &messageString) : CriMessage(MessageType::VARIABLES),
+-                                                                 numberVariables(),
+-                                                                 positionVariables()
+-        {
+-            std::regex variables_regex("\\S+");
+-            auto variables_begin = std::sregex_iterator(messageString.begin(), messageString.end(), variables_regex);
+-            auto variables_end = std::sregex_iterator();
+-
+-            std::sregex_iterator it = variables_begin;
+-            while (it != variables_end)
+-            {
+-                std::string matchStr = GetMatchString((*it));
+-
+-                if (matchStr.compare(CriKeywords::VARIABLES_NR_VARIABLE) == 0)
+-                {
+-                    NumberVariable nv;
+-
+-                    it++;
+-                    nv.name = GetMatchString(*it);
+-
+-                    it++;
+-                    nv.value = std::stod(GetMatchString(*it));
+-
+-                    numberVariables.push_back(nv);
+-                }
+-
+-                if (matchStr.compare(CriKeywords::VARIABLES_POS_VARIABLE) == 0)
+-                {
+-                    PositionVariable pv;
+-
+-                    it++;
+-                    pv.name = GetMatchString(*it);
+-
+-                    for (auto i = 0; i < 15; i++)
+-                    {
+-                        it++;
+-                        pv.values[i] = std::stod(GetMatchString(*it));
+-                    }
+-                    positionVariables.push_back(pv);
+-                }
+-
+-                it++;
+-            }
+-        }
+-
+-        std::string Variables::GetMatchString(const std::smatch &smatch)
+-        {
+-            std::string matchStr = smatch.str();
+-            if (matchStr.length() > 0 && matchStr.back() == ',')
+-            {
+-                matchStr.pop_back();
+-            }
+-            return matchStr;
+-        }
+-
+-        CmdError::CmdError(const std::string &messageString) : CriMessage(MessageType::CMDERROR)
+-        {
+-            std::string::size_type commandErrorStart = messageString.find(CriKeywords::TYPE_CMDERROR) + CriKeywords::TYPE_CMDERROR.size();
+-            std::string::size_type countStart = messageString.find(" ", commandErrorStart) + 1;
+-            std::string::size_type errorMsgStart = messageString.find(" ", countStart) + 1;
+-
+-            recjectedCmd = std::stoi(messageString.substr(countStart, errorMsgStart - countStart - 1));
+-            error = messageString.substr(errorMsgStart);
+-        }
+-
+-        CmdAck::CmdAck(const std::string &messageString) : CriMessage(MessageType::CMDACK)
+-        {
+-            std::string::size_type commandAckStart = messageString.find(CriKeywords::TYPE_CMDACK) + CriKeywords::TYPE_CMDACK.size();
+-            acceptedCmd = std::stoi(messageString.substr(commandAckStart));
+-        }
+-
+-        Cyclestat::Cyclestat(const std::string &messageString) : CriMessage(MessageType::CYCLESTAT)
+-        {
+-            std::string::size_type cyclestatStart = messageString.find(CriKeywords::TYPE_CYCLESTAT) + CriKeywords::TYPE_CYCLESTAT.size();
+-            std::string::size_type cycletimeStart = messageString.find(" ", cyclestatStart) + 1;
+-            std::string::size_type workloadStart = messageString.find(" ", cycletimeStart) + 1;
+-
+-            cycletime = std::stoi(messageString.substr(cycletimeStart, workloadStart - cycletimeStart));
+-            workload = std::stoi(messageString.substr(workloadStart));
+-        }
+-
+-        ConfigType Config::GetConfigType(const std::string &msg)
+-        {
+-            std::string::size_type typeStart = msg.find(" ") + 1;
+-            std::string::size_type typeEnd = msg.find(" ", typeStart);
+-
+-            std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
+-
+-            if (typeString != CriKeywords::TYPE_CONFIG)
+-            {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Got message to parse for config data that was not a config message.");
+-                return ConfigType::UNKNOWN;
+-            }
+-
+-            std::string::size_type configTypeStart = typeEnd + 1;
+-            std::string::size_type configTypeEnd = msg.find(" ", configTypeStart + 1);
+-
+-            std::string configTypeString = msg.substr(configTypeStart, configTypeEnd - configTypeStart);
+-
+-            if (configTypeString == CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER)
+-            {
+-                return ConfigType::KINEMATICLIMITS;
+-            }
+-
+-            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config type: \"%s\"", configTypeString.c_str());
+-            return ConfigType::UNKNOWN;
+-        }
+-
+-        KinematicLimits::KinematicLimits(const std::string &messageString) : Config(ConfigType::KINEMATICLIMITS)
+-        {
+-            std::string::size_type answerStart = messageString.find(CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER);
+-            answerStart += CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER.size() + 1;
+-
+-            std::vector<float> minMax;
+-            FillVector(minMax, messageString.substr(answerStart));
+-
+-            if (minMax.size() % 2 != 0)
+-            {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing config message of type %d", (int)configType);
+-                return;
+-            }
+-
+-            for (size_t i = 0; i < minMax.size(); i += 2)
+-            {
+-                minMaxPairs.push_back(std::pair<float, float>(minMax.at(i), minMax.at(i + 1)));
+-            }
+-        }
+-
+-        std::string KinematicLimits::ToString()
+-        {
+-            std::ostringstream msg;
+-
+-            for (size_t i = 0; i < minMaxPairs.size() - 1; i++)
+-            {
+-                msg << "(" << minMaxPairs.at(i).first << ", " << minMaxPairs.at(i).second << ") ";
+-            }
+-
+-            msg << "(" << minMaxPairs.at(minMaxPairs.size() - 1).first << ", " << minMaxPairs.at(minMaxPairs.size() - 1).second << ")";
+-
+-            return msg.str();
+-        }
+-
+-        void KinematicLimits::Print()
+-        {
+-            std::cout << "Kinematic limits: " << ToString() << std::endl;
+-        }
++  return msg.str();
++}
++
++Mode Status::GetMode(const std::string & modeString)
++{
++  if (modeString == CriKeywords::MODE_JOINT) {
++    return Mode::JOINT;
++  }
++
++  if (modeString == CriKeywords::MODE_CARTBASE) {
++    return Mode::CARTBASE;
++  }
++
++  if (modeString == CriKeywords::MODE_CARTTOOL) {
++    return Mode::CARTTOOL;
++  }
++
++  if (modeString == CriKeywords::MODE_PLATFORM) {
++    return Mode::PLATFORM;
++  }
++
++  if (modeString == CriKeywords::MODE_FSM) {
++    return Mode::FSM;
++  }
++
++  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown robot mode during parsing: %s",
++        modeString.c_str());
++  return Mode::UNKNOWN;
++}
++
++Kinstate Status::GetKinstate(const std::string & kinstateString)
++{
++  int kinstateInt = std::stoi(kinstateString);
++
++  switch (kinstateInt) {
++    case (int)Kinstate::NO_ERROR:
++      return Kinstate::NO_ERROR;
++
++    case (int)Kinstate::JOINT_LIMIT_MIN:
++      return Kinstate::JOINT_LIMIT_MIN;
++
++    case (int)Kinstate::JOINT_LIMIT_MAX:
++      return Kinstate::JOINT_LIMIT_MAX;
++
++    case (int)Kinstate::CARTESIAN_SINGULARITY_CENTER:
++      return Kinstate::CARTESIAN_SINGULARITY_CENTER;
++
++    case (int)Kinstate::CARTESIAN_SINGULARITY_REACH:
++      return Kinstate::CARTESIAN_SINGULARITY_REACH;
++
++    case (int)Kinstate::CARTESIAN_SINGULARITY_WRIST:
++      return Kinstate::CARTESIAN_SINGULARITY_WRIST;
++
++    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
++      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1;
++
++    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
++      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2;
++
++    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
++      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3;
++
++    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
++      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4;
++
++    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
++      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5;
++
++    case (int)Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
++      return Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6;
++
++    case (int)Kinstate::MOTION_NOT_ALLOWED:
++      return Kinstate::MOTION_NOT_ALLOWED;
++
++    default:
++      return Kinstate::UNKNOWN;
++  }
++}
++
++Message::Message(const std::string & messageString)
++: CriMessage(MessageType::MESSAGE)
++{
++  std::string::size_type messageStart =
++    messageString.find(CriKeywords::TYPE_MESSAGE) + CriKeywords::TYPE_MESSAGE.size() + 1;
++  message = messageString.substr(messageStart);
++}
++
++Command::Command(const std::string & messageString)
++: CriMessage(MessageType::CMD)
++{
++  std::string::size_type commandStart =
++    messageString.find(CriKeywords::TYPE_CMD) + CriKeywords::TYPE_CMD.size() + 1;
++  command = messageString.substr(commandStart);
++}
++
++Info::Info(const std::string & messageString)
++: CriMessage(MessageType::INFO)
++{
++  std::string::size_type infoStart =
++    messageString.find(CriKeywords::TYPE_INFO) + CriKeywords::TYPE_INFO.size() + 1;
++  info = messageString.substr(infoStart);
++}
++
++LogMsg::LogMsg(const std::string & messageString)
++: CriMessage(MessageType::LOGMSG)
++{
++  std::string::size_type logLvlStart = messageString.find(CriKeywords::TYPE_LOGMSG) +
++    CriKeywords::TYPE_LOGMSG.size() + 1;
++  std::string::size_type timestampStart = messageString.find(" ", logLvlStart) + 1;
++  std::string::size_type msgStart = messageString.find(" ", timestampStart) + 1;
++
++  logLevel = GetLogLevel(messageString.substr(logLvlStart, (timestampStart - logLvlStart - 1)));
++  timestamp = std::stol(messageString.substr(timestampStart, (msgStart - timestampStart - 1)));
++  logMsg = messageString.substr(msgStart);
++}
++
++LogLevel LogMsg::GetLogLevel(const std::string & logLvlString)
++{
++  if (logLvlString == CriKeywords::LOG_LEVEL_DEBUG) {
++    return LogLevel::DEBUG;
++  }
++
++  if (logLvlString == CriKeywords::LOG_LEVEL_APP_INFO) {
++    return LogLevel::APP_INFO;
++  }
++
++  if (logLvlString == CriKeywords::LOG_LEVEL_APP_ERROR) {
++    return LogLevel::APP_ERROR;
++  }
++
++  if (logLvlString == CriKeywords::LOG_LEVEL_INFO) {
++    return LogLevel::INFO;
++  }
++
++  if (logLvlString == CriKeywords::LOG_LEVEL_WARN) {
++    return LogLevel::WARN;
++  }
++
++  if (logLvlString == CriKeywords::LOG_LEVEL_ERROR) {
++    return LogLevel::ERROR;
++  }
++
++  if (logLvlString == CriKeywords::LOG_LEVEL_FATAL) {
++    return LogLevel::FATAL;
++  }
++
++  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown log level during parsing: %s",
++        logLvlString.c_str());
++  return LogLevel::UNKNOWN;
++}
++
++Variables::Variables(const std::string & messageString)
++: CriMessage(MessageType::VARIABLES),
++  numberVariables(),
++  positionVariables()
++{
++  std::regex variables_regex("\\S+");
++  auto variables_begin = std::sregex_iterator(messageString.begin(), messageString.end(),
++        variables_regex);
++  auto variables_end = std::sregex_iterator();
++
++  std::sregex_iterator it = variables_begin;
++  while (it != variables_end) {
++    std::string matchStr = GetMatchString((*it));
++
++    if (matchStr.compare(CriKeywords::VARIABLES_NR_VARIABLE) == 0) {
++      NumberVariable nv;
++
++      it++;
++      nv.name = GetMatchString(*it);
++
++      it++;
++      nv.value = std::stod(GetMatchString(*it));
++
++      numberVariables.push_back(nv);
+@@ -694 +553,127 @@
+-}
++
++    if (matchStr.compare(CriKeywords::VARIABLES_POS_VARIABLE) == 0) {
++      PositionVariable pv;
++
++      it++;
++      pv.name = GetMatchString(*it);
++
++      for (auto i = 0; i < 15; i++) {
++        it++;
++        pv.values[i] = std::stod(GetMatchString(*it));
++      }
++      positionVariables.push_back(pv);
++    }
++
++    it++;
++  }
++}
++
++std::string Variables::GetMatchString(const std::smatch & smatch)
++{
++  std::string matchStr = smatch.str();
++  if (matchStr.length() > 0 && matchStr.back() == ',') {
++    matchStr.pop_back();
++  }
++  return matchStr;
++}
++
++CmdError::CmdError(const std::string & messageString)
++: CriMessage(MessageType::CMDERROR)
++{
++  std::string::size_type commandErrorStart = messageString.find(CriKeywords::TYPE_CMDERROR) +
++    CriKeywords::TYPE_CMDERROR.size();
++  std::string::size_type countStart = messageString.find(" ", commandErrorStart) + 1;
++  std::string::size_type errorMsgStart = messageString.find(" ", countStart) + 1;
++
++  recjectedCmd = std::stoi(messageString.substr(countStart, errorMsgStart - countStart - 1));
++  error = messageString.substr(errorMsgStart);
++}
++
++CmdAck::CmdAck(const std::string & messageString)
++: CriMessage(MessageType::CMDACK)
++{
++  std::string::size_type commandAckStart = messageString.find(CriKeywords::TYPE_CMDACK) +
++    CriKeywords::TYPE_CMDACK.size();
++  acceptedCmd = std::stoi(messageString.substr(commandAckStart));
++}
++
++Cyclestat::Cyclestat(const std::string & messageString)
++: CriMessage(MessageType::CYCLESTAT)
++{
++  std::string::size_type cyclestatStart = messageString.find(CriKeywords::TYPE_CYCLESTAT) +
++    CriKeywords::TYPE_CYCLESTAT.size();
++  std::string::size_type cycletimeStart = messageString.find(" ", cyclestatStart) + 1;
++  std::string::size_type workloadStart = messageString.find(" ", cycletimeStart) + 1;
++
++  cycletime = std::stoi(messageString.substr(cycletimeStart, workloadStart - cycletimeStart));
++  workload = std::stoi(messageString.substr(workloadStart));
++}
++
++ConfigType Config::GetConfigType(const std::string & msg)
++{
++  std::string::size_type typeStart = msg.find(" ") + 1;
++  std::string::size_type typeEnd = msg.find(" ", typeStart);
++
++  std::string typeString = msg.substr(typeStart, typeEnd - typeStart);
++
++  if (typeString != CriKeywords::TYPE_CONFIG) {
++    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++          "Got message to parse for config data that was not a config message.");
++    return ConfigType::UNKNOWN;
++  }
++
++  std::string::size_type configTypeStart = typeEnd + 1;
++  std::string::size_type configTypeEnd = msg.find(" ", configTypeStart + 1);
++
++  std::string configTypeString = msg.substr(configTypeStart, configTypeEnd - configTypeStart);
++
++  if (configTypeString == CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER) {
++    return ConfigType::KINEMATICLIMITS;
++  }
++
++  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config type: \"%s\"",
++        configTypeString.c_str());
++  return ConfigType::UNKNOWN;
++}
++
++KinematicLimits::KinematicLimits(const std::string & messageString)
++: Config(ConfigType::KINEMATICLIMITS)
++{
++  std::string::size_type answerStart =
++    messageString.find(CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER);
++  answerStart += CriKeywords::CONFIG_GETKINEMATICLIMITS_ANSWER.size() + 1;
++
++  std::vector<float> minMax;
++  FillVector(minMax, messageString.substr(answerStart));
++
++  if (minMax.size() % 2 != 0) {
++    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error parsing config message of type %d",
++      (int)configType);
++    return;
++  }
++
++  for (size_t i = 0; i < minMax.size(); i += 2) {
++    minMaxPairs.push_back(std::pair<float, float>(minMax.at(i), minMax.at(i + 1)));
++  }
++}
++
++std::string KinematicLimits::ToString()
++{
++  std::ostringstream msg;
++
++  for (size_t i = 0; i < minMaxPairs.size() - 1; i++) {
++    msg << "(" << minMaxPairs.at(i).first << ", " << minMaxPairs.at(i).second << ") ";
++  }
++
++  msg << "(" << minMaxPairs.at(minMaxPairs.size() - 1).first << ", " <<
++    minMaxPairs.at(minMaxPairs.size() - 1).second << ")";
++
++  return msg.str();
++}
++
++void KinematicLimits::Print()
++{
++  std::cout << "Kinematic limits: " << ToString() << std::endl;
++}
++}
++}
+
+Code style divergence in file 'src/Rebel.cpp':
+
+--- src/Rebel.cpp
++++ src/Rebel.cpp.uncrustify
+@@ -15,8 +15,8 @@
+-    Rebel::Rebel()
+-    {
+-    }
+-
+-    Rebel::~Rebel()
+-    {
+-        Stop();
+-    }
++Rebel::Rebel()
++{
++}
++
++Rebel::~Rebel()
++{
++  Stop();
++}
+@@ -27 +27,17 @@
+-    void Rebel::AliveThreadFunction()
++void Rebel::AliveThreadFunction()
++{
++  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to send ALIVEJOG");
++
++  while (continueAlive) {
++    std::ostringstream msg;
++    msg << std::showpoint;
++    msg << std::fixed;
++    msg << std::setprecision(8);
++    msg << "CRISTART " << Ccnt() << " ";
++    msg << "ALIVEJOG ";
++    msg << j1 << " " << j2 << " " << j3 << " ";
++    msg << j4 << " " << j5 << " " << j6 << " ";
++    msg << 0.0f << " " << 0.0f << " " << 0.0f << " ";
++    msg << "CRIEND" << std::endl;
++
++            // std::cout << msg.str();
+@@ -29,3 +45,272 @@
+-        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to send ALIVEJOG");
+-
+-        while (continueAlive)
++      std::lock_guard<std::mutex> lockGuard(aliveLock);
++      rebelSocket->SendMessage(msg.str());
++    }
++
++    std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs));
++  }
++
++  RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to send ALIVEJOG");
++}
++
++void Rebel::MessageThreadFunction()
++{
++  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to process robot messages");
++
++  while (continueMessage) {
++    if (rebelSocket->HasMessage()) {
++      std::string msg = rebelSocket->GetMessage();
++
++      CriMessages::MessageType type = CriMessages::CriMessage::GetMessageType(msg);
++
++      switch (type) {
++        case CriMessages::MessageType::STATUS:
++          {
++            CriMessages::Status status = CriMessages::Status(msg);
++                    // status.Print();
++            status.Log();
++            currentStatus = status;
++            ProcessStatus(currentStatus);
++            break;
++          }
++
++        case CriMessages::MessageType::RUNSTATE:
++          {
++            break;
++          }
++
++        case CriMessages::MessageType::MESSAGE:
++          {
++            CriMessages::Message message = CriMessages::Message(msg);
++            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel MESSAGE: %s",
++              message.message.c_str());
++            break;
++          }
++
++        case CriMessages::MessageType::CMD:
++          {
++            CriMessages::Command command = CriMessages::Command(msg);
++
++                    // Not sure if the ROS node should display these?
++            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "CMD: %s", command.command.c_str());
++            break;
++          }
++
++        case CriMessages::MessageType::CONFIG:
++          {
++            CriMessages::ConfigType configType = CriMessages::Config::GetConfigType(msg);
++
++            switch (configType) {
++              case CriMessages::ConfigType::KINEMATICLIMITS:
++                {
++                  CriMessages::KinematicLimits kinematicLimits = CriMessages::KinematicLimits(msg);
++                  kinematicLimits.Print();
++                  break;
++                }
++              case CriMessages::ConfigType::UNKNOWN:
++                {
++                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config message: %s",
++                  msg.c_str());
++                  break;
++                }
++
++            }
++
++            break;
++          }
++
++        case CriMessages::MessageType::INFO:
++          {
++            CriMessages::Info info = CriMessages::Info(msg);
++            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "INFO: %s", info.info.c_str());
++            break;
++          }
++
++        case CriMessages::MessageType::LOGMSG:
++          {
++            CriMessages::LogMsg log = CriMessages::LogMsg(msg);
++
++            switch (log.logLevel) {
++              case CriMessages::LogLevel::DEBUG:
++                {
++                  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
++                  log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::APP_INFO:
++                {
++                  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG (APP_INFO): %s (%ld ms)",
++                  log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::APP_ERROR:
++                {
++                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++                  "REBEL LOG (APP_ERROR): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::INFO:
++                {
++                        // The Rebel is pretty chatty with its INFO level log messages, so I've set them to output only to the ROS DEBUG level.
++                  RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
++                  log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::WARN:
++                {
++                  RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
++                  log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::ERROR:
++                {
++                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
++                  log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::FATAL:
++                {
++                  RCLCPP_FATAL(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)",
++                  log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++
++              case CriMessages::LogLevel::UNKNOWN:
++                {
++                  RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++                  "REBEL LOG (UNKNOWN LOG LEVEL): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
++                  break;
++                }
++            }
++
++            break;
++          }
++
++        case CriMessages::MessageType::VARIABLES:
++          {
++                    // CriMessages::Variables vars = CriMessages::Variables(msg);
++            break;
++          }
++
++        case CriMessages::MessageType::CMDERROR:
++          {
++            CriMessages::CmdError error = CriMessages::CmdError(msg);
++
++            try {
++              std::string command = unacknowledgedCommands.at(error.recjectedCmd);
++              unacknowledgedCommands.erase(error.recjectedCmd);
++              RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++                "Rebel did not accept command: %s. Error message: %s", command.c_str(),
++                error.error.c_str());
++            } catch (const std::out_of_range & e) {
++              RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++                "Rebel did not accept unknown command. Error message: %s (%d)", error.error.c_str(),
++                error.recjectedCmd);
++            }
++            break;
++          }
++
++        case CriMessages::MessageType::CMDACK:
++          {
++            CriMessages::CmdAck ack = CriMessages::CmdAck(msg);
++
++            try {
++              std::string command = unacknowledgedCommands.at(ack.acceptedCmd);
++              unacknowledgedCommands.erase(ack.acceptedCmd);
++              RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel accepted command: %s",
++                command.c_str());
++              break;
++            } catch (const std::out_of_range & e) {
++              RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Rebel accepted unknown command: %d",
++                ack.acceptedCmd);
++              break;
++            }
++            break;
++          }
++
++        case CriMessages::MessageType::CYCLESTAT:
++          {
++            CriMessages::Cyclestat cyclestat = CriMessages::Cyclestat(msg);
++                    // Will only output this once every 2 minutes, because this is sent every 0.5 seconds.
++            RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *node_->get_clock(), 120,
++              "Rebel cycle statistics -- Cycletime: %d -- Workload: %d%%", cyclestat.cycletime,
++              cyclestat.workload);
++            break;
++          }
++
++        case CriMessages::MessageType::UNKNOWN:
++          {
++            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "UNKNOW MESSAGE: %s", msg.c_str());
++            break;
++          }
++
++        case CriMessages::MessageType::OPINFO:
++          {
++            break;
++          }
++
++        case CriMessages::MessageType::GSIG:
++          {
++            break;
++          }
++        case CriMessages::MessageType::GRIPPERSTATE:
++          {
++            break;
++          }
++      }
++    }
++  }
++
++  RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to process robot messages");
++}
++
++int Rebel::Ccnt()
++{
++  std::lock_guard<std::mutex> lockGuard(cntLock);
++  int current = current_ccnt;
++  current_ccnt = (current_ccnt % 9999) + 1;
++  return current;
++}
++
++void Rebel::SetDigitalOut(const int & output, const bool & is_on)
++{
++  std::ostringstream cmd;
++  cmd << CriKeywords::COMMAND_DOUT << " " << output << " " << (is_on ? "true" : "false");
++  Command(cmd.str());
++}
++
++void Rebel::Command(const std::string & command)
++{
++  int commandCount = Ccnt();
++  std::ostringstream msg;
++  msg << CriKeywords::START << " " << commandCount << " ";
++  msg << CriKeywords::TYPE_CMD << " ";
++  msg << command << " ";
++  msg << CriKeywords::END << std::endl;
++
++  unacknowledgedCommands[commandCount] = command;
++
++  rebelSocket->SendMessage(msg.str());
++}
++
++void Rebel::GetConfig(const std::string & config)
++{
++  std::ostringstream msg;
++  msg << CriKeywords::START << " " << Ccnt() << " ";
++  msg << CriKeywords::TYPE_CONFIG << " ";
++  msg << config << " ";
++  msg << CriKeywords::END << std::endl;
++
++  rebelSocket->SendMessage(msg.str());
++}
++
++void Rebel::SetControlMode(const ControlMode & mode)
++{
++  switch (mode) {
++    case Rebel::ControlMode::POSITION:
++      {
+@@ -33,21 +318,36 @@
+-            std::ostringstream msg;
+-            msg << std::showpoint;
+-            msg << std::fixed;
+-            msg << std::setprecision(8);
+-            msg << "CRISTART " << Ccnt() << " ";
+-            msg << "ALIVEJOG ";
+-            msg << j1 << " " << j2 << " " << j3 << " ";
+-            msg << j4 << " " << j5 << " " << j6 << " ";
+-            msg << 0.0f << " " << 0.0f << " " << 0.0f << " ";
+-            msg << "CRIEND" << std::endl;
+-
+-            // std::cout << msg.str();
+-            {
+-                std::lock_guard<std::mutex> lockGuard(aliveLock);
+-                rebelSocket->SendMessage(msg.str());
+-            }
+-
+-            std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs));
+-        }
+-
+-        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to send ALIVEJOG");
++          std::lock_guard<std::mutex> lockGuard(aliveLock);
++
++          j1 = currentStatus.posJointCurrent.at(0);
++          j2 = currentStatus.posJointCurrent.at(1);
++          j3 = currentStatus.posJointCurrent.at(2);
++          j4 = currentStatus.posJointCurrent.at(3);
++          j5 = currentStatus.posJointCurrent.at(4);
++          j6 = currentStatus.posJointCurrent.at(5);
++
++          Command(CriKeywords::COMMAND_MOTIONTYPECARTBASE);
++          controlMode = mode;
++        }
++        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by position control.");
++        break;
++      }
++
++    case Rebel::ControlMode::VELOCITY:
++      {
++        Command(CriKeywords::COMMAND_MOTIONTYPEJOINT);
++        controlMode = mode;
++        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by velocity control.");
++        break;
++      }
++  }
++}
++
++void Rebel::ProcessStatus(const CriMessages::Status & status)
++{
++  CriMessages::Kinstate currentKinstate = status.kinstate;
++  std::array<int, 16> currentErrorJoints = status.errorJoints;
++
++  if (lastKinstate != currentKinstate) {
++
++    if (lastKinstate != CriMessages::Kinstate::NO_ERROR) {
++      RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Kinematics error resolved [%s]",
++          kinstateMessage.c_str());
+@@ -56,208 +356,90 @@
+-    void Rebel::MessageThreadFunction()
+-    {
+-        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Starting to process robot messages");
+-
+-        while (continueMessage)
+-        {
+-            if (rebelSocket->HasMessage())
+-            {
+-                std::string msg = rebelSocket->GetMessage();
+-
+-                CriMessages::MessageType type = CriMessages::CriMessage::GetMessageType(msg);
+-
+-                switch (type)
+-                {
+-                case CriMessages::MessageType::STATUS:
+-                {
+-                    CriMessages::Status status = CriMessages::Status(msg);
+-                    // status.Print();
+-                    status.Log();
+-                    currentStatus = status;
+-                    ProcessStatus(currentStatus);
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::RUNSTATE:
+-                {
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::MESSAGE:
+-                {
+-                    CriMessages::Message message = CriMessages::Message(msg);
+-                    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel MESSAGE: %s", message.message.c_str());
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::CMD:
+-                {
+-                    CriMessages::Command command = CriMessages::Command(msg);
+-
+-                    // Not sure if the ROS node should display these?
+-                    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "CMD: %s", command.command.c_str());
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::CONFIG:
+-                {
+-                    CriMessages::ConfigType configType = CriMessages::Config::GetConfigType(msg);
+-
+-                    switch (configType)
+-                    {
+-                    case CriMessages::ConfigType::KINEMATICLIMITS:
+-                    {
+-                        CriMessages::KinematicLimits kinematicLimits = CriMessages::KinematicLimits(msg);
+-                        kinematicLimits.Print();
+-                        break;
+-                    }
+-                    case CriMessages::ConfigType::UNKNOWN:
+-                    {
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Unknown config message: %s", msg.c_str());
+-                        break;
+-                    }
+-
+-                    }
+-
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::INFO:
+-                {
+-                    CriMessages::Info info = CriMessages::Info(msg);
+-                    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "INFO: %s", info.info.c_str());
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::LOGMSG:
+-                {
+-                    CriMessages::LogMsg log = CriMessages::LogMsg(msg);
+-
+-                    switch (log.logLevel)
+-                    {
+-                    case CriMessages::LogLevel::DEBUG:
+-                    {
+-                        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::APP_INFO:
+-                    {
+-                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG (APP_INFO): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::APP_ERROR:
+-                    {
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG (APP_ERROR): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::INFO:
+-                    {
+-                        // The Rebel is pretty chatty with its INFO level log messages, so I've set them to output only to the ROS DEBUG level.
+-                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::WARN:
+-                    {
+-                        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::ERROR:
+-                    {
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::FATAL:
+-                    {
+-                        RCLCPP_FATAL(rclcpp::get_logger("igus_rebel"), "REBEL LOG: %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-
+-                    case CriMessages::LogLevel::UNKNOWN:
+-                    {
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "REBEL LOG (UNKNOWN LOG LEVEL): %s (%ld ms)", log.logMsg.c_str(), log.timestamp);
+-                        break;
+-                    }
+-                    }
+-
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::VARIABLES:
+-                {
+-                    // CriMessages::Variables vars = CriMessages::Variables(msg);
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::CMDERROR:
+-                {
+-                    CriMessages::CmdError error = CriMessages::CmdError(msg);
+-
+-                    try
+-                    {
+-                        std::string command = unacknowledgedCommands.at(error.recjectedCmd);
+-                        unacknowledgedCommands.erase(error.recjectedCmd);
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Rebel did not accept command: %s. Error message: %s", command.c_str(), error.error.c_str());
+-                    }
+-                    catch (const std::out_of_range& e)
+-                    {
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Rebel did not accept unknown command. Error message: %s (%d)", error.error.c_str(), error.recjectedCmd);
+-                    }
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::CMDACK:
+-                {
+-                    CriMessages::CmdAck ack = CriMessages::CmdAck(msg);
+-
+-                    try
+-                    {
+-                        std::string command = unacknowledgedCommands.at(ack.acceptedCmd);
+-                        unacknowledgedCommands.erase(ack.acceptedCmd);
+-                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel accepted command: %s", command.c_str());
+-                        break;
+-                    }
+-                    catch (const std::out_of_range& e)
+-                    {
+-                        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Rebel accepted unknown command: %d", ack.acceptedCmd);
+-                        break;
+-                    }
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::CYCLESTAT:
+-                {
+-                    CriMessages::Cyclestat cyclestat = CriMessages::Cyclestat(msg);
+-                    // Will only output this once every 2 minutes, because this is sent every 0.5 seconds.
+-                    RCLCPP_INFO_THROTTLE(rclcpp::get_logger("igus_rebel"), *node_->get_clock(), 120, "Rebel cycle statistics -- Cycletime: %d -- Workload: %d%%", cyclestat.cycletime, cyclestat.workload);
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::UNKNOWN:
+-                {
+-                    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "UNKNOW MESSAGE: %s", msg.c_str());
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::OPINFO:
+-                {
+-                    break;
+-                }
+-
+-                case CriMessages::MessageType::GSIG:
+-                {
+-                    break;
+-                }
+-                case CriMessages::MessageType::GRIPPERSTATE:
+-                {
+-                    break;
+-                }
+-                }
+-            }
+-        }
+-
+-        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Stopped to process robot messages");
++    if (currentKinstate != CriMessages::Kinstate::NO_ERROR) {
++
++      switch (status.kinstate) {
++        case CriMessages::Kinstate::JOINT_LIMIT_MIN:
++          {
++            kinstateMessage = "joint at minimum limit";
++            break;
++          }
++
++        case CriMessages::Kinstate::JOINT_LIMIT_MAX:
++          {
++            kinstateMessage = "joint at maximum limit";
++            break;
++          }
++
++        case CriMessages::Kinstate::CARTESIAN_SINGULARITY_CENTER:
++          {
++            kinstateMessage = "cartesian singularity (center)";
++            break;
++          }
++
++        case CriMessages::Kinstate::CARTESIAN_SINGULARITY_REACH:
++          {
++            kinstateMessage = "cartesian singularity (reach)";
++            break;
++          }
++
++        case CriMessages::Kinstate::CARTESIAN_SINGULARITY_WRIST:
++          {
++            kinstateMessage = "cartesian singularity (wrist)";
++            break;
++          }
++
++        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
++          {
++            kinstateMessage = "tool at virtual box limit 1";
++            break;
++          }
++
++        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
++          {
++            kinstateMessage = "tool at virtual box limit 2";
++            break;
++          }
++
++        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
++          {
++            kinstateMessage = "tool at virtual box limit 3";
++            break;
++          }
++
++        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
++          {
++            kinstateMessage = "tool at virtual box limit 4";
++            break;
++          }
++
++        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
++          {
++            kinstateMessage = "tool at virtual box limit 5";
++            break;
++          }
++
++        case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
++          {
++            kinstateMessage = "tool at virtual box limit 6";
++            break;
++          }
++
++        case CriMessages::Kinstate::MOTION_NOT_ALLOWED:
++          {
++            kinstateMessage = "motion not allowed";
++            break;
++          }
++
++        case CriMessages::Kinstate::UNKNOWN:
++          {
++            kinstateMessage = "unknown error";
++            break;
++          }
++
++        case CriMessages::Kinstate::NO_ERROR:
++          {
++            kinstateMessage = "no error";
++            break;
++          }
++      }
++
++      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Kinematics error [%s]",
++          kinstateMessage.c_str());
+@@ -265,7 +447,56 @@
+-
+-    int Rebel::Ccnt()
+-    {
+-        std::lock_guard<std::mutex> lockGuard(cntLock);
+-        int current = current_ccnt;
+-        current_ccnt = (current_ccnt % 9999) + 1;
+-        return current;
++  }
++
++  if (currentErrorJoints != lastErrorJoints) {
++
++            // loop throught the 6 joint errors
++    for (unsigned int i = 0; i < 6; i++) {
++      int errorJoint = currentErrorJoints.at(i);
++      std::array<int, 8> errorJointBit;
++
++      if (errorJoint != lastErrorJoints.at(i)) {
++
++                    // extract bits from the error to analyze it
++        for (unsigned j = 0; j < 8; j++) {
++          errorJointBit[j] = errorJoint & (int)exp2(j);
++        }
++
++        std::string errorMsg = "";
++        if (errorJointBit.at(0) == static_cast<int>(CriMessages::ErrorJoint::TEMP)) {
++          errorMsg += "'Overtemperature' ";
++        }
++
++        if (errorJointBit.at(1) == static_cast<int>(CriMessages::ErrorJoint::ESTOP_LOWV)) {
++          errorMsg += "'Supply too low: Is emergency button pressed?' ";
++        }
++
++        if (errorJointBit.at(2) == static_cast<int>(CriMessages::ErrorJoint::MNE)) {
++          errorMsg += "'Motor not enabled' ";
++        }
++
++        if (errorJointBit.at(3) == static_cast<int>(CriMessages::ErrorJoint::COM)) {
++          errorMsg += "'Communication watch dog' ";
++        }
++
++        if (errorJointBit.at(4) == static_cast<int>(CriMessages::ErrorJoint::POS)) {
++          errorMsg += "'Position lag' ";
++        }
++
++        if (errorJointBit.at(5) == static_cast<int>(CriMessages::ErrorJoint::ENC)) {
++          errorMsg += "'Encoder Error' ";
++        }
++
++        if (errorJointBit.at(6) == static_cast<int>(CriMessages::ErrorJoint::OC)) {
++          errorMsg += "'Overcurrent' ";
++        }
++
++        if (errorJointBit.at(7) == static_cast<int>(CriMessages::ErrorJoint::DRV)) {
++          errorMsg += "'DriveError/SVM' ";
++        }
++
++        if (errorMsg != "") {
++          RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Joint %i Error: [%s]", i,
++              errorMsg.c_str());
++        } else {
++          RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Joint %i Error: Cleared", i);
++        }
++      }
+@@ -273,247 +504,5 @@
+-
+-    void Rebel::SetDigitalOut(const int &output, const bool &is_on)
+-    {
+-        std::ostringstream cmd;
+-        cmd << CriKeywords::COMMAND_DOUT << " " << output << " " << (is_on ? "true" : "false");
+-        Command(cmd.str());
+-    }
+-
+-    void Rebel::Command(const std::string &command)
+-    {
+-        int commandCount = Ccnt();
+-        std::ostringstream msg;
+-        msg << CriKeywords::START << " " << commandCount << " ";
+-        msg << CriKeywords::TYPE_CMD << " ";
+-        msg << command << " ";
+-        msg << CriKeywords::END << std::endl;
+-
+-        unacknowledgedCommands[commandCount] = command;
+-
+-        rebelSocket->SendMessage(msg.str());
+-    }
+-
+-    void Rebel::GetConfig(const std::string &config)
+-    {
+-        std::ostringstream msg;
+-        msg << CriKeywords::START << " " << Ccnt() << " ";
+-        msg << CriKeywords::TYPE_CONFIG << " ";
+-        msg << config << " ";
+-        msg << CriKeywords::END << std::endl;
+-
+-        rebelSocket->SendMessage(msg.str());
+-    }
+-
+-    void Rebel::SetControlMode(const ControlMode &mode)
+-    {
+-        switch (mode)
+-        {
+-        case Rebel::ControlMode::POSITION:
+-        {
+-            {
+-                std::lock_guard<std::mutex> lockGuard(aliveLock);
+-
+-                j1 = currentStatus.posJointCurrent.at(0);
+-                j2 = currentStatus.posJointCurrent.at(1);
+-                j3 = currentStatus.posJointCurrent.at(2);
+-                j4 = currentStatus.posJointCurrent.at(3);
+-                j5 = currentStatus.posJointCurrent.at(4);
+-                j6 = currentStatus.posJointCurrent.at(5);
+-
+-                Command(CriKeywords::COMMAND_MOTIONTYPECARTBASE);
+-                controlMode = mode;
+-            }
+-            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by position control.");
+-            break;
+-        }
+-
+-        case Rebel::ControlMode::VELOCITY:
+-        {
+-            Command(CriKeywords::COMMAND_MOTIONTYPEJOINT);
+-            controlMode = mode;
+-            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Rebel now controlled by velocity control.");
+-            break;
+-        }
+-        }
+-    }
+-
+-    void Rebel::ProcessStatus(const CriMessages::Status &status)
+-    {
+-        CriMessages::Kinstate currentKinstate = status.kinstate;
+-        std::array<int, 16> currentErrorJoints = status.errorJoints;
+-
+-        if (lastKinstate != currentKinstate)
+-        {
+-
+-            if (lastKinstate != CriMessages::Kinstate::NO_ERROR)
+-            {
+-                RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Kinematics error resolved [%s]", kinstateMessage.c_str());
+-            }
+-
+-            if (currentKinstate != CriMessages::Kinstate::NO_ERROR)
+-            {
+-
+-                switch (status.kinstate)
+-                {
+-                case CriMessages::Kinstate::JOINT_LIMIT_MIN:
+-                {
+-                    kinstateMessage = "joint at minimum limit";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::JOINT_LIMIT_MAX:
+-                {
+-                    kinstateMessage = "joint at maximum limit";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::CARTESIAN_SINGULARITY_CENTER:
+-                {
+-                    kinstateMessage = "cartesian singularity (center)";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::CARTESIAN_SINGULARITY_REACH:
+-                {
+-                    kinstateMessage = "cartesian singularity (reach)";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::CARTESIAN_SINGULARITY_WRIST:
+-                {
+-                    kinstateMessage = "cartesian singularity (wrist)";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_1:
+-                {
+-                    kinstateMessage = "tool at virtual box limit 1";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_2:
+-                {
+-                    kinstateMessage = "tool at virtual box limit 2";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_3:
+-                {
+-                    kinstateMessage = "tool at virtual box limit 3";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_4:
+-                {
+-                    kinstateMessage = "tool at virtual box limit 4";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_5:
+-                {
+-                    kinstateMessage = "tool at virtual box limit 5";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::TOOL_AT_VIRTUAL_BOX_LIMIT_6:
+-                {
+-                    kinstateMessage = "tool at virtual box limit 6";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::MOTION_NOT_ALLOWED:
+-                {
+-                    kinstateMessage = "motion not allowed";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::UNKNOWN:
+-                {
+-                    kinstateMessage = "unknown error";
+-                    break;
+-                }
+-
+-                case CriMessages::Kinstate::NO_ERROR:
+-                {
+-                    kinstateMessage = "no error";
+-                    break;
+-                }
+-                }
+-
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Kinematics error [%s]", kinstateMessage.c_str());
+-            }
+-        }
+-
+-        if (currentErrorJoints != lastErrorJoints)
+-        {
+-
+-            // loop throught the 6 joint errors
+-            for (unsigned int i = 0; i < 6; i++)
+-            {
+-                int errorJoint = currentErrorJoints.at(i);
+-                std::array<int, 8> errorJointBit;
+-
+-                if (errorJoint != lastErrorJoints.at(i))
+-                {
+-
+-                    // extract bits from the error to analyze it
+-                    for (unsigned j = 0; j < 8; j++)
+-                    {
+-                        errorJointBit[j] = errorJoint & (int)exp2(j);
+-                    }
+-
+-                    std::string errorMsg = "";
+-                    if (errorJointBit.at(0) == static_cast<int>(CriMessages::ErrorJoint::TEMP))
+-                    {
+-                        errorMsg += "'Overtemperature' ";
+-                    }
+-
+-                    if (errorJointBit.at(1) == static_cast<int>(CriMessages::ErrorJoint::ESTOP_LOWV))
+-                    {
+-                        errorMsg += "'Supply too low: Is emergency button pressed?' ";
+-                    }
+-
+-                    if (errorJointBit.at(2) == static_cast<int>(CriMessages::ErrorJoint::MNE))
+-                    {
+-                        errorMsg += "'Motor not enabled' ";
+-                    }
+-
+-                    if (errorJointBit.at(3) == static_cast<int>(CriMessages::ErrorJoint::COM))
+-                    {
+-                        errorMsg += "'Communication watch dog' ";
+-                    }
+-
+-                    if (errorJointBit.at(4) == static_cast<int>(CriMessages::ErrorJoint::POS))
+-                    {
+-                        errorMsg += "'Position lag' ";
+-                    }
+-
+-                    if (errorJointBit.at(5) == static_cast<int>(CriMessages::ErrorJoint::ENC))
+-                    {
+-                        errorMsg += "'Encoder Error' ";
+-                    }
+-
+-                    if (errorJointBit.at(6) == static_cast<int>(CriMessages::ErrorJoint::OC))
+-                    {
+-                        errorMsg += "'Overcurrent' ";
+-                    }
+-
+-                    if (errorJointBit.at(7) == static_cast<int>(CriMessages::ErrorJoint::DRV))
+-                    {
+-                        errorMsg += "'DriveError/SVM' ";
+-                    }
+-
+-                    if (errorMsg != "")
+-                    {
+-                        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Joint %i Error: [%s]", i, errorMsg.c_str());
+-                    }
+-                    else
+-                    {
+-                        RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Joint %i Error: Cleared", i);
+-                    }
+-                }
+-            }
+-        }
+-
+-        lastKinstate = currentKinstate;
+-        lastErrorJoints = currentErrorJoints;
+-    }
++  }
++
++  lastKinstate = currentKinstate;
++  lastErrorJoints = currentErrorJoints;
++}
+@@ -524,52 +513,54 @@
+-    void Rebel::SetJog(const float &joint1, const float &joint2, const float &joint3,
+-                       const float &joint4, const float &joint5, const float &joint6)
+-    {
+-        j1 = joint1;
+-        j2 = joint2;
+-        j3 = joint3;
+-        j4 = joint4;
+-        j5 = joint5;
+-        j6 = joint6;
+-    }
+-
+-    void Rebel::GetJoints(float &joint1, float &joint2, float &joint3,
+-                          float &joint4, float &joint5, float &joint6)
+-    {
+-        joint1 = currentStatus.posJointCurrent.at(0);
+-        joint2 = currentStatus.posJointCurrent.at(1);
+-        joint3 = currentStatus.posJointCurrent.at(2);
+-        joint4 = currentStatus.posJointCurrent.at(3);
+-        joint5 = currentStatus.posJointCurrent.at(4);
+-        joint6 = currentStatus.posJointCurrent.at(5);
+-    }
+-
+-    CallbackReturn Rebel::on_init(const HardwareInfo&)
+-    {
+-        rebelSocket = std::make_shared<RebelSocket>(ip, port, 200),
+-        j1 = 0.0f;
+-        j2 = 0.0f;
+-        j3 = 0.0f;
+-        j4 = 0.0f;
+-        j5 = 0.0f;
+-        j6 = 0.0f;
+-        controlMode = Rebel::ControlMode::VELOCITY;
+-        current_ccnt = 1;
+-        continueAlive = false;
+-        continueMessage = false;
+-        aliveWaitMs = 100;
+-        lastKinstate = CriMessages::Kinstate::NO_ERROR;
+-        kinstateMessage = "";
+-        node_ = std::make_shared<rclcpp::Node>("igus_rebel");
+-        digital_output_srv_ = node_->create_service<igus_rebel_msgs::srv::SetDigitalOutput>(
+-            "set_digital_output", std::bind(&Rebel::dio_callback, this, std::placeholders::_1, std::placeholders::_2));
+-        Start();
+-        return CallbackReturn::SUCCESS;
+-    }
+-
+-    std::vector<StateInterface> Rebel::export_state_interfaces()
+-    {
+-        std::vector<StateInterface> state_interfaces;
+-
+-        for (int i = 0; i < 6; ++i)
+-        {
+-            state_interfaces.emplace_back(StateInterface(
++void Rebel::SetJog(
++  const float & joint1, const float & joint2, const float & joint3,
++  const float & joint4, const float & joint5, const float & joint6)
++{
++  j1 = joint1;
++  j2 = joint2;
++  j3 = joint3;
++  j4 = joint4;
++  j5 = joint5;
++  j6 = joint6;
++}
++
++void Rebel::GetJoints(
++  float & joint1, float & joint2, float & joint3,
++  float & joint4, float & joint5, float & joint6)
++{
++  joint1 = currentStatus.posJointCurrent.at(0);
++  joint2 = currentStatus.posJointCurrent.at(1);
++  joint3 = currentStatus.posJointCurrent.at(2);
++  joint4 = currentStatus.posJointCurrent.at(3);
++  joint5 = currentStatus.posJointCurrent.at(4);
++  joint6 = currentStatus.posJointCurrent.at(5);
++}
++
++CallbackReturn Rebel::on_init(const HardwareInfo &)
++{
++  rebelSocket = std::make_shared<RebelSocket>(ip, port, 200),
++  j1 = 0.0f;
++  j2 = 0.0f;
++  j3 = 0.0f;
++  j4 = 0.0f;
++  j5 = 0.0f;
++  j6 = 0.0f;
++  controlMode = Rebel::ControlMode::VELOCITY;
++  current_ccnt = 1;
++  continueAlive = false;
++  continueMessage = false;
++  aliveWaitMs = 100;
++  lastKinstate = CriMessages::Kinstate::NO_ERROR;
++  kinstateMessage = "";
++  node_ = std::make_shared<rclcpp::Node>("igus_rebel");
++  digital_output_srv_ = node_->create_service<igus_rebel_msgs::srv::SetDigitalOutput>(
++            "set_digital_output",
++      std::bind(&Rebel::dio_callback, this, std::placeholders::_1, std::placeholders::_2));
++  Start();
++  return CallbackReturn::SUCCESS;
++}
++
++std::vector<StateInterface> Rebel::export_state_interfaces()
++{
++  std::vector<StateInterface> state_interfaces;
++
++  for (int i = 0; i < 6; ++i) {
++    state_interfaces.emplace_back(StateInterface(
+@@ -577 +568 @@
+-            state_interfaces.emplace_back(StateInterface(
++    state_interfaces.emplace_back(StateInterface(
+@@ -579,12 +570,11 @@
+-        }
+-
+-        return state_interfaces;
+-    }
+-
+-    std::vector<CommandInterface> Rebel::export_command_interfaces()
+-    {
+-        std::vector<CommandInterface> command_interfaces;
+-
+-        for (int i = 0; i < 6; ++i)
+-        {
+-            command_interfaces.emplace_back(CommandInterface(
++  }
++
++  return state_interfaces;
++}
++
++std::vector<CommandInterface> Rebel::export_command_interfaces()
++{
++  std::vector<CommandInterface> command_interfaces;
++
++  for (int i = 0; i < 6; ++i) {
++    command_interfaces.emplace_back(CommandInterface(
+@@ -592,37 +582,37 @@
+-        }
+-
+-        return command_interfaces;
+-    }
+-
+-    return_type Rebel::read(const rclcpp::Time&, const rclcpp::Duration &period)
+-    {
+-        read();
+-
+-        vel[0] = (pos[0] - last_pos[0]) / period.seconds();
+-        vel[1] = (pos[1] - last_pos[1]) / period.seconds();
+-        vel[2] = (pos[2] - last_pos[2]) / period.seconds();
+-        vel[3] = (pos[3] - last_pos[3]) / period.seconds();
+-        vel[4] = (pos[4] - last_pos[4]) / period.seconds();
+-        vel[5] = (pos[5] - last_pos[5]) / period.seconds();
+-
+-        last_pos[0] = pos[0];
+-        last_pos[1] = pos[1];
+-        last_pos[2] = pos[2];
+-        last_pos[3] = pos[3];
+-        last_pos[4] = pos[4];
+-        last_pos[5] = pos[5];
+-        return return_type::OK;
+-    }
+-
+-    void Rebel::read()
+-    {
+-        pos[0] = currentStatus.posJointCurrent.at(0) * degToRad;
+-        pos[1] = currentStatus.posJointCurrent.at(1) * degToRad;
+-        pos[2] = currentStatus.posJointCurrent.at(2) * degToRad;
+-        pos[3] = currentStatus.posJointCurrent.at(3) * degToRad;
+-        pos[4] = currentStatus.posJointCurrent.at(4) * degToRad;
+-        pos[5] = currentStatus.posJointCurrent.at(5) * degToRad;
+-    }
+-
+-    return_type Rebel::write(const rclcpp::Time&, const rclcpp::Duration&)
+-    {
++  }
++
++  return command_interfaces;
++}
++
++return_type Rebel::read(const rclcpp::Time &, const rclcpp::Duration & period)
++{
++  read();
++
++  vel[0] = (pos[0] - last_pos[0]) / period.seconds();
++  vel[1] = (pos[1] - last_pos[1]) / period.seconds();
++  vel[2] = (pos[2] - last_pos[2]) / period.seconds();
++  vel[3] = (pos[3] - last_pos[3]) / period.seconds();
++  vel[4] = (pos[4] - last_pos[4]) / period.seconds();
++  vel[5] = (pos[5] - last_pos[5]) / period.seconds();
++
++  last_pos[0] = pos[0];
++  last_pos[1] = pos[1];
++  last_pos[2] = pos[2];
++  last_pos[3] = pos[3];
++  last_pos[4] = pos[4];
++  last_pos[5] = pos[5];
++  return return_type::OK;
++}
++
++void Rebel::read()
++{
++  pos[0] = currentStatus.posJointCurrent.at(0) * degToRad;
++  pos[1] = currentStatus.posJointCurrent.at(1) * degToRad;
++  pos[2] = currentStatus.posJointCurrent.at(2) * degToRad;
++  pos[3] = currentStatus.posJointCurrent.at(3) * degToRad;
++  pos[4] = currentStatus.posJointCurrent.at(4) * degToRad;
++  pos[5] = currentStatus.posJointCurrent.at(5) * degToRad;
++}
++
++return_type Rebel::write(const rclcpp::Time &, const rclcpp::Duration &)
++{
+@@ -630,6 +620,6 @@
+-        write();
+-        return return_type::OK;
+-    }
+-
+-    void Rebel::write()
+-    {
++  write();
++  return return_type::OK;
++}
++
++void Rebel::write()
++{
+@@ -637,32 +627,31 @@
+-        if (rclcpp::ok())
+-        {
+-            rclcpp::spin_some(node_);
+-        }
+-
+-        j1 = (float)vel_cmd[0];
+-        j2 = (float)vel_cmd[1];
+-        j3 = (float)vel_cmd[2];
+-        j4 = (float)vel_cmd[3];
+-        j5 = (float)vel_cmd[4];
+-        j6 = (float)vel_cmd[5];
+-    }
+-
+-    void Rebel::dio_callback(
+-        const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
+-        std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response)
+-    {
+-        SetDigitalOut(request->output.output, request->output.is_on);
+-        response->success = true;
+-    }
+-
+-    void Rebel::GetReferenceInfo()
+-    {
+-        Command(std::string("GetReferencingInfo"));
+-    }
+-
+-    void Rebel::Start()
+-    {
+-        continueMessage = true;
+-        messageThread = std::thread(&Rebel::MessageThreadFunction, this);
+-
+-        rebelSocket->Start();
++  if (rclcpp::ok()) {
++    rclcpp::spin_some(node_);
++  }
++
++  j1 = (float)vel_cmd[0];
++  j2 = (float)vel_cmd[1];
++  j3 = (float)vel_cmd[2];
++  j4 = (float)vel_cmd[3];
++  j5 = (float)vel_cmd[4];
++  j6 = (float)vel_cmd[5];
++}
++
++void Rebel::dio_callback(
++  const std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Request> request,
++  std::shared_ptr<igus_rebel_msgs::srv::SetDigitalOutput::Response> response)
++{
++  SetDigitalOut(request->output.output, request->output.is_on);
++  response->success = true;
++}
++
++void Rebel::GetReferenceInfo()
++{
++  Command(std::string("GetReferencingInfo"));
++}
++
++void Rebel::Start()
++{
++  continueMessage = true;
++  messageThread = std::thread(&Rebel::MessageThreadFunction, this);
++
++  rebelSocket->Start();
+@@ -673,30 +662,29 @@
+-        Command(CriKeywords::COMMAND_SETACTIVE + " true");
+-        Command(CriKeywords::COMMAND_RESET);
+-        Command(CriKeywords::COMMAND_ENABLE);
+-
+-        continueAlive = true;
+-        aliveThread = std::thread(&Rebel::AliveThreadFunction, this);
+-
+-        GetConfig(CriKeywords::CONFIG_GETKINEMATICLIMITS);
+-        SetControlMode(ControlMode::VELOCITY);
+-    }
+-
+-    void Rebel::Stop()
+-    {
+-        j1 = 0.0f;
+-        j2 = 0.0f;
+-        j3 = 0.0f;
+-        j4 = 0.0f;
+-        j5 = 0.0f;
+-        j6 = 0.0f;
+-
+-        std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs + 10));
+-
+-        continueAlive = false;
+-
+-        if (aliveThread.joinable())
+-        {
+-            aliveThread.join();
+-        }
+-
+-        Command(CriKeywords::COMMAND_DISABLE);
++  Command(CriKeywords::COMMAND_SETACTIVE + " true");
++  Command(CriKeywords::COMMAND_RESET);
++  Command(CriKeywords::COMMAND_ENABLE);
++
++  continueAlive = true;
++  aliveThread = std::thread(&Rebel::AliveThreadFunction, this);
++
++  GetConfig(CriKeywords::CONFIG_GETKINEMATICLIMITS);
++  SetControlMode(ControlMode::VELOCITY);
++}
++
++void Rebel::Stop()
++{
++  j1 = 0.0f;
++  j2 = 0.0f;
++  j3 = 0.0f;
++  j4 = 0.0f;
++  j5 = 0.0f;
++  j6 = 0.0f;
++
++  std::this_thread::sleep_for(std::chrono::milliseconds(aliveWaitMs + 10));
++
++  continueAlive = false;
++
++  if (aliveThread.joinable()) {
++    aliveThread.join();
++  }
++
++  Command(CriKeywords::COMMAND_DISABLE);
+@@ -704,11 +692,10 @@
+-        Command(CriKeywords::COMMAND_QUIT);
+-
+-        rebelSocket->Stop();
+-
+-        continueMessage = false;
+-
+-        if (messageThread.joinable())
+-        {
+-            messageThread.join();
+-        }
+-    }
++  Command(CriKeywords::COMMAND_QUIT);
++
++  rebelSocket->Stop();
++
++  continueMessage = false;
++
++  if (messageThread.joinable()) {
++    messageThread.join();
++  }
++}
+
+Code style divergence in file 'src/RebelSocket.cpp':
+
+--- src/RebelSocket.cpp
++++ src/RebelSocket.cpp.uncrustify
+@@ -15,14 +15,14 @@
+-    RebelSocket::RebelSocket(const std::string &ip, const int &port, const int &timeout)
+-        : sock(0),
+-          ip(ip),
+-          port(port),
+-          timeout(timeout),
+-          unprocessedMessages(),
+-          fragmentBuffer{0}
+-    {
+-    }
+-
+-    RebelSocket::~RebelSocket()
+-    {
+-        Stop();
+-    }
++RebelSocket::RebelSocket(const std::string & ip, const int & port, const int & timeout)
++: sock(0),
++  ip(ip),
++  port(port),
++  timeout(timeout),
++  unprocessedMessages(),
++  fragmentBuffer{0}
++{
++}
++
++RebelSocket::~RebelSocket()
++{
++  Stop();
++}
+@@ -33,2 +33,2 @@
+-    void RebelSocket::MakeConnection()
+-    {
++void RebelSocket::MakeConnection()
++{
+@@ -37,16 +37,14 @@
+-        std::lock_guard<std::mutex> lockGuard(connectionLock);
+-
+-        while (connectionNeeded)
+-        {
+-            sock = 0;
+-            struct sockaddr_in serv_addr;
+-
+-            if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+-            {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket creation error.");
+-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+-                continue;
+-            }
+-
+-            serv_addr.sin_family = AF_INET;
+-            serv_addr.sin_port = htons(port);
++  std::lock_guard<std::mutex> lockGuard(connectionLock);
++
++  while (connectionNeeded) {
++    sock = 0;
++    struct sockaddr_in serv_addr;
++
++    if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
++      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket creation error.");
++      std::this_thread::sleep_for(std::chrono::milliseconds(100));
++      continue;
++    }
++
++    serv_addr.sin_family = AF_INET;
++    serv_addr.sin_port = htons(port);
+@@ -55,16 +53,42 @@
+-            if (inet_pton(AF_INET, ip.c_str(), &serv_addr.sin_addr) <= 0)
+-            {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Invalid robot IP address / Address not supported.");
+-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+-                continue;
+-            }
+-
+-            if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+-            {
+-                RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Connection Failed.");
+-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+-                continue;
+-            }
+-
+-            connectionNeeded = false;
+-            RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Connected to ReBeL at %s:%d", ip.c_str(), port);
++    if (inet_pton(AF_INET, ip.c_str(), &serv_addr.sin_addr) <= 0) {
++      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++          "Invalid robot IP address / Address not supported.");
++      std::this_thread::sleep_for(std::chrono::milliseconds(100));
++      continue;
++    }
++
++    if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
++      RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Connection Failed.");
++      std::this_thread::sleep_for(std::chrono::milliseconds(100));
++      continue;
++    }
++
++    connectionNeeded = false;
++    RCLCPP_INFO(rclcpp::get_logger("igus_rebel"), "Connected to ReBeL at %s:%d", ip.c_str(), port);
++  }
++}
++
++void RebelSocket::SeparateMessages(const char *msg)
++{
++  const char *start;
++  const char *end = msg;
++
++  while (true) {
++    start = std::strstr(end, CriKeywords::START.c_str());
++
++    if (start == nullptr) {
++      break;
++    }
++
++    end = std::strstr(start, CriKeywords::END.c_str());
++
++    if (end == nullptr) {
++                // Found a start without end.
++      const char *remainingStart = start + CriKeywords::START.size();
++      const char *remainingEnd = std::strchr(remainingStart, '\0');
++
++      if (remainingEnd != nullptr) {
++        fragmentLength = remainingEnd - remainingStart;
++
++        for (int i = 0; i < fragmentLength; i++) {
++          fragmentBuffer[i] = *(remainingStart + i);
+@@ -72,3 +96,8 @@
+-    }
+-
+-    void RebelSocket::SeparateMessages(const char *msg)
++      } else {
++        RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"),
++            "Socket read was not null-terminated, somehow.");
++      }
++
++      break;
++    }
++
+@@ -76,40 +105,2 @@
+-        const char *start;
+-        const char *end = msg;
+-
+-        while (true)
+-        {
+-            start = std::strstr(end, CriKeywords::START.c_str());
+-
+-            if (start == nullptr)
+-            {
+-                break;
+-            }
+-
+-            end = std::strstr(start, CriKeywords::END.c_str());
+-
+-            if (end == nullptr)
+-            {
+-                // Found a start without end.
+-                const char *remainingStart = start + CriKeywords::START.size();
+-                const char *remainingEnd = std::strchr(remainingStart, '\0');
+-
+-                if (remainingEnd != nullptr)
+-                {
+-                    fragmentLength = remainingEnd - remainingStart;
+-
+-                    for (int i = 0; i < fragmentLength; i++)
+-                    {
+-                        fragmentBuffer[i] = *(remainingStart + i);
+-                    }
+-                }
+-                else
+-                {
+-                    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket read was not null-terminated, somehow.");
+-                }
+-
+-                break;
+-            }
+-
+-            {
+-                std::lock_guard<std::mutex> lockGuard(messageLock);
+-                unprocessedMessages.push_front(
++      std::lock_guard<std::mutex> lockGuard(messageLock);
++      unprocessedMessages.push_front(
+@@ -119 +110,29 @@
+-            }
++    }
++  }
++}
++
++void RebelSocket::ReceiveThreadFunction()
++{
++  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Starting to receive messages from robot.");
++
++  char buffer[bufferSize * 2] = {0};
++
++  while (continueReceive) {
++    if (connectionNeeded) {
++      MakeConnection();
++    }
++
++    int valread = read(sock, buffer + fragmentLength, bufferSize);
++
++    if (!IsSocketOk()) {
++      connectionNeeded = true;
++    } else {
++      if (valread == 0) {
++        RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Empty message received");
++        connectionNeeded = true;
++      } else {
++        if (fragmentLength > 0) {
++          for (int i = 0; i < fragmentLength; i++) {
++            buffer[i] = fragmentBuffer[i];
++          }
++          fragmentLength = 0;
+@@ -121,46 +140,4 @@
+-    }
+-
+-    void RebelSocket::ReceiveThreadFunction()
+-    {
+-        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Starting to receive messages from robot.");
+-
+-        char buffer[bufferSize * 2] = {0};
+-
+-        while (continueReceive)
+-        {
+-            if (connectionNeeded)
+-            {
+-                MakeConnection();
+-            }
+-
+-            int valread = read(sock, buffer + fragmentLength, bufferSize);
+-
+-            if (!IsSocketOk())
+-            {
+-                connectionNeeded = true;
+-            }
+-            else
+-            {
+-                if (valread == 0)
+-                {
+-                    RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Empty message received");
+-                    connectionNeeded = true;
+-                }
+-                else
+-                {
+-                    if (fragmentLength > 0)
+-                    {
+-                        for (int i = 0; i < fragmentLength; i++)
+-                        {
+-                            buffer[i] = fragmentBuffer[i];
+-                        }
+-                        fragmentLength = 0;
+-                    }
+-
+-                    SeparateMessages(buffer);
+-                    for (int i = 0; i < bufferSize * 2; i++)
+-                    {
+-                        buffer[i] = 0;
+-                    }
+-                }
+-            }
++
++        SeparateMessages(buffer);
++        for (int i = 0; i < bufferSize * 2; i++) {
++          buffer[i] = 0;
+@@ -168,3 +145,6 @@
+-
+-        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Stopped to receive messages from robot.");
+-    }
++      }
++    }
++  }
++
++  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Stopped to receive messages from robot.");
++}
+@@ -175,42 +155,41 @@
+-    void RebelSocket::ListCheckThreadFunction()
+-    {
+-        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Starting to check if the message list is being processed.");
+-
+-        while (continueReceive)
+-        {
+-            if (unprocessedMessages.size() > maxUnprocessedMessages)
+-            {
+-                RCLCPP_WARN(rclcpp::get_logger("igus_rebel"), "Robot messages are not processed fast enough. Discarding messages.");
+-
+-                while (unprocessedMessages.size() > (maxUnprocessedMessages * 0.9))
+-                {
+-                    unprocessedMessages.pop_back();
+-                }
+-            }
+-
+-            std::this_thread::sleep_for(std::chrono::milliseconds(listCheckWaitMs));
+-        }
+-
+-        RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"), "Stopped to check if the message list is being processed.");
+-    }
+-
+-    bool RebelSocket::IsSocketOk()
+-    {
+-        int error = 0;
+-        socklen_t len = sizeof(error);
+-        int retval = getsockopt(sock, SOL_SOCKET, SO_ERROR, &error, &len);
+-
+-        if (retval != 0)
+-        {
+-            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error getting socket error code: %s", strerror(retval));
+-            return false;
+-        }
+-
+-        if (error != 0)
+-        {
+-            RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket error: %s", strerror(error));
+-            return false;
+-        }
+-
+-        return true;
+-    }
++void RebelSocket::ListCheckThreadFunction()
++{
++  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"),
++      "Starting to check if the message list is being processed.");
++
++  while (continueReceive) {
++    if (unprocessedMessages.size() > maxUnprocessedMessages) {
++      RCLCPP_WARN(rclcpp::get_logger("igus_rebel"),
++          "Robot messages are not processed fast enough. Discarding messages.");
++
++      while (unprocessedMessages.size() > (maxUnprocessedMessages * 0.9)) {
++        unprocessedMessages.pop_back();
++      }
++    }
++
++    std::this_thread::sleep_for(std::chrono::milliseconds(listCheckWaitMs));
++  }
++
++  RCLCPP_DEBUG(rclcpp::get_logger("igus_rebel"),
++      "Stopped to check if the message list is being processed.");
++}
++
++bool RebelSocket::IsSocketOk()
++{
++  int error = 0;
++  socklen_t len = sizeof(error);
++  int retval = getsockopt(sock, SOL_SOCKET, SO_ERROR, &error, &len);
++
++  if (retval != 0) {
++    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Error getting socket error code: %s",
++        strerror(retval));
++    return false;
++  }
++
++  if (error != 0) {
++    RCLCPP_ERROR(rclcpp::get_logger("igus_rebel"), "Socket error: %s", strerror(error));
++    return false;
++  }
++
++  return true;
++}
+@@ -221,67 +200,61 @@
+-    void RebelSocket::Start()
+-    {
+-        connectionNeeded = true;
+-        continueReceive = true;
+-
+-        listCheckThread = std::thread(&RebelSocket::ListCheckThreadFunction, this);
+-        receiveThread = std::thread(&RebelSocket::ReceiveThreadFunction, this);
+-    }
+-
+-    void RebelSocket::Stop()
+-    {
+-        connectionNeeded = false;
+-        continueReceive = false;
+-
+-        if (receiveThread.joinable())
+-        {
+-            receiveThread.join();
+-        }
+-
+-        if (listCheckThread.joinable())
+-        {
+-            listCheckThread.join();
+-        }
+-    }
+-
+-    bool RebelSocket::HasMessage()
+-    {
+-        return unprocessedMessages.size() > 0;
+-    }
+-
+-    std::string RebelSocket::GetMessage()
+-    {
+-        std::lock_guard<std::mutex> lockGuard(messageLock);
+-
+-        if (!HasMessage())
+-        {
+-            return "";
+-        }
+-
+-        std::string msg = unprocessedMessages.back();
+-        unprocessedMessages.pop_back();
+-
+-        return msg;
+-    }
+-
+-    void RebelSocket::SendMessage(const std::string &msg)
+-    {
+-        std::lock_guard<std::mutex> lockGuard(socketWriteLock);
+-
+-        if (connectionNeeded)
+-        {
+-            MakeConnection();
+-        }
+-
+-        int sent = send(sock, msg.c_str(), msg.length(), 0);
+-
+-        if (!IsSocketOk())
+-        {
+-            connectionNeeded = true;
+-        }
+-
+-        if (sent < 0)
+-        {
+-            connectionNeeded = true;
+-        }
+-    }
+-}
++void RebelSocket::Start()
++{
++  connectionNeeded = true;
++  continueReceive = true;
++
++  listCheckThread = std::thread(&RebelSocket::ListCheckThreadFunction, this);
++  receiveThread = std::thread(&RebelSocket::ReceiveThreadFunction, this);
++}
++
++void RebelSocket::Stop()
++{
++  connectionNeeded = false;
++  continueReceive = false;
++
++  if (receiveThread.joinable()) {
++    receiveThread.join();
++  }
++
++  if (listCheckThread.joinable()) {
++    listCheckThread.join();
++  }
++}
++
++bool RebelSocket::HasMessage()
++{
++  return unprocessedMessages.size() > 0;
++}
++
++std::string RebelSocket::GetMessage()
++{
++  std::lock_guard<std::mutex> lockGuard(messageLock);
++
++  if (!HasMessage()) {
++    return "";
++  }
++
++  std::string msg = unprocessedMessages.back();
++  unprocessedMessages.pop_back();
++
++  return msg;
++}
++
++void RebelSocket::SendMessage(const std::string & msg)
++{
++  std::lock_guard<std::mutex> lockGuard(socketWriteLock);
++
++  if (connectionNeeded) {
++    MakeConnection();
++  }
++
++  int sent = send(sock, msg.c_str(), msg.length(), 0);
++
++  if (!IsSocketOk()) {
++    connectionNeeded = true;
++  }
++
++  if (sent < 0) {
++    connectionNeeded = true;
++  }
++}
++}
+
+7 files with code style divergence
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/uncrustify.xunit.xml'
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Failed.
+"uncrustify" end time: Sep 09 17:10 CEST
+"uncrustify" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: xmllint
+6/6 Test: xmllint
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml" "--package-name" "igus_rebel" "--output-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/ament_xmllint/xmllint.txt" "--command" "/opt/ros/jazzy/bin/ament_xmllint" "--xunit-file" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml"
+Directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+"xmllint" start time: Sep 09 17:10 CEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel':
+ - /opt/ros/jazzy/bin/ament_xmllint --xunit-file /home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml
+File 'package.xml' is valid
+
+File 'rebel.xml' is valid
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/amrl-linux24-04/ros2_ben/build/igus_rebel/test_results/igus_rebel/xmllint.xunit.xml'
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Passed.
+"xmllint" end time: Sep 09 17:10 CEST
+"xmllint" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 09 17:10 CEST
+
+cppcheck =   0.11 sec*proc
+
+flake8 =   0.17 sec*proc
+
+lint_cmake =   0.09 sec*proc
+
+linter =   1.22 sec*proc
+
+pep257 =   0.12 sec*proc
+
+uncrustify =   0.24 sec*proc
+
+xmllint =   0.48 sec*proc
+

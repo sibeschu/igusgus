@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+../../../../build/igusgus_launch/igusgus_launch.egg-info/PKG-INFO
+../../../../build/igusgus_launch/igusgus_launch.egg-info/SOURCES.txt
+../../../../build/igusgus_launch/igusgus_launch.egg-info/dependency_links.txt
+../../../../build/igusgus_launch/igusgus_launch.egg-info/requires.txt
+../../../../build/igusgus_launch/igusgus_launch.egg-info/top_level.txt
+../../../../build/igusgus_launch/igusgus_launch.egg-info/zip-safe
+igusgus_launch/__init__.py
+launch/igusgus_launch.py
+launch/igusgus_launch_orbbec.py
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

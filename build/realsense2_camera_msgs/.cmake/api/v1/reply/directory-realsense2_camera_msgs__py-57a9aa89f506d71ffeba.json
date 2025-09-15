@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "realsense2_camera_msgs__py",
+		"source" : "/home/amrl-linux24-04/ros2_ben/build/realsense2_camera_msgs/realsense2_camera_msgs__py"
+	}
+}

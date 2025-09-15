@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="igus_rebel.pep257"
+  tests="1"
+  errors="0"
+  failures="0"
+  time="0.005"
+>
+  <testcase
+    name="./launch/rebel.launch.py"
+    classname="igus_rebel.pep257"/>
+  <system-out>Checked files:
+* ./launch/rebel.launch.py</system-out>
+</testsuite>
