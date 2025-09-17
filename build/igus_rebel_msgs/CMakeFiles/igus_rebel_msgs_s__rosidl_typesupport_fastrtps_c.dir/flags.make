@@ -6,5 +6,5 @@ C_DEFINES = -DFASTCDR_DYN_LINK -DROS_PACKAGE_NAME=\"igus_rebel_msgs\" -Digus_reb
 
 C_INCLUDES = -I/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_generator_c -I/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_generator_py -I/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/rmw -isystem /usr/include/python3.12 -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/service_msgs -isystem /opt/ros/jazzy/include/builtin_interfaces -isystem /opt/ros/jazzy/include/rosidl_typesupport_c
 
-C_FLAGS = -O3 -DNDEBUG -fPIC -Wall -Wextra
+C_FLAGS = -fPIC -Wall -Wextra
 

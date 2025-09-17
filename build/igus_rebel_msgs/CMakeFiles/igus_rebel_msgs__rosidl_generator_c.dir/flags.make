@@ -6,5 +6,5 @@ C_DEFINES = -DROSIDL_GENERATOR_C_BUILDING_DLL_igus_rebel_msgs -DROS_PACKAGE_NAME
 
 C_INCLUDES = -I/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/service_msgs -isystem /opt/ros/jazzy/include/builtin_interfaces -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface
 
-C_FLAGS = -O3 -DNDEBUG -std=gnu11 -fPIC -Wall
+C_FLAGS = -std=gnu11 -fPIC -Wall
 

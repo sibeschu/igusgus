@@ -390,8 +390,8 @@ librealsense2_camera.so: /opt/ros/jazzy/lib/libnav_msgs__rosidl_typesupport_cpp.
 librealsense2_camera.so: /opt/ros/jazzy/lib/libnav_msgs__rosidl_generator_py.so
 librealsense2_camera.so: /opt/ros/jazzy/lib/libtf2_ros.so
 librealsense2_camera.so: /opt/ros/jazzy/lib/libdiagnostic_updater.so
-librealsense2_camera.so: /usr/local/lib/librealsense2.so.2.56.5
-librealsense2_camera.so: /usr/local/lib/librsutils.a
+librealsense2_camera.so: /opt/ros/jazzy/lib/x86_64-linux-gnu/librealsense2.so.2.56.4
+librealsense2_camera.so: /opt/ros/jazzy/lib/x86_64-linux-gnu/librsutils.a
 librealsense2_camera.so: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.6.0
 librealsense2_camera.so: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.6.0
 librealsense2_camera.so: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.6.0

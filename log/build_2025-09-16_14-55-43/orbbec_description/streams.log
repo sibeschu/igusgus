@@ -1,0 +1,64 @@
+[0.280s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_description -DCMAKE_INSTALL_PREFIX=/home/amrl-linux24-04/ros2_ben/install/orbbec_description
+[0.350s] -- The C compiler identification is GNU 13.3.0
+[0.422s] -- The CXX compiler identification is GNU 13.3.0
+[0.446s] -- Detecting C compiler ABI info
+[0.574s] -- Detecting C compiler ABI info - done
+[0.584s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.584s] -- Detecting C compile features
+[0.584s] -- Detecting C compile features - done
+[0.597s] -- Detecting CXX compiler ABI info
+[0.734s] -- Detecting CXX compiler ABI info - done
+[0.750s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.750s] -- Detecting CXX compile features
+[0.751s] -- Detecting CXX compile features - done
+[0.756s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.957s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.197s] -- Configuring done (0.9s)
+[1.200s] -- Generating done (0.0s)
+[1.202s] -- Build files have been written to: /home/amrl-linux24-04/ros2_ben/build/orbbec_description
+[1.208s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/amrl-linux24-04/ros2_ben/src/OrbbecSDK_ROS2/orbbec_description -DCMAKE_INSTALL_PREFIX=/home/amrl-linux24-04/ros2_ben/install/orbbec_description
+[1.209s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/amrl-linux24-04/ros2_ben/build/orbbec_description -- -j22 -l22
+[1.269s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/amrl-linux24-04/ros2_ben/build/orbbec_description -- -j22 -l22
+[1.271s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/amrl-linux24-04/ros2_ben/build/orbbec_description
+[1.279s] -- Install configuration: ""
+[1.279s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/launch
+[1.279s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/launch/launch_utils.py
+[1.279s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/launch/view_model.launch.py
+[1.280s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes
+[1.280s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/femto_bolt
+[1.280s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/femto_bolt/femto_bolt.stl
+[1.280s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336
+[1.280s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_bottom_screw_frame.STL
+[1.281s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_infra2_frame.STL
+[1.282s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_link.STL
+[1.283s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_depth_frame.STL
+[1.283s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_infra2_optical_frame.STL
+[1.284s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_color_frame.STL
+[1.284s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_color_optical_frame.STL
+[1.284s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_infra_1_frame.STL
+[1.285s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_infra_1_optical_frame.STL
+[1.285s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/gemini335_336/camera_depth_optical_frame.STL
+[1.286s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/meshes/AstraPlus.stl
+[1.310s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/urdf
+[1.310s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/urdf/_gemini_335_336.urdf.xacro
+[1.310s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/urdf/test_gemini_335.urdf.xarco
+[1.310s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/urdf/test_gemini_336.urdf.xarco
+[1.310s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/urdf/femto_bolt.urdf.xacro
+[1.311s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/rviz
+[1.311s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/rviz/urdf.rviz
+[1.311s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/ament_index/resource_index/package_run_dependencies/orbbec_description
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/ament_index/resource_index/parent_prefix_path/orbbec_description
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/environment/ament_prefix_path.sh
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/environment/ament_prefix_path.dsv
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/environment/path.sh
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/environment/path.dsv
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/local_setup.bash
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/local_setup.sh
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/local_setup.zsh
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/local_setup.dsv
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/package.dsv
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/ament_index/resource_index/packages/orbbec_description
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/cmake/orbbec_descriptionConfig.cmake
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/cmake/orbbec_descriptionConfig-version.cmake
+[1.312s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/orbbec_description/share/orbbec_description/package.xml
+[1.315s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/orbbec_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/amrl-linux24-04/ros2_ben/build/orbbec_description

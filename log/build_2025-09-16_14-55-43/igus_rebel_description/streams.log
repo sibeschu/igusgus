@@ -1,0 +1,102 @@
+[0.026s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/igus_rebel_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description -DCMAKE_INSTALL_PREFIX=/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description
+[0.290s] -- The C compiler identification is GNU 13.3.0
+[0.290s] -- The CXX compiler identification is GNU 13.3.0
+[0.291s] -- Detecting C compiler ABI info
+[0.346s] -- Detecting C compiler ABI info - done
+[0.356s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.357s] -- Detecting C compile features
+[0.357s] -- Detecting C compile features - done
+[0.370s] -- Detecting CXX compiler ABI info
+[0.499s] -- Detecting CXX compiler ABI info - done
+[0.509s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.509s] -- Detecting CXX compile features
+[0.509s] -- Detecting CXX compile features - done
+[0.514s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.725s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.870s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.012s] -- Added test 'lint_cmake' to check CMake code style
+[1.014s] -- Added test 'xmllint' to check XML markup files
+[1.016s] -- Configuring done (1.0s)
+[1.019s] -- Generating done (0.0s)
+[1.021s] -- Build files have been written to: /home/amrl-linux24-04/ros2_ben/build/igus_rebel_description
+[1.029s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/igus_rebel_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description -DCMAKE_INSTALL_PREFIX=/home/amrl-linux24-04/ros2_ben/install/igus_rebel_description
+[1.030s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/igus_rebel_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/amrl-linux24-04/ros2_ben/build/igus_rebel_description -- -j22 -l22
+[1.096s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/igus_rebel_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/amrl-linux24-04/ros2_ben/build/igus_rebel_description -- -j22 -l22
+[1.113s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/igus_rebel_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/amrl-linux24-04/ros2_ben/build/igus_rebel_description
+[1.124s] -- Install configuration: ""
+[1.124s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes
+[1.124s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel
+[1.124s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_005.dae
+[1.128s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.002.png
+[1.129s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002_0.stl
+[1.129s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.005.png
+[1.129s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.001.png
+[1.129s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002.stl
+[1.131s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_003.stl
+[1.132s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002_1.dae
+[1.133s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002_0.dae
+[1.136s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_006.dae
+[1.138s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_005.stl
+[1.139s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_004.dae
+[1.145s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.png
+[1.145s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_000.stl
+[1.145s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_001.stl
+[1.146s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.004.png
+[1.146s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.006.png
+[1.146s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_001.dae
+[1.147s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_004.stl
+[1.149s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002_1.stl
+[1.149s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002_2.dae
+[1.151s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_000.dae
+[1.151s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Diffuse Map.003.png
+[1.151s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_003.dae
+[1.159s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_006.stl
+[1.159s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel/Robolink_RebeL_002_2.stl
+[1.160s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2
+[1.160s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_motor3.stl
+[1.161s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_motor2.stl
+[1.162s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/motor2.stl
+[1.170s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_link3.stl
+[1.172s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/link4.stl
+[1.178s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_link2.stl
+[1.182s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_motor1.stl
+[1.183s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_motor4.stl
+[1.183s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_link1.stl
+[1.184s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/motor1.stl
+[1.192s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_link4.stl
+[1.193s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/link6.stl
+[1.194s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/motor3.stl
+[1.201s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/link3.stl
+[1.208s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/motor5.stl
+[1.209s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/link1.stl
+[1.214s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/link5.stl
+[1.221s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_link6.stl
+[1.221s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_motor5.stl
+[1.221s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_base_link.stl
+[1.222s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/link2.stl
+[1.243s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/motor4.stl
+[1.249s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/simplified_link5.stl
+[1.250s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/meshes/robolink_rebel2/base_link.stl
+[1.257s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf
+[1.257s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf/igus_rebel.urdf
+[1.257s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf/igus_rebel.control.xacro
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf/igus_rebel2.urdf
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf/igus_rebel2.control.xacro
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf/igus_rebel_robot.urdf.xacro
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/urdf/igus_rebel_robot2.urdf.xacro
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/ament_index/resource_index/package_run_dependencies/igus_rebel_description
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/ament_index/resource_index/parent_prefix_path/igus_rebel_description
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/environment/ament_prefix_path.sh
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/environment/ament_prefix_path.dsv
+[1.258s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/environment/path.sh
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/environment/path.dsv
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/local_setup.bash
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/local_setup.sh
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/local_setup.zsh
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/local_setup.dsv
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/package.dsv
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/ament_index/resource_index/packages/igus_rebel_description
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/cmake/igus_rebel_descriptionConfig.cmake
+[1.259s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/cmake/igus_rebel_descriptionConfig-version.cmake
+[1.260s] -- Installing: /home/amrl-linux24-04/ros2_ben/install/igus_rebel_description/share/igus_rebel_description/package.xml
+[1.262s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/igus_rebel_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl-linux24-04/ros2_ben/install/yolo_ros:/home/amrl-linux24-04/ros2_ben/install/igusgus_launch:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/amrl-linux24-04/ros2_ben/build/igus_rebel_description

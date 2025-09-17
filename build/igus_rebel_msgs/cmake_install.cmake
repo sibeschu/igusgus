@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -292,7 +292,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/igus_rebel_msgs_s__rosidl_typesupport_fastrtps_c.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
+  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/igus_rebel_msgs_s__rosidl_typesupport_fastrtps_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -316,7 +316,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/igus_rebel_msgs_s__rosidl_typesupport_introspection_c.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
+  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/igus_rebel_msgs_s__rosidl_typesupport_introspection_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -340,7 +340,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/igus_rebel_msgs_s__rosidl_typesupport_c.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
+  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/igus_rebel_msgs_s__rosidl_typesupport_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -448,8 +448,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_generator_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_generator_cExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_generator_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -471,8 +471,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_typesupport_fastrtps_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_typesupport_fastrtps_cExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -514,8 +514,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_typesupport_fastrtps_cppExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_typesupport_fastrtps_cppExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -537,8 +537,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_introspection_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_introspection_cExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -560,8 +560,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_cExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_cExport-noconfig.cmake")
   endif()
 endif()
 
@@ -583,8 +583,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_introspection_cppExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_introspection_cppExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -606,8 +606,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_cppExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_cppExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/igus_rebel_msgs__rosidl_typesupport_cppExport-noconfig.cmake")
   endif()
 endif()
 
@@ -629,8 +629,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_generator_pyExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_generator_pyExport-release.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/cmake" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/CMakeFiles/Export/6e6de75191badc3de373bb594d5717f9/export_igus_rebel_msgs__rosidl_generator_pyExport-noconfig.cmake")
   endif()
 endif()
 
