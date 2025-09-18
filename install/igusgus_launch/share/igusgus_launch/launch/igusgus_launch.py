@@ -34,8 +34,11 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PathJoinSubstitution([camera_dir, 'rs_launch.py']),
             launch_arguments={
-            'depth_module.depth_profile': '1280x720x30',
-            'pointcloud.enable': 'true'
+            'depth_module.depth_profile': '640x480x30',
+            'rgb_camera.color_profile': '640x480x30',
+            'pointcloud.enable': 'true',
+            'pointcloud.allow_no_texture_points': 'true', # Test
+            'align_depth.enable': 'true',
             }.items()
         ),
 
