@@ -1,0 +1,2 @@
+[console_scripts]
+pub_3d = igusgus.pub_3d:main

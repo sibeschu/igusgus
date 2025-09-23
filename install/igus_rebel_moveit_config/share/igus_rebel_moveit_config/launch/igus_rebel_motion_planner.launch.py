@@ -15,7 +15,7 @@ def generate_launch_description():
         'load_robot_description', default_value='false', description='')
     use_gui_arg = DeclareLaunchArgument(
         'use_gui', default_value='false', description='')
-
+    
     moveit_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('igus_rebel_moveit_config'), 'launch', 'move_group.launch.py')
@@ -26,7 +26,7 @@ def generate_launch_description():
         }.items(),
     )
 
-
+    
     return LaunchDescription([
         debug_arg,
         load_robot_description_arg,

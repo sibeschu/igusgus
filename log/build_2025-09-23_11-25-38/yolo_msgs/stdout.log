@@ -1,0 +1,23 @@
+[  0%] Built target yolo_msgs__rosidl_generator_type_description
+[  0%] Built target ament_cmake_python_copy_yolo_msgs
+[  0%] Built target yolo_msgs__cpp
+[ 26%] Built target yolo_msgs__rosidl_generator_c
+[ 36%] Built target yolo_msgs__rosidl_typesupport_introspection_c
+[ 46%] Built target yolo_msgs__rosidl_typesupport_c
+[ 62%] Built target yolo_msgs__rosidl_typesupport_fastrtps_c
+[ 65%] Built target yolo_msgs__rosidl_typesupport_introspection_cpp
+[ 75%] Built target yolo_msgs__rosidl_typesupport_fastrtps_cpp
+[ 85%] Built target yolo_msgs__rosidl_typesupport_cpp
+[ 85%] Built target yolo_msgs
+[ 86%] Built target yolo_msgs__py
+[ 96%] Built target yolo_msgs__rosidl_generator_py
+[ 97%] Built target yolo_msgs_s__rosidl_typesupport_c
+[ 98%] Built target yolo_msgs_s__rosidl_typesupport_fastrtps_c
+[100%] Built target yolo_msgs_s__rosidl_typesupport_introspection_c
+running egg_info
+writing yolo_msgs.egg-info/PKG-INFO
+writing dependency_links to yolo_msgs.egg-info/dependency_links.txt
+writing top-level names to yolo_msgs.egg-info/top_level.txt
+reading manifest file 'yolo_msgs.egg-info/SOURCES.txt'
+writing manifest file 'yolo_msgs.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_yolo_msgs_egg

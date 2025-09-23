@@ -8,7 +8,7 @@
     An automatically generated package with all the configuration and launch files for using the
     igus_rebel with the MoveIt! Motion Planning Framework
   </description>
-  <maintainer email="schenke@truphysics.com">Björn Schenke</maintainer>
+  <maintainer email="dinhhoangdung0712@gmail.com">Hoang Dung Dinh</maintainer>
 
   <license>BSD</license>
 
@@ -21,12 +21,15 @@
 	<exec_depend>moveit_planners</exec_depend>
 	<exec_depend>moveit_simple_controller_manager</exec_depend>
 	<exec_depend>moveit_visual_tools</exec_depend>
+	<exec_depend>moveit_servo</exec_depend>
 	<exec_depend>joint_state_publisher</exec_depend>
 	<exec_depend>joint_state_publisher_gui</exec_depend>
 	<exec_depend>tf2_ros</exec_depend>
 	<exec_depend>xacro</exec_depend>
 
 	<exec_depend>joint_trajectory_controller</exec_depend>
+	<exec_depend>velocity_controllers</exec_depend>
+	<exec_depend>position_controllers</exec_depend>
 	<exec_depend>controller_manager</exec_depend>
 	<exec_depend>igus_rebel_description</exec_depend>
 	<exec_depend>moveit_configs_utils</exec_depend>

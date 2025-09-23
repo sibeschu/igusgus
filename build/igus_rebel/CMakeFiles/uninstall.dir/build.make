@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+CMAKE_SOURCE_DIR = /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/amrl-linux24-04/ros2_ben/build/igus_rebel
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/amrl-linux24-04/ros2_ben/build/igus_rebel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel /home/amrl-linux24-04/ros2_ben/build/igus_rebel /home/amrl-linux24-04/ros2_ben/build/igus_rebel /home/amrl-linux24-04/ros2_ben/build/igus_rebel/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/amrl-linux24-04/ros2_ben/build/igus_rebel && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel /home/amrl-linux24-04/ros2_ben/build/igus_rebel /home/amrl-linux24-04/ros2_ben/build/igus_rebel /home/amrl-linux24-04/ros2_ben/build/igus_rebel/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

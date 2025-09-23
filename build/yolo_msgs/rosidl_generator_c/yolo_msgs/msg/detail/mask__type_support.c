@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "yolo_msgs/msg/detail/mask__type_support.h"
-#include "yolo_msgs/msg/detail/mask__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "yolo_msgs/msg/detail/mask__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "yolo_msgs/msg/detail/mask__functions.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -1,7 +1,7 @@
 CMakeFiles/igus_rebel.dir/src/RebelSocket.cpp.o: \
- /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/src/RebelSocket.cpp \
+ /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/src/RebelSocket.cpp \
  /usr/include/stdc-predef.h \
- /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/include/igus_rebel/RebelSocket.hpp \
+ /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/include/igus_rebel/RebelSocket.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/13/csignal \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -703,6 +703,6 @@ CMakeFiles/igus_rebel.dir/src/RebelSocket.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/include/igus_rebel/CriKeywords.hpp \
+ /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/include/igus_rebel/CriKeywords.hpp \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/in.h

@@ -8,13 +8,7 @@ import os
 
 
 def generate_launch_description():
-    env = {
-        'IGN_GAZEBO_SYSTEM_PLUGIN_PATH': ':'.join([
-            os.environ.get('IGN_GAZEBO_SYSTEM_PLUGIN_PATH', default=''),
-            os.environ.get('LD_LIBRARY_PATH', default='')]
-        ),
-    }
-    
+  
     hardware_protocol_arg = DeclareLaunchArgument(
         "hardware_protocol",
         default_value="rebel",
@@ -42,7 +36,8 @@ def generate_launch_description():
             LaunchConfiguration("hardware_protocol"),
         ]
     )}
-        
+
+
     ros2_control_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
@@ -61,7 +56,9 @@ def generate_launch_description():
         remappings=[],
         output="both",
     )
-    
+
+    print("robot state publisher started")
+
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -69,10 +66,17 @@ def generate_launch_description():
         output="both",
     )
     
-    robot_controller_spawner = Node(
+    robot_trajectory_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
+        arguments=["rebel_arm_trajectory_controller", "--controller-manager", "/controller_manager"],
+        output="both",
+    )
+
+    robot_velocity_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["rebel_arm_velocity_controller", "--controller-manager", "/controller_manager"],
         output="both",
     )
     
@@ -81,6 +85,7 @@ def generate_launch_description():
         ros2_control_node,
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
-        robot_controller_spawner,
+        robot_trajectory_controller_spawner,
+        # robot_velocity_controller_spawner,
     ])
     

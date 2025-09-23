@@ -1,4 +1,4 @@
-# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/rebel.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/rebel.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,13 +70,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/rebel.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/rebel.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel/" TYPE DIRECTORY FILES
-    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/config"
-    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/launch"
+    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/config"
+    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/launch"
     )
 endif()
 
@@ -140,7 +140,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

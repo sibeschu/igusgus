@@ -9,11 +9,17 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     
-    robot_controller_spawner = Node(
+    robot_trajectory_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["rebel_arm_controller", "--controller-manager", "/controller_manager"],
-        parameters=[{'use_sim_time': True}],
+        arguments=["rebel_arm_trajectory_controller", "--controller-manager", "/controller_manager"],
+        output="both",
+    )
+
+    robot_position_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["rebel_arm_position_controller", "--controller-manager", "/controller_manager"],
         output="both",
     )
     
@@ -26,6 +32,7 @@ def generate_launch_description():
     )
     
     return LaunchDescription([
-        robot_controller_spawner,
+        robot_trajectory_controller_spawner,
+        # robot_position_controller_spawner,
         joint_state_broadcaster_spawner,
     ])

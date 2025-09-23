@@ -370,7 +370,7 @@ igus_rebel_msgs_BINARY_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/build/igus_rebe
 igus_rebel_msgs_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-igus_rebel_msgs_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs
+igus_rebel_msgs_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs
 
 //Dependencies for the target
 igus_rebel_msgs__rosidl_generator_py_LIB_DEPENDS:STATIC=general;igus_rebel_msgs__rosidl_generator_c;general;Python3::Python;general;igus_rebel_msgs__rosidl_typesupport_c;general;service_msgs::service_msgs__rosidl_generator_c;general;service_msgs::service_msgs__rosidl_typesupport_fastrtps_c;general;service_msgs::service_msgs__rosidl_typesupport_fastrtps_cpp;general;service_msgs::service_msgs__rosidl_typesupport_introspection_c;general;service_msgs::service_msgs__rosidl_typesupport_c;general;service_msgs::service_msgs__rosidl_typesupport_introspection_cpp;general;service_msgs::service_msgs__rosidl_typesupport_cpp;general;service_msgs::service_msgs__rosidl_generator_py;general;service_msgs::service_msgs__rosidl_generator_py;general;builtin_interfaces::builtin_interfaces__rosidl_generator_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_fastrtps_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_fastrtps_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_generator_py;general;builtin_interfaces::builtin_interfaces__rosidl_generator_py;
@@ -604,7 +604,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

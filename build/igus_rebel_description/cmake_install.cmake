@@ -1,4 +1,4 @@
-# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description
+# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_description" TYPE DIRECTORY FILES
-    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description/meshes"
-    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description/urdf"
+    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_description/meshes"
+    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_description/urdf"
     )
 endif()
 
@@ -105,7 +105,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_description" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_description" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_description/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

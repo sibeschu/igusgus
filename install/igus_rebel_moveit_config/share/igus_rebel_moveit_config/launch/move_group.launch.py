@@ -142,6 +142,56 @@ def opaque_func(context, *args, **kwargs):
         ],
     )
 
+    # Get parameters for the Servo node
+    servo_params_file = PathJoinSubstitution(
+        [
+            FindPackageShare("igus_rebel_moveit_config"),
+            "config",
+            "servo.yaml",
+        ]
+    )
+    servo_context = load_yaml(Path(servo_params_file.perform(context)))
+    servo_params = {
+        "moveit_servo": servo_context
+    }
+    # This sets the update rate and planning group name for the acceleration limiting filter.
+    planning_group_name = {"planning_group_name": "igus_rebel_arm"}
+
+    servo_node = Node(
+        package="moveit_servo",
+        executable="servo_node",
+        namespace=namespace,
+        parameters=[
+            {'use_sim_time': use_sim_time},
+            servo_params,
+            planning_group_name,
+            moveit_args,
+        ],
+        output="screen",
+    )
+
+    # Launch gamepad
+    joy_node = Node(
+        package="joy",
+        executable="joy_node",
+        parameters=[{'use_sim_time': use_sim_time}],
+        output="screen",
+    )
+
+    teleop_joy_twist_file = PathJoinSubstitution(
+        [
+            FindPackageShare("igus_rebel_moveit_config"),
+            "config",
+            "gamepad.yaml",
+        ]
+    )
+    teleop_twist_joy_node = Node(
+        package="igus_rebel_moveit_config",
+        executable="rebel_servo_teleop_gamepad",
+        parameters=[{'use_sim_time': use_sim_time}, teleop_joy_twist_file],
+        output="screen",
+    )
+
     default_rviz_file = os.path.join(
         get_package_share_directory('igus_rebel_moveit_config'),
         'launch',
@@ -166,6 +216,9 @@ def opaque_func(context, *args, **kwargs):
 
     return [
         move_group_node,
+        # servo_node,
+        # joy_node,
+        # teleop_twist_joy_node,
         launch_rviz
     ]
 

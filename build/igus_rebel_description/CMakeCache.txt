@@ -326,7 +326,7 @@ igus_rebel_description_BINARY_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/build/ig
 igus_rebel_description_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-igus_rebel_description_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description
+igus_rebel_description_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_description
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
@@ -416,7 +416,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_description
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_description
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

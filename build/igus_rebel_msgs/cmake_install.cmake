@@ -1,4 +1,4 @@
-# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs
+# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -375,11 +375,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/msg" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs/msg/DigitalOutput.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/msg" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs/msg/DigitalOutput.msg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/srv" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs/srv/SetDigitalOutput.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs/srv" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs/srv/SetDigitalOutput.srv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -670,7 +670,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_msgs" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

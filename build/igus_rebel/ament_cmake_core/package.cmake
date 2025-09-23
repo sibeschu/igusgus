@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "igus_rebel")
 set(igus_rebel_VERSION "0.0.0")
-set(igus_rebel_MAINTAINER "Björn Schenke <schenke@truphysics.com>")
+set(igus_rebel_MAINTAINER "hoangdung <dinhhoangdung0712@gmail.com>")
 set(igus_rebel_BUILD_DEPENDS "rosidl_default_generators" "rclcpp" "rclpy" "std_msgs" "sensor_msgs" "igus_rebel_msgs" "joint_state_broadcaster" "hardware_interface" "pluginlib")
 set(igus_rebel_BUILDTOOL_DEPENDS "ament_cmake")
 set(igus_rebel_BUILD_EXPORT_DEPENDS "rclcpp" "rclpy" "std_msgs" "sensor_msgs" "igus_rebel_msgs" "joint_state_broadcaster" "hardware_interface" "pluginlib")

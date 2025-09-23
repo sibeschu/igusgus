@@ -1,0 +1,6 @@
+source;share/igusgus/hook/pythonpath.ps1
+source;share/igusgus/hook/pythonpath.dsv
+source;share/igusgus/hook/pythonpath.sh
+source;share/igusgus/hook/ament_prefix_path.ps1
+source;share/igusgus/hook/ament_prefix_path.dsv
+source;share/igusgus/hook/ament_prefix_path.sh

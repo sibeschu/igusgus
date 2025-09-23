@@ -1,4 +1,4 @@
-# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config
+# Install script for directory: /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,9 +43,57 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config" TYPE EXECUTABLE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_moveit_config/rebel_servo_teleop_keyboard")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard"
+         OLD_RPATH "/opt/ros/jazzy/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_keyboard")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_moveit_config/CMakeFiles/rebel_servo_teleop_keyboard.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config" TYPE EXECUTABLE FILES "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_moveit_config/rebel_servo_teleop_gamepad")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad"
+         OLD_RPATH "/opt/ros/jazzy/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/igus_rebel_moveit_config/rebel_servo_teleop_gamepad")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/amrl-linux24-04/ros2_ben/build/igus_rebel_moveit_config/CMakeFiles/rebel_servo_teleop_gamepad.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_moveit_config" TYPE DIRECTORY FILES
-    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config/launch"
-    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config/config"
+    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config/launch"
+    "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config/config"
     )
 endif()
 
@@ -105,7 +153,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_moveit_config" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/igus_rebel_moveit_config" TYPE FILE FILES "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

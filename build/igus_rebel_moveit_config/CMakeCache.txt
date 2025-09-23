@@ -442,6 +442,9 @@ console_bridge_DIR:PATH=/usr/lib/x86_64-linux-gnu/console_bridge/cmake
 //The directory containing a CMake configuration file for console_bridge_vendor.
 console_bridge_vendor_DIR:PATH=/opt/ros/jazzy/share/console_bridge_vendor/cmake
 
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/jazzy/share/control_msgs/cmake
+
 //The directory containing a CMake configuration file for eigen3_cmake_module.
 eigen3_cmake_module_DIR:PATH=/opt/ros/jazzy/share/eigen3_cmake_module/cmake
 
@@ -482,7 +485,7 @@ igus_rebel_moveit_config_BINARY_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/build/
 igus_rebel_moveit_config_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-igus_rebel_moveit_config_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config
+igus_rebel_moveit_config_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config
 
 //The directory containing a CMake configuration file for kdl_parser.
 kdl_parser_DIR:PATH=/opt/ros/jazzy/share/kdl_parser/cmake
@@ -853,7 +856,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

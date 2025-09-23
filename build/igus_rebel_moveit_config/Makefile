@@ -57,7 +57,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_moveit_config
+CMAKE_SOURCE_DIR = /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/amrl-linux24-04/ros2_ben/build/igus_rebel_moveit_config
@@ -197,6 +197,80 @@ igus_rebel_moveit_config_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/igus_rebel_moveit_config_uninstall.dir/build.make CMakeFiles/igus_rebel_moveit_config_uninstall.dir/build
 .PHONY : igus_rebel_moveit_config_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named rebel_servo_teleop_keyboard
+
+# Build rule for target.
+rebel_servo_teleop_keyboard: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rebel_servo_teleop_keyboard
+.PHONY : rebel_servo_teleop_keyboard
+
+# fast build rule for target.
+rebel_servo_teleop_keyboard/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_keyboard.dir/build.make CMakeFiles/rebel_servo_teleop_keyboard.dir/build
+.PHONY : rebel_servo_teleop_keyboard/fast
+
+#=============================================================================
+# Target rules for targets named rebel_servo_teleop_gamepad
+
+# Build rule for target.
+rebel_servo_teleop_gamepad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rebel_servo_teleop_gamepad
+.PHONY : rebel_servo_teleop_gamepad
+
+# fast build rule for target.
+rebel_servo_teleop_gamepad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_gamepad.dir/build.make CMakeFiles/rebel_servo_teleop_gamepad.dir/build
+.PHONY : rebel_servo_teleop_gamepad/fast
+
+src/rebel_servo_teleop_gamepad.o: src/rebel_servo_teleop_gamepad.cpp.o
+.PHONY : src/rebel_servo_teleop_gamepad.o
+
+# target to build an object file
+src/rebel_servo_teleop_gamepad.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_gamepad.dir/build.make CMakeFiles/rebel_servo_teleop_gamepad.dir/src/rebel_servo_teleop_gamepad.cpp.o
+.PHONY : src/rebel_servo_teleop_gamepad.cpp.o
+
+src/rebel_servo_teleop_gamepad.i: src/rebel_servo_teleop_gamepad.cpp.i
+.PHONY : src/rebel_servo_teleop_gamepad.i
+
+# target to preprocess a source file
+src/rebel_servo_teleop_gamepad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_gamepad.dir/build.make CMakeFiles/rebel_servo_teleop_gamepad.dir/src/rebel_servo_teleop_gamepad.cpp.i
+.PHONY : src/rebel_servo_teleop_gamepad.cpp.i
+
+src/rebel_servo_teleop_gamepad.s: src/rebel_servo_teleop_gamepad.cpp.s
+.PHONY : src/rebel_servo_teleop_gamepad.s
+
+# target to generate assembly for a file
+src/rebel_servo_teleop_gamepad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_gamepad.dir/build.make CMakeFiles/rebel_servo_teleop_gamepad.dir/src/rebel_servo_teleop_gamepad.cpp.s
+.PHONY : src/rebel_servo_teleop_gamepad.cpp.s
+
+src/rebel_servo_teleop_keyboard.o: src/rebel_servo_teleop_keyboard.cpp.o
+.PHONY : src/rebel_servo_teleop_keyboard.o
+
+# target to build an object file
+src/rebel_servo_teleop_keyboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_keyboard.dir/build.make CMakeFiles/rebel_servo_teleop_keyboard.dir/src/rebel_servo_teleop_keyboard.cpp.o
+.PHONY : src/rebel_servo_teleop_keyboard.cpp.o
+
+src/rebel_servo_teleop_keyboard.i: src/rebel_servo_teleop_keyboard.cpp.i
+.PHONY : src/rebel_servo_teleop_keyboard.i
+
+# target to preprocess a source file
+src/rebel_servo_teleop_keyboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_keyboard.dir/build.make CMakeFiles/rebel_servo_teleop_keyboard.dir/src/rebel_servo_teleop_keyboard.cpp.i
+.PHONY : src/rebel_servo_teleop_keyboard.cpp.i
+
+src/rebel_servo_teleop_keyboard.s: src/rebel_servo_teleop_keyboard.cpp.s
+.PHONY : src/rebel_servo_teleop_keyboard.s
+
+# target to generate assembly for a file
+src/rebel_servo_teleop_keyboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rebel_servo_teleop_keyboard.dir/build.make CMakeFiles/rebel_servo_teleop_keyboard.dir/src/rebel_servo_teleop_keyboard.cpp.s
+.PHONY : src/rebel_servo_teleop_keyboard.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +286,14 @@ help:
 	@echo "... test"
 	@echo "... igus_rebel_moveit_config_uninstall"
 	@echo "... uninstall"
+	@echo "... rebel_servo_teleop_gamepad"
+	@echo "... rebel_servo_teleop_keyboard"
+	@echo "... src/rebel_servo_teleop_gamepad.o"
+	@echo "... src/rebel_servo_teleop_gamepad.i"
+	@echo "... src/rebel_servo_teleop_gamepad.s"
+	@echo "... src/rebel_servo_teleop_keyboard.o"
+	@echo "... src/rebel_servo_teleop_keyboard.i"
+	@echo "... src/rebel_servo_teleop_keyboard.s"
 .PHONY : help
 
 

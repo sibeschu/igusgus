@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "igus_rebel_description")
 set(igus_rebel_description_VERSION "0.0.0")
-set(igus_rebel_description_MAINTAINER "Björn Schenke <schenke@truphysics.com>")
+set(igus_rebel_description_MAINTAINER "hoangdung <dinhhoangdung0712@gmail.com>")
 set(igus_rebel_description_BUILD_DEPENDS "ros_gz_bridge" "gz_ros2_control")
 set(igus_rebel_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(igus_rebel_description_BUILD_EXPORT_DEPENDS "ros_gz_bridge" "gz_ros2_control")

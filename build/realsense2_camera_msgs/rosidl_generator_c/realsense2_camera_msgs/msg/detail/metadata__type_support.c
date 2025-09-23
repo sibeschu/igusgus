@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "rosidl_typesupport_interface/macros.h"
 #include "realsense2_camera_msgs/msg/detail/metadata__functions.h"
 #include "realsense2_camera_msgs/msg/detail/metadata__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "realsense2_camera_msgs/msg/detail/metadata__type_support.h"
 
 #ifdef __cplusplus

@@ -425,7 +425,7 @@ igus_rebel_IS_TOP_LEVEL:STATIC=ON
 igus_rebel_LIB_DEPENDS:STATIC=general;hardware_interface::mock_components;general;hardware_interface::hardware_interface;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_generator_c;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_typesupport_fastrtps_c;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_typesupport_fastrtps_cpp;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_typesupport_introspection_c;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_typesupport_c;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_typesupport_introspection_cpp;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_typesupport_cpp;general;igus_rebel_msgs::igus_rebel_msgs__rosidl_generator_py;
 
 //Value Computed by CMake
-igus_rebel_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+igus_rebel_SOURCE_DIR:STATIC=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel
 
 //The directory containing a CMake configuration file for igus_rebel_msgs.
 igus_rebel_msgs_DIR:PATH=/home/amrl-linux24-04/ros2_ben/install/igus_rebel_msgs/share/igus_rebel_msgs/cmake
@@ -696,7 +696,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

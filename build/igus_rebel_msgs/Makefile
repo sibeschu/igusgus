@@ -57,7 +57,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/igus_rebel_msgs
+CMAKE_SOURCE_DIR = /home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs
