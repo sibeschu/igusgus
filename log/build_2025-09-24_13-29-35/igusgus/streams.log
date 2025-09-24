@@ -1,0 +1,30 @@
+[1.807s] Invoking command in '/home/amrl-linux24-04/ros2_ben/src/igusgus': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/igusgus build --build-base /home/amrl-linux24-04/ros2_ben/build/igusgus/build install --record /home/amrl-linux24-04/ros2_ben/build/igusgus/install.log --single-version-externally-managed install_data
+[2.291s] running egg_info
+[2.323s] writing ../../build/igusgus/igusgus.egg-info/PKG-INFO
+[2.323s] writing dependency_links to ../../build/igusgus/igusgus.egg-info/dependency_links.txt
+[2.324s] writing entry points to ../../build/igusgus/igusgus.egg-info/entry_points.txt
+[2.324s] writing requirements to ../../build/igusgus/igusgus.egg-info/requires.txt
+[2.324s] writing top-level names to ../../build/igusgus/igusgus.egg-info/top_level.txt
+[2.386s] reading manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+[2.387s] adding license file 'LICENSE'
+[2.387s] writing manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+[2.388s] running build
+[2.388s] running build_py
+[2.388s] copying igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[2.388s] running install
+[2.400s] running install_lib
+[2.430s] copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[2.431s] byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py to pub_3d.cpython-312.pyc
+[2.434s]   File "/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py", line 95
+[2.434s]     except CvBridgeError, e:
+[2.434s]            ^^^^^^^^^^^^^^^^
+[2.434s] SyntaxError: multiple exception types must be parenthesized
+[2.435s] 
+[2.435s] running install_data
+[2.435s] running install_egg_info
+[2.467s] removing '/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info' (and everything under it)
+[2.467s] Copying ../../build/igusgus/igusgus.egg-info to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info
+[2.470s] running install_scripts
+[2.678s] Installing pub_3d script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+[2.678s] writing list of installed files to '/home/amrl-linux24-04/ros2_ben/build/igusgus/install.log'
+[2.732s] Invoked command in '/home/amrl-linux24-04/ros2_ben/src/igusgus' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/igusgus build --build-base /home/amrl-linux24-04/ros2_ben/build/igusgus/build install --record /home/amrl-linux24-04/ros2_ben/build/igusgus/install.log --single-version-externally-managed install_data

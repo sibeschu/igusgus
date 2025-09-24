@@ -1,0 +1,5 @@
+  File "/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py", line 95
+    except CvBridgeError, e:
+           ^^^^^^^^^^^^^^^^
+SyntaxError: multiple exception types must be parenthesized
+
