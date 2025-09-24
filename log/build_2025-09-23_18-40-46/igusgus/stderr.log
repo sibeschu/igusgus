@@ -1,0 +1,5 @@
+  File "/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py", line 60
+    self.get_logger().info(f"mask_points count = {len(mask_points)}"
+                          ^
+SyntaxError: '(' was never closed
+

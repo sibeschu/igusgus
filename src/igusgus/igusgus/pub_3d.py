@@ -31,7 +31,7 @@ class Pub3D(Node):
         self.depth_sub = Subscriber(self, Image, image_rect_raw, qos_profile = self.qos)
         self.depth_info = Subscriber(self, CameraInfo, "/camera/camera/depth/camera_info", qos_profile = self.qos)
 
-        queue_size = 10
+        queue_size = 30
         max_delay = 0.5
 
         self.sync = ApproximateTimeSynchronizer([self.detections_sub, self.depth_sub, self.depth_info], queue_size, max_delay)
@@ -46,7 +46,26 @@ class Pub3D(Node):
         f"Got sync! detections={len(detections_msg.detections)}, "
         f"depth stamp={depth_msg.header.stamp.sec}, "
         f"info stamp={depth_info_msg.header.stamp.sec}, "
+        # f"pixel_coords = {pixel_coords}, "
         )
+
+        # get x and y coordinates from image plane
+        # (from segmentation yolov8)
+        for detection in detections_msg.detections:
+            if (detection.mask is None) or (detection.mask.data is None) or (len(detection.mask.data) == 0):
+                self.get_logger().info("mask empty")
+                continue
+
+            mask_points = detection.mask.data # list of Point2D positions
+            self.get_logger().info(f"mask_points count = {len(mask_points)}")
+            self.get_logger().info(f"first5 = {[(p.x, p.y) for p in mask_points[:5]]}")
+            # pixel_coords = [(u1,v1), (u2,v2), ...]
+            pixel_coords = [(int(pt.x), int(pt.y)) for pt in mask_points]
+
+
+        # get according z coordinates for x,y,z
+
+        # xyz depth points to cloud
 
         dbg = String()
         dbg.data = "Sync triggered"
