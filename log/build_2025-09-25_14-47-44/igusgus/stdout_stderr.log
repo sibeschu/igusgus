@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/igusgus/igusgus.egg-info/PKG-INFO
+writing dependency_links to ../../build/igusgus/igusgus.egg-info/dependency_links.txt
+writing entry points to ../../build/igusgus/igusgus.egg-info/entry_points.txt
+writing requirements to ../../build/igusgus/igusgus.egg-info/requires.txt
+writing top-level names to ../../build/igusgus/igusgus.egg-info/top_level.txt
+reading manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+running build
+running build_py
+copying igusgus/ctrl_rob.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+copying igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+running install
+running install_lib
+copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/ctrl_rob.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/ctrl_rob.py to ctrl_rob.cpython-312.pyc
+byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py to pub_3d.cpython-312.pyc
+running install_data
+copying launch/igusgus_launch.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+running install_egg_info
+removing '/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/igusgus/igusgus.egg-info to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info
+running install_scripts
+Installing ctrl_rob script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+Installing pub_3d script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+writing list of installed files to '/home/amrl-linux24-04/ros2_ben/build/igusgus/install.log'

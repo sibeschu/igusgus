@@ -1,18 +1,1 @@
-// generated from rosidl_adapter/resource/srv.idl.em
-// with input from igus_rebel_msgs/srv/SetDigitalOutput.srv
-// generated code does not contain a copyright notice
-
-#include "igus_rebel_msgs/msg/DigitalOutput.idl"
-
-module igus_rebel_msgs {
-  module srv {
-    struct SetDigitalOutput_Request {
-      igus_rebel_msgs::msg::DigitalOutput output;
-    };
-    struct SetDigitalOutput_Response {
-      boolean success;
-
-      string message;
-    };
-  };
-};
+/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_adapter/igus_rebel_msgs/srv/SetDigitalOutput.idl

@@ -1,0 +1,43 @@
+[1.996s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/igusgus': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/amrl-linux24-04/ros2_ben/build/igusgus/build
+[2.741s] running develop
+[3.205s] Removing /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus.egg-link (link to .)
+[3.268s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/igusgus' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/amrl-linux24-04/ros2_ben/build/igusgus/build
+[3.272s] Invoking command in '/home/amrl-linux24-04/ros2_ben/src/igusgus': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/igusgus build --build-base /home/amrl-linux24-04/ros2_ben/build/igusgus/build install --record /home/amrl-linux24-04/ros2_ben/build/igusgus/install.log --single-version-externally-managed install_data --force
+[4.210s] running egg_info
+[4.285s] writing ../../build/igusgus/igusgus.egg-info/PKG-INFO
+[4.285s] writing dependency_links to ../../build/igusgus/igusgus.egg-info/dependency_links.txt
+[4.286s] writing entry points to ../../build/igusgus/igusgus.egg-info/entry_points.txt
+[4.286s] writing requirements to ../../build/igusgus/igusgus.egg-info/requires.txt
+[4.287s] writing top-level names to ../../build/igusgus/igusgus.egg-info/top_level.txt
+[4.441s] reading manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+[4.442s] adding license file 'LICENSE'
+[4.444s] writing manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+[4.444s] running build
+[4.444s] running build_py
+[4.445s] creating /home/amrl-linux24-04/ros2_ben/build/igusgus/build
+[4.445s] creating /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib
+[4.446s] creating /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[4.446s] copying igusgus/__init__.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[4.446s] copying igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[4.447s] copying igusgus/mask_to_3d.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[4.447s] running install
+[4.468s] running install_lib
+[4.546s] creating /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[4.547s] copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/__init__.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[4.547s] copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[4.547s] copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/mask_to_3d.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[4.549s] byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/__init__.py to __init__.cpython-312.pyc
+[4.550s] byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py to pub_3d.cpython-312.pyc
+[4.556s] byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/mask_to_3d.py to mask_to_3d.cpython-312.pyc
+[4.561s] running install_data
+[4.561s] copying resource/igusgus -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index/packages
+[4.562s] copying package.xml -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus
+[4.562s] copying launch/igusgus_exec_process.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[4.563s] copying launch/igusgus_launch.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[4.563s] copying launch/igusgus_launch_orbbec.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[4.564s] running install_egg_info
+[4.647s] Copying ../../build/igusgus/igusgus.egg-info to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info
+[4.650s] running install_scripts
+[5.013s] Installing pub_3d script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+[5.014s] writing list of installed files to '/home/amrl-linux24-04/ros2_ben/build/igusgus/install.log'
+[5.073s] Invoked command in '/home/amrl-linux24-04/ros2_ben/src/igusgus' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/igusgus build --build-base /home/amrl-linux24-04/ros2_ben/build/igusgus/build install --record /home/amrl-linux24-04/ros2_ben/build/igusgus/install.log --single-version-externally-managed install_data --force

@@ -1,4 +1,1 @@
-# 2D position in pixel coordinates
-
-yolo_msgs/Point2D position
-float64 theta
+/home/amrl-linux24-04/ros2_ben/src/yolo_ros/yolo_msgs/msg/Pose2D.msg

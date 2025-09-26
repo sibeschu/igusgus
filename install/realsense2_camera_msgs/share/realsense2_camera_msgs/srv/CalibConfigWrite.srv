@@ -1,4 +1,1 @@
-string calib_config
----
-bool success
-string error_message
+/home/amrl-linux24-04/ros2_ben/src/realsense-ros/realsense2_camera_msgs/srv/CalibConfigWrite.srv

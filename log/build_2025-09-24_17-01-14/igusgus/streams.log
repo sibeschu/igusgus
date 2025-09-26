@@ -1,0 +1,28 @@
+[0.550s] Invoking command in '/home/amrl-linux24-04/ros2_ben/build/igusgus': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl-linux24-04/ros2_ben/build/igusgus/build --no-deps symlink_data
+[0.757s] running develop
+[0.883s] running egg_info
+[0.883s] creating igusgus.egg-info
+[0.894s] writing igusgus.egg-info/PKG-INFO
+[0.895s] writing dependency_links to igusgus.egg-info/dependency_links.txt
+[0.895s] writing entry points to igusgus.egg-info/entry_points.txt
+[0.895s] writing requirements to igusgus.egg-info/requires.txt
+[0.895s] writing top-level names to igusgus.egg-info/top_level.txt
+[0.896s] writing manifest file 'igusgus.egg-info/SOURCES.txt'
+[0.920s] reading manifest file 'igusgus.egg-info/SOURCES.txt'
+[0.921s] writing manifest file 'igusgus.egg-info/SOURCES.txt'
+[0.934s] running build_ext
+[0.934s] Creating /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus.egg-link (link to .)
+[0.934s] Installing pub_3d script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+[0.934s] 
+[0.934s] Installed /home/amrl-linux24-04/ros2_ben/build/igusgus
+[0.934s] running symlink_data
+[0.934s] creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index
+[0.935s] creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index
+[0.935s] creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index/packages
+[0.935s] symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/resource/igusgus -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index/packages
+[0.935s] symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/package.xml -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus
+[0.935s] creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[0.935s] symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/launch/igusgus_exec_process.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[0.936s] symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/launch/igusgus_launch.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[0.936s] symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/launch/igusgus_launch_orbbec.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+[0.962s] Invoked command in '/home/amrl-linux24-04/ros2_ben/build/igusgus' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl-linux24-04/ros2_ben/build/igusgus/build --no-deps symlink_data

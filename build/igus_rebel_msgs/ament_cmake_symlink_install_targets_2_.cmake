@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_generator_py/igus_rebel_msgs/igus_rebel_msgs_s__rosidl_typesupport_c.so" "TARGETS" "igus_rebel_msgs_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/igus_rebel_msgs")

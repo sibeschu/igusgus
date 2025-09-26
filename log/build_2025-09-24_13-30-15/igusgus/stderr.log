@@ -1,5 +1,0 @@
-  File "/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py", line 96
-    print e
-    ^^^^^^^
-SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
-

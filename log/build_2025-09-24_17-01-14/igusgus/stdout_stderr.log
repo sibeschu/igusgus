@@ -1,0 +1,26 @@
+running develop
+running egg_info
+creating igusgus.egg-info
+writing igusgus.egg-info/PKG-INFO
+writing dependency_links to igusgus.egg-info/dependency_links.txt
+writing entry points to igusgus.egg-info/entry_points.txt
+writing requirements to igusgus.egg-info/requires.txt
+writing top-level names to igusgus.egg-info/top_level.txt
+writing manifest file 'igusgus.egg-info/SOURCES.txt'
+reading manifest file 'igusgus.egg-info/SOURCES.txt'
+writing manifest file 'igusgus.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus.egg-link (link to .)
+Installing pub_3d script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+
+Installed /home/amrl-linux24-04/ros2_ben/build/igusgus
+running symlink_data
+creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index
+creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index
+creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index/packages
+symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/resource/igusgus -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/ament_index/resource_index/packages
+symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/package.xml -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus
+creating /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/launch/igusgus_exec_process.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/launch/igusgus_launch.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch
+symbolically linking /home/amrl-linux24-04/ros2_ben/build/igusgus/launch/igusgus_launch_orbbec.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/share/igusgus/launch

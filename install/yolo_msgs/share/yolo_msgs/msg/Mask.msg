@@ -1,8 +1,1 @@
-# segmentation mask for one instance
-
-# size of the original image
-int32 height
-int32 width
-
-# mask data represeted by the points of the border of the mask
-yolo_msgs/Point2D[] data
+/home/amrl-linux24-04/ros2_ben/src/yolo_ros/yolo_msgs/msg/Mask.msg

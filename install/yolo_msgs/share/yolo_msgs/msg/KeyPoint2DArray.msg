@@ -1,3 +1,1 @@
-# represents all the keypoints for human pose estimation
-
-yolo_msgs/KeyPoint2D[] data
+/home/amrl-linux24-04/ros2_ben/src/yolo_ros/yolo_msgs/msg/KeyPoint2DArray.msg

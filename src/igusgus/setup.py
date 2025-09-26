@@ -28,7 +28,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'pub_3d = igusgus.pub_3d:main'
+        'pub_3d = igusgus.pub_3d:main',
+        'ctrl_rob = igusgus.ctrl_rob:main'
         ],
     },
 )

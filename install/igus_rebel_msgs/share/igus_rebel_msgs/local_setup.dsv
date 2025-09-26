@@ -1,4 +1,1 @@
-source;share/igus_rebel_msgs/environment/ament_prefix_path.sh
-source;share/igus_rebel_msgs/environment/library_path.sh
-source;share/igus_rebel_msgs/environment/path.sh
-source;share/igus_rebel_msgs/environment/pythonpath.sh
+/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/ament_cmake_environment_hooks/local_setup.dsv

@@ -6,8 +6,8 @@
 
 #include "rosidl_typesupport_interface/macros.h"
 #include "realsense2_camera_msgs/srv/detail/device_info__functions.h"
-#include "realsense2_camera_msgs/srv/detail/device_info__type_support.h"
 #include "realsense2_camera_msgs/srv/detail/device_info__struct.h"
+#include "realsense2_camera_msgs/srv/detail/device_info__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

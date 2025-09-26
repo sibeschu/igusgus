@@ -1,2 +1,1 @@
-int8 output
-bool is_on
+/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs/msg/DigitalOutput.msg

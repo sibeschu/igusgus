@@ -1,4 +1,1 @@
-# 2D size in pixel
-
-float64 x
-float64 y
+/home/amrl-linux24-04/ros2_ben/src/yolo_ros/yolo_msgs/msg/Vector2.msg

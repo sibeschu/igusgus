@@ -10,7 +10,7 @@ setup.py
 ../../build/igusgus/igusgus.egg-info/top_level.txt
 ../../build/igusgus/igusgus.egg-info/zip-safe
 igusgus/__init__.py
-igusgus/mask_to_3d.py
+igusgus/ctrl_rob.py
 igusgus/pub_3d.py
 launch/igusgus_exec_process.py
 launch/igusgus_launch.py

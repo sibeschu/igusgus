@@ -1,5 +1,0 @@
-  File "/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py", line 96
-    self.get_logger()info("too few mask points")
-                     ^^^^
-SyntaxError: invalid syntax
-

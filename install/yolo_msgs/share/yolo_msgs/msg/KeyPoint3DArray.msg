@@ -1,6 +1,1 @@
-# represents all the keypoints for human pose estimation in meters
-
-yolo_msgs/KeyPoint3D[] data
-
-# frame reference
-string frame_id
+/home/amrl-linux24-04/ros2_ben/src/yolo_ros/yolo_msgs/msg/KeyPoint3DArray.msg

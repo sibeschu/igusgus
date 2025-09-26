@@ -1,2 +1,1 @@
-std_msgs/Header header
-string json_data
+/home/amrl-linux24-04/ros2_ben/src/realsense-ros/realsense2_camera_msgs/msg/Metadata.msg

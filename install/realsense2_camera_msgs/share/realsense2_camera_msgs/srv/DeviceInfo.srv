@@ -1,8 +1,1 @@
----
-string device_name
-string serial_number
-string firmware_version
-string usb_type_descriptor
-string firmware_update_id
-string sensors
-string physical_port
+/home/amrl-linux24-04/ros2_ben/src/realsense-ros/realsense2_camera_msgs/srv/DeviceInfo.srv

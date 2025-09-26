@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/amrl-linux24-04/ros2_ben/build/igus_rebel/libigus_rebel.so" "TARGETS" "igus_rebel" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

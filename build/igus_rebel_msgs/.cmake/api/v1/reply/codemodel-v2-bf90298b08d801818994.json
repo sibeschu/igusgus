@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-eff12ca40f6fc6c70a46.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "igus_rebel_msgs__py",
+					"jsonFile" : "directory-igus_rebel_msgs__py-d9fc5ab35399dd0e3e72.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/igus_rebel_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "igus_rebel_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_igus_rebel_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_igus_rebel_msgs_egg-8f68ed2c56085f8aa137.json",
+					"name" : "ament_cmake_python_build_igus_rebel_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_igus_rebel_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_igus_rebel_msgs-aef3f270eba3cd7d5392.json",
+					"name" : "ament_cmake_python_symlink_igus_rebel_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs-2fc456fae887d8f691d6.json",
+					"name" : "igus_rebel_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__cpp-3ee0a58f7a3163efbfe7.json",
+					"name" : "igus_rebel_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "igus_rebel_msgs__py::@23d99c82433a12f4c1ac",
+					"jsonFile" : "target-igus_rebel_msgs__py-ef3fbba29a04e35886f5.json",
+					"name" : "igus_rebel_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_generator_c-796b0d03df378c0425aa.json",
+					"name" : "igus_rebel_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_generator_py-b9a5536d15a7c1f38974.json",
+					"name" : "igus_rebel_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_generator_type_description-fc0133ee8c6a7adb02ff.json",
+					"name" : "igus_rebel_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_typesupport_c-52f8fdc00e76d66499ca.json",
+					"name" : "igus_rebel_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_typesupport_cpp-8b368cbc0d5f118f92cf.json",
+					"name" : "igus_rebel_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_typesupport_fastrtps_c-ed9991bf6c43a0914556.json",
+					"name" : "igus_rebel_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_typesupport_fastrtps_cpp-4d8e05dad64a50acf165.json",
+					"name" : "igus_rebel_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_typesupport_introspection_c-15d640487358f0e9ced9.json",
+					"name" : "igus_rebel_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs__rosidl_typesupport_introspection_cpp-c1c27f0cde47c3b324d1.json",
+					"name" : "igus_rebel_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs_s__rosidl_typesupport_c-df6bd79b7ab76ce377aa.json",
+					"name" : "igus_rebel_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs_s__rosidl_typesupport_fastrtps_c-8c3e3248f9cb66d7b4b4.json",
+					"name" : "igus_rebel_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs_s__rosidl_typesupport_introspection_c-f6fe33afd78015d9259f.json",
+					"name" : "igus_rebel_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_msgs_uninstall-2edcabe581b0476153c8.json",
+					"name" : "igus_rebel_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0996f3a44da1c60c54f0.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs",
+		"source" : "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

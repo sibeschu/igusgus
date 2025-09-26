@@ -1,14 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from igus_rebel_msgs/msg/DigitalOutput.msg
-// generated code does not contain a copyright notice
-
-
-module igus_rebel_msgs {
-  module msg {
-    struct DigitalOutput {
-      int8 output;
-
-      boolean is_on;
-    };
-  };
-};
+/home/amrl-linux24-04/ros2_ben/build/igus_rebel_msgs/rosidl_adapter/igus_rebel_msgs/msg/DigitalOutput.idl

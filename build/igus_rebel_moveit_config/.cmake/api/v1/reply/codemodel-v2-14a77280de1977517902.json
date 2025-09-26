@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-713992ba847954bdab0b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "igus_rebel_moveit_config",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "igus_rebel_moveit_config_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-igus_rebel_moveit_config_uninstall-1839942240ea272a9841.json",
+					"name" : "igus_rebel_moveit_config_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rebel_servo_teleop_gamepad::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rebel_servo_teleop_gamepad-d589790a4f5f4ae7b964.json",
+					"name" : "rebel_servo_teleop_gamepad",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rebel_servo_teleop_keyboard::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rebel_servo_teleop_keyboard-89dccf35ef10310f9e15.json",
+					"name" : "rebel_servo_teleop_keyboard",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-509e8836f0d5aa0d167b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/amrl-linux24-04/ros2_ben/build/igus_rebel_moveit_config",
+		"source" : "/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

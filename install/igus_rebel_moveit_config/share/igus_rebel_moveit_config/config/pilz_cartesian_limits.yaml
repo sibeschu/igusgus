@@ -1,5 +1,1 @@
-cartesian_limits:
-  max_trans_vel: 1
-  max_trans_acc: 2.25
-  max_trans_dec: -5
-  max_rot_vel: 1.57
+/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config/config/pilz_cartesian_limits.yaml

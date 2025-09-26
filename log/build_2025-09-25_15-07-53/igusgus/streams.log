@@ -1,0 +1,29 @@
+[0.479s] Invoking command in '/home/amrl-linux24-04/ros2_ben/src/igusgus': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/igusgus build --build-base /home/amrl-linux24-04/ros2_ben/build/igusgus/build install --record /home/amrl-linux24-04/ros2_ben/build/igusgus/install.log --single-version-externally-managed install_data
+[0.636s] running egg_info
+[0.647s] writing ../../build/igusgus/igusgus.egg-info/PKG-INFO
+[0.647s] writing dependency_links to ../../build/igusgus/igusgus.egg-info/dependency_links.txt
+[0.647s] writing entry points to ../../build/igusgus/igusgus.egg-info/entry_points.txt
+[0.647s] writing requirements to ../../build/igusgus/igusgus.egg-info/requires.txt
+[0.647s] writing top-level names to ../../build/igusgus/igusgus.egg-info/top_level.txt
+[0.670s] reading manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+[0.670s] adding license file 'LICENSE'
+[0.670s] writing manifest file '../../build/igusgus/igusgus.egg-info/SOURCES.txt'
+[0.670s] running build
+[0.670s] running build_py
+[0.670s] copying igusgus/ctrl_rob.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[0.670s] copying igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus
+[0.671s] running install
+[0.674s] running install_lib
+[0.685s] copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/ctrl_rob.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[0.686s] copying /home/amrl-linux24-04/ros2_ben/build/igusgus/build/lib/igusgus/pub_3d.py -> /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus
+[0.686s] byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/ctrl_rob.py to ctrl_rob.cpython-312.pyc
+[0.686s] byte-compiling /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus/pub_3d.py to pub_3d.cpython-312.pyc
+[0.687s] running install_data
+[0.687s] running install_egg_info
+[0.699s] removing '/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info' (and everything under it)
+[0.699s] Copying ../../build/igusgus/igusgus.egg-info to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages/igusgus-0.0.0-py3.12.egg-info
+[0.700s] running install_scripts
+[0.775s] Installing ctrl_rob script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+[0.775s] Installing pub_3d script to /home/amrl-linux24-04/ros2_ben/install/igusgus/lib/igusgus
+[0.775s] writing list of installed files to '/home/amrl-linux24-04/ros2_ben/build/igusgus/install.log'
+[0.792s] Invoked command in '/home/amrl-linux24-04/ros2_ben/src/igusgus' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/amrl-linux24-04/ros2_ben/build/igusgus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl-linux24-04/ros2_ben/install/igusgus/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/igusgus build --build-base /home/amrl-linux24-04/ros2_ben/build/igusgus/build install --record /home/amrl-linux24-04/ros2_ben/build/igusgus/install.log --single-version-externally-managed install_data

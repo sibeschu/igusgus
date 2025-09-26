@@ -1,8 +1,1 @@
-# Default initial position for each movable joint
-initial_positions:
-  joint1: 0.0
-  joint2: 0.0
-  joint3: 0.0
-  joint4: 0.0
-  joint5: 0.0
-  joint6: 0.0
+/home/amrl-linux24-04/ros2_ben/src/igus_rebel_ros2/src/igus_rebel_moveit_config/config/initial_positions.yaml
