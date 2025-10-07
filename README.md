@@ -8,6 +8,9 @@ igus_rebel starten mit Ros2 -> cd in ros2_ben -> source install/setup.bash
  -> ros2 launch igus_rebel rebel.launch.py
 -> ros2 launch igus_rebel_moveit_config igus_rebel_motion_planner.launch.py
 use_gui:=true
+
+wenn Probleme direkt nach dem neuen Aufsetzen von igus_rebel_ros2 -> # move_group_node unkommentieren in move_group.launch.py
+
 -> Um den Roboterarm zu erreichen muss eine statische Ip vergeben werden : 192.168.3.1 mit Subnetz 255.255.255.0
 
 https://bitbucket.org/truphysics/igus_rebel_ros2/src/main/ Repository Igus
@@ -112,3 +115,155 @@ Build von Source da sonst Kernel Fehler bei librealsense
 - Cad Datei angefangen für Kamera Halter
 
 12.09.25 - ~ 7 Stunden
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+amrl-linux24-04@amrl-linux24-04-ThinkPad-E16-Gen-2:~/ros2_ben/src$ python3 -m venv venv
+amrl-linux24-04@amrl-linux24-04-ThinkPad-E16-Gen-2:~/ros2_ben/src$ source venv/bin/activate
+(venv) amrl-linux24-04@amrl-linux24-04-ThinkPad-E16-Gen-2:~/ros2_ben/src$ pip install -r yolo_ros/requirements.txt
+
+
+Python Pakete für yolo_ros in virtueller Python umgebung installiert
+--> Versionskonflikte wegen Numpy und anderen Paketen, da Ubuntu andere Python Version nutzt als für Ultralytics YOLO gebraucht wird
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+15.09.25 - ~ 5 Stunden
+14.09.25 - ~ 5 Stunden
+
+3D Modell für Kamera Halter
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+16.09.25
+
+TODO :
+  - Kamera an neue Position anpassen in Ros2 -> in Y um 1 Rad gedreht
+  - rausfinden wie man Roboter mittels IK Solver steuert über Code/CLI
+  - rausfinden wie man ein DNN trainiert -> Yolo oder Tensorflow oder Pytorch
+  - dieses dann in OpenCV DNN ausführen und in ROS2 einbinden
+
+  Alternativ : rausfinden wie Versionskonflikte gelöst werden können
+
+
+  ros2 topic list -> /goal_pose interessant
+  ros2 topic type /goal_pose gibt geometry_msgs/msg/PoseStamped
+  ros2 interface show geometry_msgs/msg/PoseStamped gibt :
+
+
+  # A Pose with reference coordinate frame and timestamp
+
+std_msgs/Header header
+	builtin_interfaces/Time stamp
+		int32 sec
+		uint32 nanosec
+	string frame_id
+Pose pose
+	Point position
+		float64 x
+		float64 y
+		float64 z
+	Quaternion orientation
+		float64 x 0
+		float64 y 0
+		float64 z 0
+		float64 w 1
+
+
+zurück, welches anscheinend der erwartete Pub Typ für goal_pose ist
+
+gibt aber über ros2 topic echo nichts aus wenn man goal_pose setzt in rviz
+
+--> später genauer rausfinden
+
+- YOLO
+
+ros2 launch yolo_bringup yolov8.launch.py   model:=best.pt use_3d:=True imgsz_width:=640 imgsz_height:=480  input_image_topic:=/camera/camera/color/image_raw   input_depth_topic:=/camera/camera/depth/image_rect_raw   input_depth_info_topic:=/camera/camera/depth/camera_info   target_frame:=camera_link device:=cpu
+
+-> Bild und Erkennung
+
+-> numpy war nochmal installiert und hat mit einer neueren Version geshadowed
+
+-> Schraubendreher wird als "Crayon" erkannt mit YOLOE
+--> Model YOLO v8 erste mit Segmentation
+--> selber Feintunen/Trainieren?
+
+Wie trainieren, wie sieht Dataset aus?
+
+-- Dataset
+20 Bilder pro Werkzeug, verschiedene Lagen, hinter oder vor verschiedenen Dingen
+-> mit Labelme auf PC gelabelt
+
+Dataset
+  - images
+    -train
+    -val
+  -labels
+    -train
+    -val
+
+-> mittels "python3 -m labelme2yolov8 --json_dir $HOME/ros2_benpc/dataset/labels/train/ --val_size 0.1 --test_size 0.1"
+in Yolo format umgewandelt
+
+-> trainieren mit yolo task=segment mode=train model=yolov8n-seg.pt data=~/ros2_benpc/dataset/labels/train/YOLOv8Dataset/dataset.yaml epochs=50 imgsz=512 batch=2 device=cpu workers=0 amp=False plots=False
+auf PC
+
+labelme2yolov8 splittet automatisch in train val und test
+
+epoch: ein vollständiger Durchlauf aller Trainingsdaten.
+box_loss: Fehler bei den vorhergesagten Bounding Box-Koordinaten.
+cls_loss: Fehler bei der Klassenzuweisung (falsches Objektlabel).
+dfl_loss: Distribution Focal Loss – Feinkorrektur der Box-Kanten.
+instances: Anzahl der Objekte in den aktuellen Bildern.
+size: Bildgröße, die fürs Training genutzt wird (z. B. 640×640).
+mAP50: mittlere Average Precision bei 50 % IoU-Schwelle (Genauigkeit).
+mAP50-95: Durchschnitt über IoU-Schwellen von 50 % bis 95 %.
+it/s: Iterationen pro Sekunde (Trainingsgeschwindigkeit).
+
+Ergebnisse des Trainings in "Home/runs/segment/train4/weights" auf PC
+
+Wie performance verbessern für Laptop CPU? Bildgröße?
+
+17.09.25
+
+/////////////////////////////////////////////////////////////////////////////
+
+18.09.25 ~7 Stunden
+
+--> ros2 param dump /camera/camera
+zeigt aktuell eingestellte Parameter der Kamera (muss währenddessen laufen)
+
+    ///////////////////////////////////////////////////////////////////////
+
+    22.09.25
+
+    ~ 5 Stunden
+
+    IK Solver gefixt durch neu-installieren von Igus_rebel_ros2
+
+    Idee : eigener Knoten der genauere 3D Position ausgibt
+
+    Yolo bis jetzt in yolo_ros/detect_3d_node.py
+
+    convert_bb_to_3d()
+
+
+    --> igusgus_dbg im Terminal zeigt nun alle Prozesse in ihrem eigenen Terminal
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    23.09.25
+
+    ~7 stunden
+
+    angefangen Node zu schreiben
+
+    /////////////////////////////////////////////////////////////////////////
+
+    24.09.25
+
+    ~   Stunden
+
+    Node weitergeschrieben
+
+    nach build muss igusgus.rviz in ros2_ben/src kopiert werden.. (beheben!)
